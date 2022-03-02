@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 클래스"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content" class="detail-wrap">
+            <div class="detail-inner">
+                <section class="main-desc none-border">
+                    <div class="swiper-container kivi">
+                        <a href="#" class="swiper-button-prev">Prev</a>
+                        <a href="#" class="swiper-button-next">Next</a>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../img/@temp/img-class_visual04.jpg" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-class_visual04.jpg" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-class_visual04.jpg" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-class_visual04.jpg" alt="" /></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="share">
+                            <a href="#" class="pop-open btn-share" data-pop="share"><span class="blind">공유하기</span></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="aside">
+                    <div class="title">
+                        <h2 class="t-title1">우유 생크림 롤케이크</h2>
+                        <p>우유 본연의 부드러운 맛을 낸 생크림 비법</p>
+                    </div>
+                    <span class="hash-tag">
+                        <a href="#">#베이킹</a>
+                        <a href="#">#초보</a>
+                        <a href="#">#간식</a>
+                    </span>
+                    <ul class="info-list t-desc1">
+                        <li class="ico-time">
+                            <strong>시간</strong>
+                            <span>약 3시간 소요</span>
+                        </li>
+                        <li class="ico-place">
+                            <strong>위치</strong>
+                            <span>서울시 강남구 논현동</span>
+                        </li>
+                        <li class="ico-day">
+                            <strong>일시</strong>
+                            <span>10월 25일, 10월 26일, 10월 27일, 10월 25일, 10월 26일, 10월 27일</span>
+                        </li>
+                    </ul>
+                    <div class="say">
+                        <figure>
+                            <img src="../img/@temp/img-say_thumbnail.png" alt="" />
+                            <div class="teacher">
+                                <a href="#" class="more-arrow">
+                                    <span><strong>김수아</strong>베이킹전문가</span><i class="ico-more_arrow"></i>
+                                </a>
+                            </div>
+                        </figure>
+                        <p>“100% 국내산 우유로 만든 생크림으로 유명 베이커리 못지 않은 생크림 롤케이크를 만들 수 있어요.”</p>
+                    </div>
+                </section>
+
+                <section class="introduce">
+                    <h3 class="t-title2">클래스 소개</h3>
+                    <div class="cont">
+                        <div class="inner">
+                            <p>루아르강을 따라 펼쳐진 아름다운 계곡 너머, 청정한 에쉬레 지역에서 ‘영혼이 담긴 버터’라고 불리는 에쉬레 버터가 만들어집니다. 에쉬레는 버터 공장 반경 30km 이내에 위치한 목장에서 착유한지 48시간 이내에 공급받는 우수한 우유만을 사용하죠.<br /><br />또한 에쉬레는 전 세계에서 유일하게 전통방식으로 버터를 만드는 브랜드로도 유명합니다. 순수한 버터의 맛을 내기 위해 거대한 티크나무 교유기를 사용해 원유에서 크림을 분리하고, 중력을 이용해 버터를 만들죠.또한 에쉬레는 전 세계에서 유일하게 전통방식으로 버터를 만드는 브랜드로도 유명합니다. 순수한 버터의 맛을 내기 위해 거대한 티크나무 교유기를 사용해 원유에서 크림을 분리하고, 중력을 이용해 버터를 만들죠.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="aside sticky">
+                    <div class="for-teacher top">
+                        <button class="talk" type="button">선생님께 <b>궁금한 점</b>을 물어보세요.</button>
+                        <!-- [D]: .favor 클래스에 .active가 추가되면 활성화 -->
+                        <button class="favor" type="button"></button>
+                    </div>
+                    <div class="class-option">
+                        <h3>클래스 일정</h3>
+                        <p>원하시는 일정을 선택해 주세요.</p>
+                        <a href="#" class="ico ico-fav"><span class="blind">즐겨찾기</span></a>
+                        <div class="schedule">
+                            <ul>
+                                <li>
+                                    <span class="date">18.10.25 (목)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.26 (금)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">4 / 8</span>
+                                </li>
+                                <li class="active">
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">11:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li class="disabled">
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">15:00</span>
+                                    <span class="member">마감</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.28 (일)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.25 (목)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.26 (금)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">4 / 8</span>
+                                </li>
+                                <li class="active">
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">11:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li class="disabled">
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">15:00</span>
+                                    <span class="member">마감</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.27 (토)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                                <li>
+                                    <span class="date">18.10.28 (일)</span>
+                                    <span class="time">19:00</span>
+                                    <span class="member">2 / 8</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="more-schedule">
+                            <a href="#">일정 더보기</a>
+                        </p>
+                    </div>
+                    <div class="option-result">
+                        <dl>
+                            <dt>선택된 일정</dt>
+                            <dd class="date">18.10.27 (토)</dd>
+                            <dd class="time">11:00 - 13:00</dd>
+                        </dl>
+                        <p class="price"><em>₩</em>35,000</p>
+                        <a href="#" class="btn-form active">신청하기</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="t-title2">참고사항</h3>
+                    <div class="cont">
+                        <p>클래스는 실내에서 진행되며, 브레이크 타임 30분과 클래스 종료 후 티 타임 30분이 포함되어있습니다. </p>
+                    </div>
+                </section>
+
+                <section class="slider-paging detail-place">
+                    <h3 class="t-title2">공간</h3>
+                    <div class="swiper-container paging">
+                        <a href="#" class="swiper-button-prev">Prev</a>
+                        <a href="#" class="swiper-button-next">Next</a>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../img/@temp/img-place_ex.png" class="rect" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-place_ex.png" class="rect" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-place_ex.png" class="rect" alt="" /></div>
+                            <div class="swiper-slide"><img src="../img/@temp/img-place_ex.png" class="rect" alt="" /></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <a href="#" class="more-arrow small">
+                        <span>서울시 강남구 논현동 마리앤제이</span><i class="ico-more_arrow"></i>
+                    </a>
+                    <p>자가용을 이용할 경우 주차공간이 협소하니 이용에 참고해주시면 감사하겠습니다.</p>
+                </section>
+
+                <section>
+                    <h3 class="t-title2">클래스 일정</h3>
+                    <div class="cont">
+                        <div class="inner">
+                            <p>클래스 신청은 우측에 신청하기 버튼을 눌러주세요</p>
+                        </div>
+                    </div>
+
+                    <div class="half">
+                        @include('../inc/_cal.html', {
+                        "year": "2018",
+                        "month": "10"
+                        })
+                    </div>
+                    <div class="half">
+                        <div class="schedule-list">
+                            <div class="cal-header">
+                                <p class="t-title2">일정별 수업시간</p>
+                            </div>
+
+                            <div class="list">
+                                <ul>
+                                    <!-- [D]: 달력의 선택된 날짜에 .active가 붙으면 활성화 -->
+                                    <li class="active"><span class="date">2018.10.23 (목)</span> <span class="time">14:00 - 16:00</span></li>
+                                    <li class="active"><span class="date">2018.10.23 (목)</span> <span class="time">19:00 - 21:00</span></li>
+                                    <li><span class="date">2018.10.24 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.24 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.24 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.24 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                    <li><span class="date">2018.10.25 (목)</span> <span class="time">18:00 - 22:00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="review">
+                    <div>
+                        <h3 class="t-title2">리뷰</h3>
+                        <a href="./detail_review.html" class="more-arrow small"> <span>리뷰 더 보기</span> <i class="ico-more_arrow"></i> </a>
+                    </div>
+                    <ul class="review-list">
+                        <!-- loop -->
+                        <li>
+                            <div class="review-info">
+                                <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                                <span>
+                                    <!-- [D]: icon type은 3가지 - .ico-review_type1~3 추천/만족/불만족 -->
+                                    <strong class="ico-review_type1">추천해요!</strong>
+                                    <span>정주영<em>2018.09.24</em></span>
+                                </span>
+                            </div>
+
+                            <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                            <div class="cont overflow">
+                                <div class="inner">
+                                    <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다채 중간 브레이크 타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                                    <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                                </div>
+                            </div>
+
+                            <!-- [D]: 더보기가 있는 경우 추가 -->
+                            <a href="#" class="more">더 보기</a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <div class="review-info">
+                                <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                                <span>
+                                    <strong class="ico-review_type2">추천해요!</strong>
+                                    <span>정주영<em>2018.09.24</em></span>
+                                </span>
+                            </div>
+                            <div class="cont">
+                                <div class="inner">
+                                    <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="review-info">
+                                <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                                <span>
+                                    <strong class="ico-review_type1">추천해요!</strong>
+                                    <span>정주영<em>2018.09.24</em></span>
+                                </span>
+                            </div>
+                            <div class="cont">
+                                <div class="inner">
+                                    <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="more-bottom">
+                    <h3 class="t-title2">자주 묻는 질문</h3>
+
+                    <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                    <div class="cont overflow">
+                        <ul class="faq-list inner">
+                            <li>
+                                <a href="#"><em>Q</em>클래스 재료는 국내산인가요?</a>
+                                <p>앙버터 클래스에 사용되는 에쉬레 앙버터와팥 앙금, 곡물빵은 모두 국내에서 제조된 국내산 입니다.</p>
+                            </li>
+                            <li>
+                                <a href="#"><em>Q</em>클래스 재료는 국내산인가요?</a>
+                                <p>앙버터 클래스에 사용되는 에쉬레 앙버터와팥 앙금, 곡물빵은 모두 국내에서 제조된 국내산 입니다.</p>
+                            </li>
+                            <li>
+                                <a href="#"><em>Q</em>클래스 재료는 국내산인가요?</a>
+                                <p>앙버터 클래스에 사용되는 에쉬레 앙버터와팥 앙금, 곡물빵은 모두 국내에서 제조된 국내산 입니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- [D]: 더보기가 있는 경우 추가 -->
+                    <a href="#" class="more">더 보기</a>
+                </section>
+
+                <section class="more-bottom">
+                    <h3 class="t-title2">취소 및 환불 규정</h3>
+
+                    <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                    <div class="cont overflow">
+                        <div class="inner">
+                            <ul>
+                                <li>- 클래스는 수강일로부터 4일전 최소인원 모집시 최종확정됩니다.</li>
+                                <li>- 클래스확정일 전에는 100% 환불되며, 이후 취소 시 마일리지로 부분 환불됩니다.</li>
+                                <li>- 클래스확정이후, 선생님(또는 호스트)의 사유로 취소 시, 100% 환불됩니다.</li>
+                            </ul>
+                            <ul class="table">
+                                <li>
+                                    <p class="strong">클래스 취소일자 별 환불 금액</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>환불정책</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>결제일~5일전</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td>80%(마일리지로 지급)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td>50%(마일리지로 지급)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td>환불불가</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p class="strong">선생님 또는 호스트가 클래스를 취소한 경우</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>환불정책</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td>100%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p class="strong">취소보상금</p>
+                                    <p>(취소 보상금이란 선생님 또는 호스트로 인해 클래스가 취소될 경우 지급되는 보상금입니다)</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>수강생보상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- [D]: 더보기가 있는 경우 추가 -->
+                    <a href="#" class="more">더 보기</a>
+                </section>
+
+                <section class="similar end-sticky">
+                    <h3 class="t-title2">비슷한 클래스</h3>
+                    <div class="list-scroll">
+                        <button type="button" class="scroll-btn prev"></button>
+                        <button type="button" class="scroll-btn next"></button>
+                        <div class="inner">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../img/@temp/img-main-thumb01.jpg" alt="" />
+                                        </figure>
+                                        <div class="list-content">
+                                            <strong class="t-title2">소고기 버섯 볶음</strong>
+                                            <p>남녀노소 누구나 좋아하는 간식 떡볶이를 달달한 간장양념으로 만들어보아요!</p>
+                                            <div class="text-info">
+                                                <span>손님초대</span>
+                                                <span>서울시 용산구</span>
+                                                <span>10월 5회 가능</span>
+                                            </div>
+                                            <span class="price">
+                                                <em>₩</em>35,000
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../img/@temp/img-main-thumb01.jpg" alt="" />
+                                        </figure>
+                                        <div class="list-content">
+                                            <strong class="t-title2">소고기 버섯 볶음</strong>
+                                            <p>남녀노소 누구나 좋아하는 간식 떡볶이를 달달한 간장양념으로 만들어보아요!</p>
+                                            <div class="text-info">
+                                                <span>손님초대</span>
+                                                <span>서울시 용산구</span>
+                                                <span>10월 5회 가능</span>
+                                            </div>
+                                            <span class="price">
+                                                <em>₩</em>35,000
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../img/@temp/img-main-thumb01.jpg" alt="" />
+                                        </figure>
+                                        <div class="list-content">
+                                            <strong class="t-title2">소고기 버섯 볶음</strong>
+                                            <p>남녀노소 누구나 좋아하는 간식 떡볶이를 달달한 간장양념으로 만들어보아요!</p>
+                                            <div class="text-info">
+                                                <span>손님초대</span>
+                                                <span>서울시 용산구</span>
+                                                <span>10월 5회 가능</span>
+                                            </div>
+                                            <span class="price">
+                                                <em>₩</em>35,000
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../img/@temp/img-main-thumb01.jpg" alt="" />
+                                        </figure>
+                                        <div class="list-content">
+                                            <strong class="t-title2">소고기 버섯 볶음</strong>
+                                            <p>남녀노소 누구나 좋아하는 간식 떡볶이를 달달한 간장양념으로 만들어보아요!</p>
+                                            <div class="text-info">
+                                                <span>손님초대</span>
+                                                <span>서울시 용산구</span>
+                                                <span>10월 5회 가능</span>
+                                            </div>
+                                            <span class="price">
+                                                <em>₩</em>35,000
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="../img/@temp/img-main-thumb01.jpg" alt="" />
+                                        </figure>
+                                        <div class="list-content">
+                                            <strong class="t-title2">소고기 버섯 볶음</strong>
+                                            <p>남녀노소 누구나 좋아하는 간식 떡볶이를 달달한 간장양념으로 만들어보아요!</p>
+                                            <div class="text-info">
+                                                <span>손님초대</span>
+                                                <span>서울시 용산구</span>
+                                                <span>10월 5회 가능</span>
+                                            </div>
+                                            <span class="price">
+                                                <em>₩</em>35,000
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- // #content -->
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap small pop-share" id="share">
+            <div class="pop-inner">
+                <div class="t-title1">공유하기</div>
+                <div class="pop-cont">
+                    <ul>
+                        <li><a href="#" class="ico-fb">페이스북</a></li>
+                        <li><a href="#" class="ico-tw">트위터</a></li>
+                        <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                        <li><a href="#" class="ico-band">밴드</a></li>
+                        <li><a href="#" class="ico-kat">카카오톡</a></li>
+                        <li><a href="#" class="ico-line">라인</a></li>
+                        <li><a href="#" class="ico-mail">메일</a></li>
+                        <li><a href="#" class="ico-url">URL복사</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+            </div>
+        </div>
+        <!-- //공유하기 -->
+
+        @include('../inc/_footer.html')
+    </div>
+
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //kivi slide
+            $('.kivi.swiper-container').slider({
+                loop: true,
+                threshold: 30,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: { //[18.12.18] kivisual slide on method 수정
+                    init: function () {
+                        $('.kivi').addClass('start');
+                    },
+                    slideNextTransitionStart: function () {
+                        var index = this.realIndex;
+                        if (index > 0) $(this.pagination.bullets[(index - 1)]).addClass('prev');
+                        if (index == 0) $(this.pagination.el).children().removeClass('prev');;
+                    },
+                    slidePrevTransitionStart: function () {
+                        var index = this.realIndex;
+                        var len = this.pagination.bullets.length;
+                        if (index == (len - 1)) {
+                            $(this.pagination.el).children().addClass('prev');
+                            $(this.pagination.el).children().eq(len - 1).removeClass('prev');
+                        }
+
+                        $(this.pagination.bullets[(index + 1)]).removeClass('prev');
+                    }
+                }
+            });
+
+            // [18.12.20] 스크립트 추가
+            var kiviSlider = $('.kivi.swiper-container')[0].swiper;
+            if (kiviSlider.slides.length - 2 == 1) {
+                $(kiviSlider.params.pagination.el).eq(0).hide();
+                kiviSlider.destroy();
+            }
+
+            // 일정 더보기
+            $('.more-schedule a').click(function (e) {
+                e.preventDefault();
+                var scheduleBox = [$('.schedule'), $(this).parent()];
+                $(scheduleBox).toggleClass('on');
+                if($(this).parent().hasClass('on')) {
+                    $('.schedule').animate({
+                        'height': '420px'
+                    }, 400, setSticky);
+                    $(this).text("일정 접기");
+                } else {
+                    $('.schedule').animate({
+                        scrollTop: 0,
+                        'height': '195px'
+                    }, 400, setSticky);
+                    $(this).text("일정 더보기");
+                }
+            });
+
+            // inner slide
+            $('.slider-paging .swiper-container').slider({
+                threshold: 30,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            // faq list
+            $('.faq-list li a').on('click', function (e) {
+                e.preventDefault();
+
+                if (!$(this).parent().hasClass('on')) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+
+                var innerH = $(this).closest('.cont').find('.inner').outerHeight();
+                $(this).closest('.cont').css('height', 'auto');
+
+            });
+
+
+            // more contents
+            var contH;
+            $('.more').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                var $thisCont = $this.parent().find('.cont');
+                var innerH = $thisCont.find('.inner').outerHeight();
+
+                if (!$thisCont.hasClass('more-show')) {
+                    $thisCont.addClass('more-show');
+                    $this.addClass('on').text('접기');
+
+                    contH = $thisCont.outerHeight();
+                    $thisCont._ani(0.25, {
+                        height: innerH
+                    });
+                } else {
+                    $thisCont.removeClass('more-show');
+                    $this.removeClass('on').text('더보기');;
+
+                    $thisCont._ani(0.25, {
+                        height: contH
+                    });
+                }
+
+            });
+
+            $('.list-scroll .inner').slider({
+                slidesPerView: 'auto',
+                threshold: 30,
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev'
+                }
+            });
+
+            $('.btn-more').click(function (e) {
+                e.preventDefault();
+                $(this).addClass('hide');
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| about"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/about.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- #content -->
+        <div id="content">
+            <div class="btn-back-wrap">
+                <a href="#" class="btn-back"><span class="blind">뒤로가기</span></a>
+            </div>
+
+            <section>
+                <div class="board-wrap">
+                    <div class="board-cont">
+                        <h3 class="cont-title">
+                            [안내] 2018년 개인정보 이용내역 통지안내
+                            <em class="b-date">18.10.05</em>
+                        </h3>
+                        <div class="cont-text">
+                            <p>
+                                고객님, 안녕하세요.<br><br>
+                                언제나 공공의 주방을 아껴주시고 이용해 주셔서 감사드립니다.<br><br>
+                                공공의 주방은 [정보통신망이용촉진및정보보호에관한법률] 제 30조 2 (개인정보 이용내역 통지)에 의거하여 개인정보 이용정보내역을 안내해 드립니다.<br><br>
+                                개인정보 이용내역은 <a href="http://www.public-kitchen.com" class="url-type">공공의 주방 홈페이지
+                                (http://www.public-kitchen.com)</a> 하단에 있는 [개인정보취급방침]을 클릭하시면 쉽게 확인하실 수 있습니다. (2019년 1월부터 확인 가능)<br><br>
+                                고객님의 개인정보를 안전하게 관리하고자 노력하는 공공의 주방이 되겠습니다.<br><br>
+                                감사합니다.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap pop-share" id="share">
+            <div class="pop-cont">
+                <div class="t-title1">공유하기</div>
+                <ul>
+                    <li><a href="#" class="ico-fb">페이스북</a></li>
+                    <li><a href="#" class="ico-tw">트위터</a></li>
+                    <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                    <li><a href="#" class="ico-band">밴드</a></li>
+                    <li><a href="#" class="ico-kat">카카오톡</a></li>
+                    <li><a href="#" class="ico-line">라인</a></li>
+                    <li><a href="#" class="ico-mail">메일</a></li>
+                    <li><a href="#" class="ico-url">URL복사</a></li>
+                </ul>
+            </div>
+            <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+        </div>
+        <!-- //공유하기 -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // tab
+            $('.tab-title a').on('click', function(e){
+                e.preventDefault();
+                var tabList = $(this).index();
+
+                $(".tab-title a").removeClass("on");
+                $(this).addClass("on");
+
+                $(".tab-cont-wrap .tab-cont").hide();
+                $(".tab-cont-wrap .tab-cont").eq(tabList).show();
+            })
+
+            // faq list
+            $('.faq-list li a').on('click', function (e) {
+                e.preventDefault();
+
+                if (!$(this).parent().hasClass('on')) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

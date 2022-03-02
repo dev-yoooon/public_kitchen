@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 메세지"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- [18.11.19] 수정: .msg-wrap 이하를 제외한 마크업 수정 -->
+        <div id="content">
+            <div class="btn-back-wrap">
+                <a href="#" class="btn-back"><span class="blind">뒤로가기</span></a>
+            </div>
+            <section>
+                <form action="">
+                    <div class="msg-wrap">
+                        <div class="msg-date">2018년 10월 12일 금요일</div>
+
+                        <!-- 관리자 메세지 -->
+                        <div class="msg-chat cnsl">
+                            <figure><img src="../../img/@temp/img-msg_list01.png" alt="" /></figure>
+                            <div class="chat">
+                                <div class="chat-info">
+                                    <strong class="name">김수아</strong>
+                                    <span class="time">PM 2:04</span>
+                                </div>
+                                <div class="chat-box">
+                                    안녕하세요. <strong>‘우유 생크림 롤케이크’</strong> 클래스를 진행하는 김수아입니다. 무엇을 도와드릴까요?
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //관리자 메세지 -->
+
+                        <!-- 사용자 메세지 -->
+                        <div class="msg-chat user">
+                            <div class="chat">
+                                <div class="chat-info">
+                                    <span class="time">PM 2:04</span>
+                                </div>
+                                <div class="chat-box">
+                                    일정을 변경하고 싶어요.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //사용자 메세지 -->
+
+                    </div>
+                    <div class="msg-inp">
+                        <input type="text" name="" class="inp" placeholder="메세지를 입력하세요." title="메세지 입력">
+                        <!-- [D]: .btn-send에 .active 추가시 활성화 -->
+                        <button class="btn-send">전송</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

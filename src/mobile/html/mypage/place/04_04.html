@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="lend">
+                <div class="sub-title">
+                    <h2 class="t-title1">공간 공유하기</h2>
+                </div>
+                <a href="#" class="account-box">정산 예정 금액
+                    <span class="cost">2,650,000 원</span>
+                </a>
+                <div class="tab-title">
+                    <a href="#">공간 관리</a>
+                    <a href="#">공유 관리</a>
+                    <a href="#" class="on">예약 관리</a>
+                </div>
+
+                <p class="not-msg">예약 내역이 없어요</p>
+
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {});
+    </script>
+</body>
+
+</html>

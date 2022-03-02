@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('./inc/_head.html',{ "title": "| 기본 가이드" })
+    <link rel="stylesheet" href="/guide/css/prism.css">
+    <script src="/guide/js/prism.js"></script>
+</head>
+
+
+<body>
+    <div id="wrap">
+
+        @include('./inc/_component-box.html')
+
+        <div class="box">
+            <h3 class="compo-title">퍼블리싱 정의</h3>
+            <ol class="guide-list">
+                <li><strong>인코딩 :</strong> utf-8</li>
+                <li><strong>dtd :</strong> HTML5</li>
+                <li><strong>크로스 브라우징</strong> (width: 360~)
+                    <ul>
+                        <li><strong>Android :</strong> 최신 Android OS ,Galaxy S4 , Chrome</li>
+                        <li><strong>IOS :</strong> 최신 IOS , 기본 브라우저(safari) , Chrome App</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="box">
+            <h3 class="compo-title">css 구분</h3>
+            <h4 class="sub-title">공통</h4>
+            <ul class="guide-list">
+                <li><strong>common.css :</strong> mobile, pc 공통 css (font, normalize, slider)</li>
+            </ul>
+
+            <h4 class="sub-title">일반</h4>
+            <ul class="guide-list">
+                <li><strong>basic.css :</strong> 모바일 공통 css</li>
+                <li><strong>main.css :</strong> 메인 css</li>
+                <li><strong>detail.css :</strong> 상세 css</li>
+                <li><strong>login.css :</strong> 로그인 css</li>
+                <li><strong>search.css :</strong> 검색 css</li>
+                <li><strong>mypage.css :</strong> 마이페이지 css</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3 class="compo-title">스크립트 Ver.</h3>
+            <ul class="guide-list">
+                <li>Jquery ver : v3.3.1</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3 class="compo-title">주의사항</h3>
+            <ul class="guide-list">
+                <li>&lt;label for=""&gt;와 input, select의 id="" 값은 매칭시켜 주세요.
+                    <pre><code class="language-markup">
+&lt;!-- [D]: label for="" 값과 input id="" 값은 매칭시켜 주세요. -->
+&lt;label for="inp01">타이틀&lt;/label>
+&lt;input type="text" name="" id="inp01" class="inp">
+
+&lt;div class="select-box label-type">
+    &lt;!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+    &lt;label for="sel01">수강완료&lt;/label>
+    &lt;select name="" id="sel01">
+        &lt;option value="" selected>인기순&lt;/option>
+        &lt;option value="">최신순&lt;/option>
+    &lt;/select>
+&lt;/div>
+                    </code></pre>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

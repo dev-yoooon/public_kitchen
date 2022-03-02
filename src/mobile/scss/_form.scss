@@ -1,0 +1,1086 @@
+input[type=file],
+input[type=checkbox],
+input[type=radio] {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0.1px;
+    height: 0.1px;
+}
+
+input[type=file] {
+    opacity: 0;
+}
+
+%form-pse {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    // transform: translateY(-50%);
+}
+
+*::-webkit-input-placeholder {
+    color: $gray-b7;
+    line-height: 1.4;
+}
+
+.error {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: $point-color;
+    @include font(400, 13px);
+}
+
+
+.radio-box {
+    display: inline-block;
+    position: relative;
+    margin-left: 18px;
+    padding-bottom: 10px;
+
+    &:nth-of-type(1) {
+        margin-left: 0;
+    }
+
+    @at-root .inp-tit+& {
+        margin-left: 0;
+    }
+
+
+    &.block {
+        display: block;
+        margin-left: 0;
+    }
+
+    label {
+        position: relative;
+        display: block;
+        padding-left: 25px;
+        @include font(400, 16px);
+        color: rgba(45, 45, 45, .65);
+
+        &:before {
+            @extend %form-pse;
+            box-sizing: border-box;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid $gray-b7;
+            background: $white;
+        }
+
+    }
+
+    input:checked {
+        &+label {
+            font-weight: 600;
+            color: rgba(45, 45, 45, 1);
+
+            &:before {
+                background: $point-color;
+                border: 0;
+            }
+
+            &:after {
+                @extend %form-pse;
+                width: 6px;
+                height: 6px;
+                left: 6px;
+                border-radius: 50%;
+                background: $white;
+                top: 50%;
+                margin-top: 1px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.check-box {
+    display: inline-block;
+    position: relative;
+    margin-left: 23px;
+
+    &:nth-of-type(1) {
+        margin-left: 0;
+    }
+
+    &.block {
+        display: block;
+        margin-left: 0;
+    }
+
+    label {
+        position: relative;
+        display: block;
+        padding-left: 25px;
+        @include font(400, 16px);
+        color: $gray-83;
+
+        &:before {
+            @extend %form-pse;
+            box-sizing: border-box;
+            width: 16px;
+            height: 16px;
+            background: url(../img/mypage/bg-checkbox.png) no-repeat 0 0 / auto 100%;
+        }
+
+    }
+
+    input:checked {
+        &+label {
+            font-weight: 600;
+            color: $basic-color;
+
+            &:before {
+                background-position: 100% 0;
+
+                @at-root .bg-grey & {
+                    background-position: 100% 0;
+                }
+            }
+
+        }
+    }
+
+    &_tag {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 33.33%;
+        padding: 5px;
+
+        label {
+            display: block;
+            box-sizing: border-box;
+            height: 41px;
+            padding: 0 5px;
+            border-radius: 40px;
+            background: $white;
+            font-size: 15px;
+            line-height: 41px;
+            text-align: center;
+            color: $gray-b7;
+            white-space: nowrap;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        input:checked {
+            &+label {
+                background: $point-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.check-tag {
+    margin: -5px -5px 0;
+    font-size: 0;
+}
+
+.text-area {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #C5C5C5;
+    @include font(200, 16px);
+
+    &-type2 {
+        resize: none;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px;
+        background: $white;
+        border: 2px solid $white;
+        font-size: 15px;
+        color: $gray-2e;
+
+        // &::placeholder {
+        //     color: transparent;
+        // }
+
+        &:focus{
+            border-color: $point-color;
+        }
+
+        &+.placeholder {
+            display: block;
+            overflow: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: 14px;
+            @include font(200, 15px);
+            color: $gray-b7;
+            line-height: 1.5;
+        }
+    }
+
+    &-type3 {
+        resize: none;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px;
+        background: $gray-f6;
+        font-size: 15px;
+        color: $gray-2e;
+    }
+
+}
+
+.form-select {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 0 14px;
+    background: $gray-f6 url(../img/mypage/ico-sel_arrow.svg) no-repeat calc(100% - 15px) 50%;
+    @include font(400, 15px);
+    color: $gray-b7;
+    // line-height: 52px;
+
+    &.active {
+        color: $gray-2e;
+    }
+
+    &-type2 {
+        @extend .form-select;
+        background-image: url(../img/mypage/ico-sel_arrow-type2.png);
+        background-size: 18px auto;
+        background-color: $white;
+    }
+
+}
+
+.inp {
+    @extend .form-select;
+    padding: 0 12px;
+    border: 2px solid $gray-f6;
+    background: none;
+    background-color: $gray-f6;
+    line-height: 1;
+    color: $gray-2e;
+
+    &:focus:not(:read-only) {
+        border: 2px solid $point-color;
+
+        &+.btn-add {
+            background-image: url(../img/mypage/ico-file-add_on.png);
+        }
+    }
+
+    @at-root .inp-bundle & {
+        padding-right: 30px;
+    }
+
+    &:not(:placeholder-shown)~.val-type {
+        color: $gray-2e;
+    }
+
+    @at-root .inner-tit & {
+
+        &~label {
+            position: absolute;
+            left: 14px;
+            top: 11px;
+            font-size: 0;
+            color: #B7B7B7;
+        }
+
+        &:not(:placeholder-shown) {
+            padding-top: 18px;
+            font-size: 15px;
+
+            &~label {
+                font-size: 10px;
+                // transition: all .25s;
+            }
+        }
+
+        // &[type=password] {
+        //     &:not(:placeholder-shown) {
+        //         &~label {
+        //             right: 14px;
+
+        //             &:after {
+        //                 position: absolute;
+        //                 top: 5px;
+        //                 right: 6px;
+        //                 display: block;
+        //                 width: 25px;
+        //                 height: 19px;
+        //                 background: url(../img/login/ico-login_pass.png) no-repeat 0 0/25px auto;
+        //                 content: '';
+
+        //                 @at-root .active#{&} {
+        //                     display: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+
+    &-mt {
+        margin-top: 8px;
+
+        &2 {
+            margin-top: 12px;
+        }
+    }
+
+    &-wrap {
+        display: block;
+        position: relative;
+        margin-top: 30px;
+        font-weight: 400;
+
+        &.inner-tit {
+            position: relative;
+            margin-top: 8px;
+
+            &.active {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 16px;
+                    right: 16px;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../img/login/ico-login_check.svg) no-repeat 0 0 / auto 100%;
+                }
+            }
+
+            &:nth-of-type(1) {
+                margin-top: 30px;
+            }
+        }
+
+        .inner {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+        }
+
+        .btn-add {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 14px;
+            background: $white url(../img/mypage/ico-file_add.png) no-repeat 50%/20px auto;
+            transform: translateY(-50%);
+
+            @media (max-width: 359px) {
+                width: 30px;
+                background-position-x: 10px;
+            }
+
+        }
+
+        &.active {
+            .inp-tit {
+                .tit-right {
+                    .active {
+                        color: inherit;
+                    }
+                }
+            }
+
+            &:after {
+                @extend .inner-tit.active:after;
+                top: 45px;
+            }
+        }
+    }
+
+    &-tit {
+        display: block;
+        margin-bottom: 10px;
+        @include font(600, 14px);
+        color: $gray-83;
+
+        @at-root .bg-grey & {
+            color: $gray-83;
+        }
+
+        @at-root .inp-inner & {
+            margin-top: 30px;
+            font-weight: 200;
+        }
+
+        dt {
+            display: inline-block;
+        }
+
+        dd {
+            display: inline-block;
+            position: relative;
+            margin-left: 5px;
+            padding-left: 8px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: -2px;
+                width: 1px;
+                height: 12px;
+                background: $gray-83;
+            }
+
+        }
+
+        small {
+            padding-left: 8px;
+            @include font(400, 12px);
+            color: #585858;
+
+            &.point {
+                color: $gray-83;
+            }
+        }
+
+        .tit-right {
+            display: inline-block;
+            float: right;
+            color: #7F7F7F;
+            font-size: 14px;
+            font-weight: 400;
+
+            &.check-box {
+                label {
+                    font-size: 14px;
+                    padding-left: 22px;
+
+                    &:before {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+
+            .active {
+                color: $point-color;
+            }
+        }
+    }
+
+    &-txt {
+        font-size: 15px;
+        line-height: 1.5;
+        color: $gray-2e;
+    }
+
+
+    &-type2 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 50px;
+        padding: 0 12px;
+        background: $white;
+        border: 2px solid $white;
+        font-size: 15px;
+
+        @at-root input#{&}:read-only {
+            background: rgba(255, 255, 255, .6);
+            border: 0;
+        }
+
+        &:focus:not(:read-only) {
+            @extend .inp:focus;
+        }
+
+        &.attach {
+            display: block;
+            line-height: 50px;
+            padding-right: 30px;
+            color: $gray-b7;
+            background: $white url(../img/mypage/ico-file_add.png) no-repeat calc(100% - 12px) 50%/20px auto;
+        }
+
+        &.active {
+            color: $gray-2e;
+        }
+    }
+
+
+    &-search {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #9E9E9E;
+        font-size: 20px;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            border-color: $point-color;
+        }
+
+        &:not(:placeholder-shown)~.inp-search_del {
+            display: block;
+        }
+
+        &_del {
+            display: none;
+            position: absolute;
+            right: -4px;
+            bottom: 15px;
+            width: 18px;
+            height: 18px;
+            background: url(../img/ico-search_del.png) no-repeat 0 0 / 100% auto;
+        }
+    }
+
+
+    &-inner {
+        display: block;
+        overflow: auto;
+        white-space: nowrap;
+        font-size: 0;
+
+        &.box {
+            padding: 14px 14px 30px;
+            background: $white;
+            white-space: normal;
+        }
+
+        .desc {
+            @include font(200, 15px);
+            line-height: 22px;
+            color: #B7B7B7;
+        }
+
+        .income {
+            &-tooltip {
+                position: relative;
+
+                .ico-tooltip {
+                    &.on {
+                        z-index: 4;
+                    }
+                }
+
+                .tip {
+                    z-index: 3;
+                    left: 5px;
+                    right: 5px;
+                    @include font(200, 13px);
+                    color: $gray-2e;
+                }
+            }
+
+        }
+
+    }
+
+    &-file-wrap {
+        overflow: hidden;
+        position: relative;
+
+        img {
+            position: absolute;
+            z-index: 1;
+            max-width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        video {
+            @extend img;
+        }
+
+        .btn-modify {
+            position: absolute;
+            z-index: 2;
+            top: 16px;
+            right: 15px;
+            opacity: 0;
+            visibility: hidden;
+
+            &.open {
+                opacity: 1;
+                visibility: visible;
+                transition: all .25s ease-in-out;
+            }
+
+            .ico-modify {
+                display: block;
+                width: 34px;
+                height: 34px;
+                background: url(../img/mypage/ico-modify.png) no-repeat 0 0/100% auto;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+            }
+
+            .btn-list {
+                overflow: hidden;
+                position: absolute;
+                right: 0;
+                top: 32px;
+                width: 0;
+                min-width: 0;
+                height: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .33);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .25s ease-in-out;
+
+                &.open {
+                    width: auto;
+                    min-width: 90px;
+                    height: 72px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                a {
+                    display: block;
+                    padding: 0 13px;
+                    border-top: 1px solid #E6E6E6;
+                    background: $white;
+                    font-size: 14px;
+                    line-height: 36px;
+                    color: #454545;
+
+                    &:first-child {
+                        border-top: 0;
+                    }
+                }
+
+            }
+        }
+
+        &.small {
+            display: inline-block;
+            width: 30.33%;
+            margin-left: 3%;
+
+            .inp-file {
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/mypage/ico-file_add.png) no-repeat 0 0/100% auto;
+                }
+            }
+
+            .btn-del {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .3) url(../img/mypage/btn-close_white.png) no-repeat 50% / 20px auto;
+
+            }
+        }
+    }
+
+    &-file {
+        display: block;
+        overflow: hidden;
+        box-sizing: border-box;
+        width: 100%;
+        background: $white;
+        transform: translateZ(0);
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+
+
+
+        &.land {
+            &:before {
+                padding-top: 63%;
+                transform: translateZ(0);
+            }
+        }
+
+        &.dot {
+            border: 1px dashed #7B7B7B;
+        }
+
+        &.disabled {
+
+            &:before {
+                position: relative;
+                z-index: 2;
+                background: $basic-color;
+                opacity: .2;
+            }
+
+            &:after {
+                opacity: .2;
+            }
+        }
+
+        .text-add {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            color: $gray-83;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url(../img/mypage/ico-file_add.png) no-repeat 0 0/100% auto;
+                position: static;
+                margin: 0 auto 8px;
+            }
+        }
+
+    }
+
+    &-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background: url(../img/cal-month_arrow.png) no-repeat 50%/5px auto;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &-bundle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+
+        .btn-form {
+            max-width: 118px;
+            height: 50px;
+            margin-left: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        .val-type {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            color: $gray-83;
+            transform: translateY(-50%);
+
+            &.t-num {
+                font-size: 15px;
+                color: $gray-b7;
+            }
+
+            &.t-ko {
+                font-size: 12px;
+            }
+        }
+
+        .bull {
+            &.type1 {
+                padding: 0 5px;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 2px;
+                    border-radius: 2px;
+                    background: $gray-b7;
+                    vertical-align: middle;
+                }
+
+            }
+
+            &.type2 {
+                padding: 0 8px;
+
+                &::before {
+                    content: '@';
+                    display: inline-block;
+                    color: $gray-b7;
+                }
+
+                &+input {
+                    width: 140%;
+                }
+            }
+        }
+
+        .form-select-type2 {
+            margin-left: 9px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+    }
+
+    &-card {
+        position: relative;
+        margin-top: 30px;
+        background: $white;
+
+        &+.inp-card {
+            margin-top: 20px;
+        }
+
+        @at-root .inp-tit+& {
+            margin-top: 0;
+        }
+
+        .dim {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 1;
+            top: 52px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(135, 135, 135, .7);
+            @include font(600, 18px);
+            color: $white;
+        }
+
+        .card-tit {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: relative;
+            height: 53px;
+            padding: 0 18px;
+            background: $gray-5b;
+            font-size: 16px;
+            line-height: 52px;
+            color: $white;
+
+            .btn-close {
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url(../img/mypage/btn-close_white.png) no-repeat 50% / 20px auto;
+            }
+
+            .btn-add {
+                @extend .btn-close;
+                background-image: url(../img/mypage/btn-add_white.png);
+                background-size: 100% auto;
+            }
+        }
+
+
+        .inp {
+            &-wrap {
+                margin-top: 0;
+                padding: 18px 18px 30px;
+                border-top: 1px solid $gray-ea;
+
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+
+            &-tit {
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+
+            &-bundle {
+                margin-top: 6px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            &:read-only {
+                color: $basic-color;
+
+                &:focus {
+                    border-color: $gray-f6;
+                }
+            }
+
+        }
+
+        .check-box {
+            &_tag {
+                display: block;
+                width: 100%;
+                padding: 0;
+                margin-top: 6px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                label {
+                    border: 1px solid $gray-b7;
+                    color: $gray-2e;
+                    font-weight: 400;
+
+                    &.active {
+                        background: $point-color;
+                    }
+                }
+
+                input {
+                    &:checked~label {
+                        border-color: $point-color;
+                    }
+
+                    &:disabled~label {
+                        background: $gray-d9;
+                        border-color: $gray-d9;
+                        color: $white;
+
+                        &.active {
+                            background: $point-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .sel-tit {
+            min-width: 72px;
+            font-size: 15px;
+            color: $gray-2e;
+        }
+
+    }
+}
+
+.form-select-list {
+    padding: 15px 18px;
+    background: $white;
+
+    li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 8px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .sel-tit {
+            @include font(400, 15px);
+            margin-right: 14px;
+            width: 100%;
+            max-width: 104px;
+        }
+
+        .form-select {
+            width: calc(100% - 104px);
+            padding: 0 14px;
+            background-position: calc(100% - 14px) 50%;
+
+            span {
+                @include font(400, 14px);
+            }
+
+        }
+    }
+
+}
+
+.increment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    color: $gray-b7;
+
+    .inp-num {
+        display: inline-block;
+        width: 88px;
+        color: $gray-2e;
+        text-align: center;
+    }
+
+    .btn-wrap {
+        [class^=btn-] {
+            width: 28px;
+            height: 28px;
+            background: url(../img/mypage/ico-people-num.png) no-repeat 0 0/56px auto;
+        }
+
+        .btn-increment {
+            background-position: 100% 0;
+        }
+    }
+
+    &.active {
+        border-color: $point-color;
+
+        .btn-decrement {
+            background-position: 0 100%;
+
+            &.disabled {
+                background-position: 0 0;
+            }
+        }
+
+        .btn-increment {
+            background-position: 100% 100%;
+
+            &.disabled {
+                background-position: 100% 0;
+            }
+        }
+
+    }
+}
+
+@media only all and (min-width:320px) and (max-width:359px) {
+    .radio-box {
+        margin-left: 6px;
+    }
+}

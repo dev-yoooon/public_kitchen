@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 리스트</title>
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/guide/css/basic.css">
+    <script src="/common/js/plugin.js"></script>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <style>
+        body {
+            font-weight: 400
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="guide-list-content">
+
+        <header class="header">
+            <h1 class="logo"><img src="/common/img/logo.svg" alt=""></h1>
+            <div class="mode">
+                <a href="/?type=pc">현황판</a>
+            </div>
+        </header>
+        <div class="content">
+            <h2 class="subject">PC</h2>
+            <p class="alert">
+                <span class="date">18.12.04</span>
+                <span>전체적으로 스타일이 변경되었습니다: css 파일 업데이트 부탁드립니다. 이 외에 마크업 변경 사항은 각 항목별로 기재했습니다. <br />
+            Noto Sans 폰트 파일이 변경되었습니다: 폰트 파일을 교체해주세요.</span>
+            </p>
+            <!--ul class="component box">
+        <li><a href="/guide/pc/guide.html">basic guide</a></li>
+        <li><a href="/guide/pc/js-guide.html">js guide</a></li>
+        <li><a href="/guide/pc/form.html">form</a></li>
+        <li><a href="/guide/pc/button.html">button</a></li>
+        <li><a href="/guide/pc/typo.html">typo</a></li>
+        <li><a href="/guide/pc/list.html">list</a></li>
+        <li><a href="/guide/pc/component.html">component</a></li>
+    </ul-->
+            <div class="box">
+                <h3 class="compo-title">메인 비주얼</h3>
+
+                <!-- main visual -->
+                <div class="swiper-container kivi full-box">
+                    <div class="swiper-wrapper">
+                        <!-- loop -->
+                        <div class="swiper-slide"><a href="#"><img src="/mobile/img/@temp/img-class_visual01.png" alt="" /></a></div>
+                        <!-- //loop -->
+                        <div class="swiper-slide"><a href="#"><img src="/mobile/img/@temp/img-class_visual02.png" alt="" /></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="/mobile/img/@temp/img-class_visual03.png" alt="" /></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="/mobile/img/@temp/img-class_visual04.png" alt="" /></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //main visual -->
+
+                <hr>
+
+                <!-- img visual -->
+                <div class="swiper-container paging full-box">
+                    <div class="swiper-wrapper">
+                        <!-- loop -->
+                        <div class="swiper-slide"><img src="/mobile/img/@temp/img-place_ex.png" alt="" /></div>
+                        <!-- //loop -->
+                        <div class="swiper-slide"><img src="/mobile/img/@temp/img-place_ex.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="/mobile/img/@temp/img-place_ex.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="/mobile/img/@temp/img-place_ex.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //img visual -->
+            </div>
+            <div class="box">
+                <h3 class="compo-title">스크롤 리스트</h3>
+
+                <div class="list-scroll full-box">
+                    <ul>
+                        <!-- loop -->
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-similar01.png" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>서울시 강남구</span>
+                                        <span>09월 - 10월</span>
+                                        <span>김수아</span>
+                                    </div>
+                                    <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-similar02.png" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>서울시 강남구</span>
+                                        <span>09월 - 10월</span>
+                                        <span>김수아</span>
+                                    </div>
+                                    <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-similar02.png" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>서울시 강남구</span>
+                                        <span>09월 - 10월</span>
+                                        <span>김수아</span>
+                                    </div>
+                                    <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="box">
+                <h3 class="compo-title">이미지 리스트</h3>
+
+                <div class="list-mypage">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="list-num"><mark>No.</mark>1588296423</div>
+                                <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                    <div class="list-content">
+                                        <!-- [D]: 두줄 말줄임인 경우 -->
+                                        <strong class="list-tit multi-line2">두줄 말줄임인 경우 multi-line2 클래스를 사용합니다.</strong>
+                                        <div class="text-info">
+                                            <span>18.10.27 (토)</span>
+                                            <span>09:00 - 13:00</span>
+                                        </div>
+                                        <div class="list-status"><span>예약신청</span><i class="ico-more_arrow"></i></div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="list-num"><mark>No.</mark>1588296423</div>
+                                <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <div class="text-info">
+                                            <span>18.10.27 (토)</span>
+                                            <span>09:00 - 13:00</span>
+                                        </div>
+                                        <div class="list-status"><span>예약신청</span><i class="ico-more_arrow"></i></div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+
+                <div class="list-mypage">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                    <div class="list-content">
+                                        <div class="list-num"><mark>No.</mark>1588296423</div>
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                    <div class="list-content">
+                                        <div class="list-num"><mark>No.</mark>1588296423</div>
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <p class="list-desc">18.10.27 (토) | 09:00 - 13:00</p>
+                                        <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li>
+                            <div class="btn-flex">
+                                <span class="check-share">
+                                <input type="checkbox" name="" id="share01" checked>
+                                <label for="share01">공유</label>
+                            </span>
+                                <div class="btn-normal-wrap">
+                                    <a href="#" class="btn-normal">수정</a>
+                                    <a href="#" class="btn-normal">삭제</a>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                    <div class="list-content">
+                                        <div class="list-num"><mark>No.</mark>1588296423</div>
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <p class="list-desc">18.10.27 (토) | 09:00 - 13:00</p>
+                                        <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="list-mypage type2">
+                    <ul>
+                        <!-- loop -->
+                        <!-- [D]: li에 .on이 붙으면 활성화됩니다. -->
+                        <li class="on">
+                            <a href="#">
+                                <figure><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">마리 앤 제이</strong>
+                                        <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">마리 앤 제이</strong>
+                                        <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="list-mypage check">
+                    <ul>
+                        <!-- 클래스 -->
+                        <li>
+                            <figure>
+                                <img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                                <div class="list-check hidden">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="listChk01">
+                                    <label for="listChk01"><span class="blind">선택</span></label>
+                                </div>
+                            </figure>
+                            <a href="#">
+                                <div class="list-content">
+                                    <strong class="list-tit">쇠고기 버섯 볶음</strong>
+                                    <div class="text-info">
+                                        <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                    </div>
+                                    <div class="list-status"><span>진행중</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- //클래스 -->
+                        <!-- 선생님/공간 -->
+                        <li>
+                            <figure>
+                                <img src="/mobile/img/@temp/img-mypage_list02.jpg" alt="">
+                                <div class="list-check">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="listChk02">
+                                    <label for="listChk02"><span class="blind">선택</span></label>
+                                </div>
+                            </figure>
+                            <a href="#">
+                                <div class="list-content">
+                                    <strong class="list-tit">쇠고기 버섯 볶음</strong>
+                                    <div class="text-info"><span>서울시 중랑구</span> </div>
+                                    <div class="list-status"><span>한식</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- //선생님/공간 -->
+                    </ul>
+                </div>
+
+            </div>
+            <!-- //box -->
+
+            <!-- box -->
+            <div class="box">
+                <h3 class="compo-title">텍스트 리스트</h3>
+
+                <div class="list-text">
+                    <div class="select-box al-r">
+                        <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                        <label for="sel01">전체</label>
+                        <select name="" id="sel01">
+                            <option value="">전체</option>
+                            <option value="">클래스</option>
+                            <option value="">수강완료</option>
+                        </select>
+                    </div>
+                    <ul class="full-box">
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>클래스</span>
+                                    <span>수강완료</span>
+                                </div>
+                                <strong class="tit">전복 간장 조림 만들기</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">+20<em class="t-ko">원</em><small>적립</small></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>클래스</span>
+                                    <span>수강완료</span>
+                                </div>
+                                <strong class="tit">전복 간장 조림 만들기</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">+20<em class="t-ko">원</em><small>적립</small></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //box -->
+
+            <!-- box -->
+            <div class="box">
+                <h3 class="compo-title">알림/메세지</h3>
+
+                <div class="list-msg">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/mypage/img-public_msg.png" alt=""> </figure>
+                                <div class="list-content">
+                                    <strong class="list-tit">공공의 주방</strong>
+                                    <p class="list-msg">공공의 주방을 사랑해주시는 선생님들 안녕하세요. 공간대여…</p>
+                                    <div class="al-r">
+                                        <span class="time">PM 2:04</span>
+                                        <span class="bull">4</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/mypage/img-notice_msg.png" alt=""> </figure>
+                                <div class="list-content">
+                                    <strong class="list-tit">광고</strong>
+                                    <p class="list-msg">12월을 맞아 제철 요리를 클래스에 등록해보시는건 어떨까…</p>
+                                    <div class="al-r">
+                                        <span class="time">18.10.05</span>
+                                        <span class="bull">14</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/mypage/img-alert_msg.png" alt=""> </figure>
+                                <div class="list-content">
+                                    <strong class="list-tit">요리배우기</strong>
+                                    <p class="list-msg">신청하신 클래스(클래스명)가 예약 확정되었습니다. 나의 예…</p>
+                                    <div class="al-r">
+                                        <span class="time">18.10.05</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/mobile/img/mypage/img-alert_msg.png" alt=""> </figure>
+                                <!-- [D]: 메세지를 확인했을 때 .list-content에 .read추가 -->
+                                <div class="list-content read">
+                                    <strong class="list-tit">요리배우기</strong>
+                                    <p class="list-msg">신청하신 클래스(클래스명)가 예약 확정되었습니다. 나의 예…</p>
+                                    <div class="al-r">
+                                        <span class="time">18.10.05</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $('.swiper-container').slider({
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                })
+
+            });
+        </script>
+</body>
+
+</html>

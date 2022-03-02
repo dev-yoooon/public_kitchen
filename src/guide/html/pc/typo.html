@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('./inc/_head.html',{ "title": "| 타이포" })
+</head>
+
+<body>
+    <div id="wrap">
+
+        @include('./inc/_component-box.html')
+
+        <div class="box">
+            <h3 class="compo-title">Main Typo</h3>
+
+            <p class="t-title1">폰트 Noto/24px/800 (.t-title1)</p>
+            <p class="t-title2">폰트 Noto/22px/600 (.t-title2)</p>
+            <p class="t-title3">폰트 Noto/28px/600 (.t-title3)</p>
+            <p class="t-title4">폰트 Noto/18px/600 (.t-title4)</p>
+            <p class="t-desc1">폰트 Noto/16px/400 (.t-desc1)</p>
+            <p class="t-desc2">폰트 Noto/20px/200 (.t-desc2)</p>
+            <p class="t-desc3">폰트 Noto/16px/400 (.t-desc3)</p>
+            <p class="t-ko">Noto 폰트로만 변경 (.t-ko) </p>
+            <p class="t-num">font style only Roboto (.t-num) </p>
+
+        </div>
+
+        <div class="box">
+            <h3 class="compo-title">Text Style</h3>
+
+            <span class="price">
+                <em>₩</em>13,500
+                <span class="price-origin">₩15,000</span>
+                <span class="price-dc">10%</span>
+            </span>
+
+            <hr>
+
+            <div class="list-content">
+                <!-- [D]: 두줄 말줄임인 경우 -->
+                <strong class="list-tit multi-line2">두줄 말줄임인 경우 multi-line2 클래스를 사용합니다.</strong>
+                <div class="text-info t-num">
+                    <span>18.10.27 (<em class="t-ko">토</em>)</span>
+                    <span>09:00 - 13:00</span>
+                </div>
+                <div class="list-status"><span>예약신청</span><i class="ico-more_arrow"></i></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

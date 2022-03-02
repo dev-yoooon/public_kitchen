@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">공간 공유하기</p>
+                    <h1>공간 <br />공유하기</h1>
+                    <p class="desc">공간을 등록하기 전에 가이드라인과 <br />운영원칙을 확인해주세요</p>
+                    <a href="#" class="desc-small pop-open" data-pop="guide">가이드라인 확인하기<i class="ico-tooltip"></i></a>
+                </div>
+            </section>
+            <section>
+                <div class="tab-area full-box">
+                    <div class="box-type1 bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit">선택된 공간</span>
+                                <div class="list-mypage type2">
+                                    <!-- [D]: 수업 공간 리스트가 존재할 경우 ul에 .hidden을 삭제할 경우 노출됩니다.  -->
+                                    <ul>
+                                        <!-- loop -->
+                                        <!-- [D]: li에 .on이 붙으면 활성화됩니다. -->
+                                        <li class="on">
+                                            <a href="#">
+                                                <figure><img src="../../img/@temp/img-mypage_list02.jpg" alt="">
+                                                    <div class="list-content">
+                                                        <strong class="list-tit">마리 앤 제이</strong>
+                                                        <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                                                    </div>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <!-- //loop -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="inp-wrap dp-ib">
+                                <span class="inp-tit full">일정 선택<small class="point">*중복 선택 가능</small></span>
+                                <div class="half">
+                                    @include('../../inc/_cal.html', {
+                                    "year": "2018년",
+                                    "month": "10",
+                                    "prev": "",
+                                    "next": "hidden"
+                                    })
+                                </div>
+                                <div class="half">
+                                    @include('../../inc/_cal.html', {
+                                    "year": "2018년",
+                                    "month": "11",
+                                    "prev": "hidden",
+                                    "next": ""
+                                    })
+                                </div>
+                            </div>
+                            <div class="inp-card">
+                                <strong class="card-tit">10.25 (목) <a href="#" class="btn-close"><span class="blind">닫기</span></a></strong>
+
+                                <!-- 체크박스 타입 -->
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">공간공유 시간대 선택</span>
+                                    <div class="tag-col-3">
+                                        <span class="check-box_tag">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="chk04">
+                                            <label for="chk04">오전(10:00-14:00)</label>
+                                        </span>
+
+                                        <span class="check-box_tag">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="chk05">
+                                            <label for="chk05">오후(14:00-18:00)</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                        </span>
+
+                                        <span class="check-box_tag">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="chk06">
+                                            <label for="chk06">저녁(18:00-22:00)</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //체크박스 타입 -->
+                            </div>
+
+                            <div class="btn-form-wrap">
+                                <button class="btn-form normal none-border">임시저장</button>
+                                <button class="btn-form active">완료</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+        <div class="pop-wrap guide" id="guide">
+            <div class="pop-inner">
+                <h2 class="t-title1">가이드라인 운영원칙</h2>
+                <p>가이드 확인 후 매력적인 공간 공유를 등록해 주세요</p>
+                <div class="pop-cont">
+                    <dl>
+                        <!-- [18.12.31] 가이드라인 수정  -->
+                        <dt>운영원칙</dt>
+                        <dd>
+                            <ul class="table">
+                                <li class="full">
+                                    <p class="t-title3">공간 공유 시 예상 수익 금액(4시간 기준)</p>
+                                    <table class="col3">
+                                        <thead>
+                                            <tr>
+                                                <th>인원수</th>
+                                                <th>쿠킹/베이킹전문 스튜디오</th>
+                                                <th>요리시설</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">6명 이하 이용시</td>
+                                                <td>80,000원</td>
+                                                <td>보유</td>
+                                            </tr>
+                                            <tr>
+                                                <td>60,000원</td>
+                                                <td>미보유</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">7명 이상 이용시</td>
+                                                <td>110,000원</td>
+                                                <td>보유</td>
+                                            </tr>
+                                            <tr>
+                                                <td>90,000원</td>
+                                                <td>미보유</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="full">
+                                    <p class="t-title3">취소보상금 제도</p>
+                                    <p class="desc">공공의 주방에서는 선생님이 클래스를 취소할 경우 호스트님의 공간 공유를 보상해주는 취소보상금 제도를 제공하고 있습니다</p>
+                                </li>
+                                <li class="full">
+                                    <p class="t-title3">선생님 클래스 취소 시</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>호스트 보상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>공간대여 금액의 50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전</td>
+                                                <td>공간대여 금액의 100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전</td>
+                                                <td>공간대여 금액의 100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전</td>
+                                                <td>공간대여 금액의 100%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="full">
+                                    <p class="t-title3">서비스 수수료</p>
+                                    <p class="desc">공공의 주방에서 호스트로 활동 시 클래스 종료 후 정산 수입 금액 중 일부를 수수료로 지불하게 됩니다</p>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>공유일정</dt>
+                        <dd>
+                            <ul>
+                                <li class="full">
+                                    <p class="desc">
+                                        달력에서 원하는 날짜 선택 시 오전/오후/저녁 공유 시간대를 선택할 수 있는 버튼이 노출됩니다<br>
+                                        <span class="example">- 날짜별로 공유를 원하는 시간대를 모두 선택해주시길 바랍니다</span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-place04.jpg" alt="">
+                                    </figure>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </div>
+        @include('../../inc/_footer.html')
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

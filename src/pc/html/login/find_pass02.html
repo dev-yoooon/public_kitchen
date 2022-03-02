@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">@include('../inc/_head.html',{
+    "title": "| 비밀번호 찾기"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="login">
+                <div class="sub-title">
+                    <h2 class="t-title">비밀번호 찾기</h2>
+                    <p class="t-desc"><mark class="active">dfy123@naver.com</mark>으로 <br>임시 비밀번호를 발송하였습니다. <br> 전송된 임시 비밀번호로 로그인해주세요.</p>
+                </div>
+
+                <div class="btn-wrap">
+                    <a href="#" class="btn-form active">다시 로그인하기</a href="#">
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

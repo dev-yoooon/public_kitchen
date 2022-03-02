@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 공통"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="focus-area">
+                <div class="sub-title">
+                    <h2 class="t-title1">핸드폰 번호 변경</h2>
+                </div>
+                <form action="">
+                    <div class="inp-wrap">
+                        <span class="inp-bundle">
+                            <input type="number" class="inp" name="" placeholder="‘ - ’ 빼고 숫자만 입력">
+                            <a href="#" class="btn-form active">인증번호</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                        </span>
+                        <span class="inp-bundle inp-mt">
+                            <input type="text" class="inp" name="" placeholder="인증번호 입력해 주세요">
+                        </span>
+                    </div>
+                    <div class="btn-form-wrap mt-1">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <button class="btn-form active">확인</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

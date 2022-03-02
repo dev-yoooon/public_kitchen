@@ -1,0 +1,185 @@
+.mypage-main {
+    .intro {
+        position: relative;
+        margin-top: 23px;
+        padding-right: 72px;
+        min-height: 72px;
+
+        .t-title {
+            font-size: 24px;
+
+            strong {
+                font-weight: 800;
+                word-break: break-all;
+            }
+        }
+
+        .badge {
+            position: static;
+            margin-top: 7px;
+
+            span {
+                display: inline-block;
+                margin-right: 5px;
+                padding: 4px 7px 2px;
+                border-radius: 22px;
+                @include font(600, 13px);
+                color: $white;
+            }
+
+            .class {
+                background: $point-color;
+            }
+
+            .host {
+                background: #BCB1A3;
+            }
+
+            .teacher {
+                background: #396D90;
+            }
+        }
+    }
+
+    .profile {
+        position: absolute;
+        top: 0;
+        right: 4px;
+    }
+
+    .info {
+        display: flex;
+        margin-top: 50px;
+
+        dl {
+            margin-left: 50px;
+            padding: 0 3px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        dt {
+            @include font(400, 14px);
+            color: $gray-83;
+        }
+
+        dd {
+            @include font(400, 29px);
+        }
+    }
+
+    .point {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 16px;
+        background: rgba(216, 216, 216, .23);
+
+        dl {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 14px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 1px;
+                height: 28px;
+                background: $gray-d9;
+            }
+
+            &:first-child:before {
+                display: none;
+            }
+        }
+
+        dt {
+            font-size: 14px;
+            color: $gray-83;
+        }
+
+        dd {
+            font-size: 17px;
+
+            em {
+                font-weight: 200;
+            }
+
+            .t-ko {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.main-list {
+    margin-top: 30px;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    background: #363636;
+
+    .list-wrap {
+        padding: 22px 0;
+        border-top: 1px solid #4E4E4E;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:last-child {
+            font-size: 22px;
+
+            .title {
+                display: block;
+            }
+        }
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 16px;
+        font-size: 21px;
+        color: $white;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .btn-link {
+            @include font(400, 15px);
+            color: $white;
+        }
+    }
+
+
+
+    .list {
+        margin-top: 17px;
+
+        li {
+            margin-top: 5px;
+            font-weight: 200;
+            line-height: 35px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        a {
+            display: block;
+            color: $gray-d9;
+        }
+    }
+}

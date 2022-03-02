@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 클래스"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/main.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+        <div id="content">
+
+            <section>
+                <!-- 새로운 클래스 -->
+                <div class="list-area">
+                    <h2 class="t-title1">새로운 클래스</h2>
+                    <div class="list-scroll full-box">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <figure>
+                                    <a href="#"><img src="/mobile/img/@temp/img-similar01.png" alt="" /></a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">띄어쓰기 포함 십오글자 이하</strong>
+                                        <p>돼지 갈비찜 하나면 우리집 밥상도 한정식집 부럽지 않아요!</p>
+                                        <div class="text-info">
+                                            <span>데코레이션</span>
+                                            <span>경기도 남양주시</span>
+                                            <span>10월 12회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>35,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <figure>
+                                    <a href="#"><img src="/mobile/img/@temp/img-similar01.png" alt="" /></a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">연포탕</strong>
+                                        <p>가을철 보양 밥상에는 연포탕이 최고의 보양식</p>
+                                        <div class="text-info">
+                                            <span>데코레이션</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 2회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>30,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //새로운 클래스 -->
+
+                <!-- 배너 -->
+                <div class="banner-area full-box">
+                    <a href="#"><img src="/mobile/img/main/bann-class.jpg" alt=""></a>
+                </div>
+                <!-- //배너 -->
+
+                <!-- 클래스 -->
+                <div class="list-area">
+                    <h2 class="t-title1">클래스</h2>
+                    <div class="select">
+
+                        <div class="select-box label-type">
+                            <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                            <!-- [D]: label에 .active 추가하면 활성화 -->
+                            <label for="sel01">최저가순</label>
+                            <select name="" id="sel01">
+                                <option value="" selected>인기순</option>
+                                <option value="">최신순</option>
+                            </select>
+                        </div>
+
+                        <div class="select-box btn-type">
+                            <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                            <!-- [D]: label에 .active 추가하면 활성화 -->
+                            <label for="sel01" class="active">
+                                <span>손님초대</span>
+                                <select name="" id="sel01">
+                                    <option value="테마1">테마1</option>
+                                    <option value="테마2">손님초대</option>
+                                </select>
+                            </label>
+
+                            <label for="sel02">
+                                <span>경기</span>
+                                <select name="" id="sel02">
+                                    <option value="지역1">지역1</option>
+                                    <option value="지역2">지역2</option>
+                                </select>
+                            </label>
+
+                            <label for="sel03">
+                                <span>1개월</span>
+                                <select name="" id="sel03">
+                                    <option value="월별1">월별1</option>
+                                    <option value="월별2">월별2</option>
+                                </select>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="list-default">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb02.jpg" alt="" />
+                                        <span class="badge">
+                                            <i class="badge-new">신규</i>
+                                            <i class="badge-dc">할인</i>
+                                            <i class="badge-end">마감임박</i>
+                                        </span>
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">아욱 된장국</strong>
+                                        <p>고소하게 보글보글 끓인 된장찌개에 채소의 왕 아욱이 듬뿍 들어갔어요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 5회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>13,500
+                                            <span class="price-origin">₩15,000</span>
+                                            <span class="price-dc">10%</span>
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb02.jpg" alt="" />
+                                        <span class="badge">
+                                            <i class="badge-end">마감임박</i>
+                                            <i class="badge-dc">할인</i>
+                                        </span>
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">조랭이 궁중 떡볶이</strong>
+                                        <p>고소하게 보글보글 끓인 된장찌개에 채소의 왕 아욱이 듬뿍 들어갔어요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 5회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>20,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb02.jpg" alt="" />
+                                        <span class="badge">
+                                            <i class="badge-new">신규</i>
+                                            <i class="badge-end">마감임박</i>
+                                            <i class="badge-dc">할인</i>
+                                        </span>
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">조랭이 궁중 떡볶이</strong>
+                                        <p>고소하게 보글보글 끓인 된장찌개에 채소의 왕 아욱이 듬뿍 들어갔어요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 5회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>20,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb02.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">조랭이 궁중 떡볶이</strong>
+                                        <p>고소하게 보글보글 끓인 된장찌개에 채소의 왕 아욱이 듬뿍 들어갔어요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 5회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>20,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb02.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">조랭이 궁중 떡볶이</strong>
+                                        <p>고소하게 보글보글 끓인 된장찌개에 채소의 왕 아욱이 듬뿍 들어갔어요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 5회 가능</span>
+                                        </div>
+                                        <span class="price">
+                                            <em>₩</em>20,000
+                                        </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+
+                        <div class="btn-area">
+                            <!-- [D]: .btn-more에 .hide가 붙으면 사라집니다. -->
+                            <button class="btn-more">더 많은 <strong>클래스</strong>가 궁금하다면?</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //인기 클래스 -->
+
+            </section>
+        </div>
+        @include('../inc/_footer.html')
+    </div>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.btn-more').click(function (e) {
+                e.preventDefault();
+                $(this).addClass('hide');
+            })
+        });
+    </script>
+</body>
+
+</html>

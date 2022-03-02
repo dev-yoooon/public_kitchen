@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 알림"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">알림
+                        <!-- [18.11.22] 수정: 소팅기능 추가 -->
+                        <div class="select-box label-type">
+                            <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                            <!-- [D]: label에 .active 추가하면 활성화 -->
+                            <label for="sel01">전체</label>
+                            <select name="" id="sel01">
+                                <option value="" selected="">전체</option>
+                                <option value="">공지</option>
+                                <option value="">광고</option>
+                                <option value="">요리배우기</option>
+                                <option value="">클래스만들기</option>
+                                <option value="">공간공유하기</option>
+                            </select>
+                        </div>
+                    </h2>
+                </div>
+                <div class="not-msg">
+                    <p class="not-msg-big">받은 알림이 없습니다</p>
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

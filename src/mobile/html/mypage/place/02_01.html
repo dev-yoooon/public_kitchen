@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="lend">
+                <div class="sub-title">
+                    <h2 class="t-title1">공간 공유하기<a href="#" class="oval type2">공간 등록</a></h2>
+                </div>
+                <a href="#" class="account-box">정산 예정 금액
+                    <span class="cost">2,650,000 원</span>
+                </a>
+                <div class="tab-title">
+                    <a href="#" class="on">공간 관리</a>
+                    <a href="#">공유 관리</a>
+                    <a href="#">예약 관리</a>
+                </div>
+                <div class="list-mypage">
+                    <ul>
+                        <li>
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-normal">삭제</a>
+                            </div>
+                            <a href="#">
+                                <!-- [18.12.14] 추가: 공간 디폴트 이미지 추가 -->
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/mypage/img-default_place.png" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">브래드 앤 버터 베이커리 &amp; 쿠킹 스튜디오</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">임시 저장<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- [D]: 임시저장, 승인 거절인 경우 -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-normal">삭제</a>
+                            </div>
+                            <!-- //[D]: 임시저장, 승인 거절인 경우 -->
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list02.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <!-- [D]: 두줄 말줄임인 경우 .multi-line2 추가 -->
+                                        <strong class="list-tit multi-line2">티엠 키친 쥬드로 티엠 키친 쥬드로 티엠 키친 쥬드로 티엠 키친 쥬드로</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">임시 저장<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list03.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">티엠 키친</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">승인대기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-flex">
+                                <span class="check-share">
+                                    <input type="checkbox" name="" id="share01">
+                                    <label for="share01">공유</label>
+                                </span>
+                                <div class="btn-normal-wrap">
+                                    <a href="#" class="btn-normal">수정</a>
+                                    <a href="#" class="btn-normal">삭제</a>
+                                </div>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list04.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">파시다로</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">일정 선택하기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-flex">
+                                <span class="check-share">
+                                    <input type="checkbox" name="" id="share01" checked>
+                                    <label for="share01">공유</label>
+                                </span>
+                                <div class="btn-normal-wrap">
+                                    <a href="#" class="btn-normal">수정</a>
+                                    <a href="#" class="btn-normal">삭제</a>
+                                </div>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list05.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">루체 루다</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">공유중<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-flex">
+                                <span class="check-share">
+                                    <input type="checkbox" name="" id="share01" checked>
+                                    <label for="share01">공유</label>
+                                </span>
+                                <div class="btn-normal-wrap">
+                                    <a href="#" class="btn-normal">수정</a>
+                                    <a href="#" class="btn-normal">삭제</a>
+                                </div>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list06.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">ST 정우남</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">일정 선택하기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- [D]: 임시저장, 승인 거절인 경우 -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-normal">삭제</a>
+                            </div>
+                            <!-- //[D]: 임시저장, 승인 거절인 경우 -->
+                            <a href="#">
+                                <figure>
+                                    <span class="img-wrap"><img src="/mobile/img/@temp/img-place_list07.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                    <div class="list-content">
+                                        <strong class="list-tit multi-line2">봄블룸봄</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">승인거절<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+.footer {
+    display: inline-block;
+    width: 100%;
+    padding: 30px 0;
+    background: rgba(43, 42, 46, .9);
+    vertical-align: top;
+
+    .logo {
+        float: left;
+        padding: 0 80px 90px 0;
+
+        img {
+            width: 110px;
+        }
+    }
+
+    ul {
+        font-size: 0;
+
+        li {
+            display: inline-block;
+
+        }
+    }
+
+    &-privacy {
+        float: left;
+
+        li {
+            position: relative;
+            @include font(200, 14px);
+            margin-left: 17px;
+            line-height: 20px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -9px;
+                top: 3px;
+                width: 1px;
+                height: 14px;
+                background: rgba(255, 255, 255, .1);
+            }
+
+            &:first-child {
+                margin-left: 0;
+                margin-right: 7px;
+                color: $white;
+                @include font(600, 14px);
+
+                &:before,
+                &+ :before {
+                    display: none;
+                }
+            }
+
+
+            a {
+                color: rgba(255, 255, 255, .9);
+            }
+
+            &.last {
+                width: 100%;
+                margin-top: 10px;
+                margin-left: 0;
+                @include font(600, 14px);
+
+                &:before {
+                    display: none;
+                }
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+    }
+
+    .sns {
+        float: right;
+        font-size: 0;
+
+        a {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+
+            &.facebook {
+                background: url("../img/ico-sns_facebook.png") 100% 50% no-repeat;
+                background-size: auto 22px;
+            }
+
+            &.instagram {
+                margin-left: 31px;
+                background: url("../img/ico-sns_instagram.png") 100% 50% no-repeat;
+                background-size: auto 22px;
+            }
+        }
+    }
+
+    &-info {
+        float: left;
+        max-width: 80%;
+        margin-top: 18px;
+        line-height: 22px;
+
+        li {
+            @include font(200, 13px);
+
+        }
+
+        .title {
+            color: rgba(197, 197, 197, .9);
+        }
+
+        .name {
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 16px;
+            color: rgba(255, 255, 255, .9);
+        }
+    }
+
+    &-copy {
+        float: left;
+        margin-bottom: 18px;
+
+        p {
+            margin-top: 4px;
+            @include font(200, 13px);
+            line-height: 19px;
+            color: #c5c5c5;
+            &.copy {
+                margin-top: 20px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, .8);
+            }
+        }
+    }
+
+}
+
+.static {
+
+    .title {
+        @include font(400, 19px);
+    }
+
+    .desc {
+        @include font(200, 18px);
+        line-height: 1.7;
+    }
+
+    .contact {
+        margin-top: 30px;
+
+        li {
+            display: inline-block;
+            margin-left: 62px;
+            @include font(600, 15px);
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            strong {
+                display: inline-block;
+            }
+
+            span {
+                display: inline-block;
+                margin-left: 10px;
+                font-weight: 200;
+            }
+        }
+    }
+
+    .box-type2 {
+        margin-top: 50px;
+    }
+}
+
+.partner {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.terms {
+    margin-top: 25px;
+    line-height: 1.66;
+    word-break: break-all;
+
+    h3 {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        @include font(600, 19px);
+
+        &:nth-of-type(1) {
+            margin-top: 0;
+        }
+    }
+
+    p + h3:nth-of-type(1) {
+        margin-top: 50px;
+    }
+
+    h2 {
+        @extend h3;
+        font-size: 22px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+        td {
+            padding: 0.5em 1em;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            color: #555;
+        }
+        thead {
+            td {
+                font-weight: 600;
+                color: #333;
+            }
+        }
+    }
+
+    ul {
+
+        li {
+            margin-top: 15px;
+            @include font(200, 16px);
+            line-height: 1.8;
+        }
+
+        &.txt-depth02 {
+            li {
+                margin-top: 16px;
+                @include font(200, 16px);
+                line-height: 1.62;
+
+                strong {
+                    display: block;
+                }
+            }
+        }
+
+        &.txt-depth03 {
+            li {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    p {
+        margin-top: 15px;
+        @include font(200, 16px);
+        line-height: 1.8;
+    }
+}

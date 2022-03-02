@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 위시리스트"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">마이페이지</p>
+                    <h1>위시리스트</h1>
+                </div>
+                <div class="tab-title">
+                    <a href="#" class="on">클래스</a>
+                    <a href="#">선생님</a>
+                    <a href="#">공간</a>
+                </div>
+            </section>
+            <section>
+                <div class="tab-area">
+                    <div class="list-mypage">
+                        <div class="not-msg">
+                            <div class="inner">
+                                <p class="heart">클래스 위시리스트가 없어요<br>마음에 드는 클래스를 추가해보세요!</p>
+                                <p class="heart hidden">선생님 위시리스트가 없어요<br>마음에 드는 선생님을 추가해보세요!</p>
+                                <p class="heart hidden">공간 위시리스트가 없어요<br>마음에 드는 공간을 추가해보세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../../inc/_footer.html')
+    </div>
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

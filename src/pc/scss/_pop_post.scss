@@ -1,0 +1,113 @@
+.post {
+
+    .pop-inner {
+        position: relative;
+        padding: 40px 40px 0;
+        text-align: left;
+        min-height: 734px;
+    }
+
+    .pop-cont {
+        box-sizing: border-box;
+        height: 100%;
+        margin-top: 50px;
+
+        .inp {
+            height: 50px;
+            padding: 0 20px;
+            margin-left: 0;
+            border-bottom-color: $gray-f6;
+            font-size: 15px;
+
+            &:focus, &:not(:placeholder-shown) {
+                border-bottom-color: $point-color;
+            }
+
+            &-wrap {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            &-bundle {
+                width: 100%;
+
+                .inp-search_del {
+                    right: 10px;
+                }
+            }
+        }
+
+        .btn-form {
+            max-width: 125px;
+            height: 50px;
+            margin-left: 10px;
+        }
+    }
+
+    .post {
+
+        &-num {
+            margin-top: 43px;
+            @include font(600, 18px);
+        }
+
+        &-result {
+            height: 474px;
+            margin-top: 20px;
+            margin-right:-40px;
+            margin-left:-40px;
+            border-top: 1px solid $gray-ea;
+            overflow-y: scroll;
+            
+            li {
+                padding: 14px 40px;
+                border-bottom: 1px solid $gray-ea;
+
+                &.active{
+                    background:$gray-f6;
+                }
+            }
+
+            a {
+                display: block;
+            }
+
+            dl {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 5px;
+            }
+
+            dt {
+                width: 100%;
+                max-width: 50px;
+                @include font(400, 14px);
+                line-height: 20px;
+                color: $gray-b7;
+            }
+
+            dd {
+                width: 100%;
+                @include font(600, 15px);
+                line-height: 20px;
+                color: $gray-2e;
+            }
+        }
+    }
+
+
+
+
+    .btn-form-floating {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+
+        .btn-form {
+            max-width: none;
+            height: 56px;
+            line-height: 56px;
+        }
+    }
+
+}

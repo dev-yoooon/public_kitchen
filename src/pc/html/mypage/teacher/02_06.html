@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 선생님"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">선생님</p>
+                    <h1>클래스 <br/>만들기</h1>
+                    <p class="desc">클래스 등록을 하기 전에 <br/>가이드라인을 확인해주세요</p>
+                    <a href="#" class="desc-small pop-open" data-pop="guide">가이드라인 확인하기<i class="ico-tooltip"></i></a>
+                </div>
+                <div class="tab-title check">
+                    <!-- [D]:
+                    .active - 입력 완료된 탭
+                    .on - 현재 선택된 탭
+                    .on.active - 수정하기에서 수정 중인 선택된 탭
+                    .dim.active - 수정하기에서 선택되지 않은 탭
+                    -->
+                    <a href="#" class="active">기본정보</a>
+                    <a href="#" class="active">상세소개</a>
+                    <a href="#" class="on">일정/공간</a>
+                </div>
+            </section>
+            <section>
+                <div class="tab-area full-box">
+                    <div class="box-type1 bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit full">수업공간 대여여부</span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="formal" id="place01" checked>
+                                    <label for="place01">공간대여를 원합니다</label>
+                                </span>
+                                <span class="radio-box block">
+                                    <input type="radio" name="formal" id="place02">
+                                    <label for="place02">내 공간을 보유하고 있습니다</label>
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간 테마</span>
+                                <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                <select name="" class="form-select-type2">
+                                    <option value="">요리 스튜디오</option>
+                                    <option value="">선택1</option>
+                                    <option value="">선택2</option>
+                                </select>
+                            </div>
+                            <div class="inp-wrap dp-ib">
+                                <span class="inp-tit full">대여일정 선택<small class="point">*중복 선택 가능</small></span>
+                                <div class="half">
+                                    @include('../../inc/_cal.html', {
+                                        "year": "2018년",
+                                        "month": "10월",
+                                        "prev": "",
+                                        "next": "hidden"
+                                    })
+                                </div>
+                                <div class="half">
+                                    @include('../../inc/_cal.html', {
+                                        "year": "2018년",
+                                        "month": "11월",
+                                        "prev": "hidden",
+                                        "next": ""
+                                    })
+                                </div>
+                            </div>
+
+                            <div class="inp-wrap">
+                                <span class="inp-tit">지역 선택</span>
+                                <div class="inp-bundle">
+                                    <select name="" class="form-select-type2">
+                                        <option value="">시/도</option>
+                                        <option value="">선택1</option>
+                                        <option value="">선택2</option>
+                                    </select>
+                                    <select name="" class="form-select-type2">
+                                        <option value="">시/군/구</option>
+                                        <option value="">선택1</option>
+                                        <option value="">선택2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="btn-form-wrap">
+                                <!-- [D]: .disabled - 비활성화, .active - 활성화 -->
+                                <a class="btn-form disabled full">대여가능한 공간 찾기</a>
+                            </div>
+                            <div class="btn-form-wrap inp-mt">
+                                <button class="btn-form normal none-border">임시저장</button>
+                                <button class="btn-form disabled">다음</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+        <div class="pop-wrap guide" id="guide">
+            <div class="pop-inner">
+                <h2 class="t-title1">가이드라인 운영원칙</h2>
+                <p>가이드 확인 후 매력적인 공간을 등록해 주세요</p>
+                <div class="pop-cont">
+                    <dl>
+                        <dt>기본정보</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <p class="t-title3">클래스 제목</p>
+                                    <p class="desc">
+                                        제목은 간결하고 매력적이게 작성해 보세요<br>
+                                        <span class="example">예시 : 달콤 짭짤 소고기 버섯 볶음 만들기</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="t-title3">클래스 한 줄 설명</p>
+                                    <p class="desc">
+                                        제목에서 적지 못했던 추가 설명을 적어보세요<br>
+                                        <span class="example">예시 : 편의점 혼밥은 그만! 맛있는 한끼를 함께 만들어 보아요</span>
+                                    </p>
+                                </li>
+                                <li class="full">
+                                    <p class="t-title3">해시태그</p>
+                                    <p class="desc">
+                                        많은 사람들이 검색해 볼 수 있게 태그를 입력해주세요<br>
+                                        <span class="example">예시 : #집밥 #밑반찬 #자취생</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>상세소개</dt>
+                        <dd>
+                            <ul>
+                                <li class="full">
+                                    <p class="t-title3">커버 이미지</p>
+                                    <p class="desc">리스트 썸네일은 홈페이지 메인이나 공간 목록에서 노출되는 이미지를 뜻합니다</p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher01.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li class="full">
+                                    <p class="t-title3">상세 이미지 등록</p>
+                                    <p class="desc">
+                                        상세 썸네일은 클래스 클릭 시 노출되는 첫번째 이미지를 뜻합니다<br>
+                                        상세 썸네일영역에 노출되며 최대 9개 까지 추가 등록이 가능합니다<br>
+                                        <span class="example">
+                                            - 이미지는 클래스의 특징을 보여주는 사진을 사용해 주세요<br>
+                                            - 클래스가 진행될 공간을 보여주세요<br>
+                                            - 세부적인 특징이 잘 들어나도록 사진을 찍어주세요
+                                        </span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher02.jpg" alt="">
+                                    </figure>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>일정/공간</dt>
+                        <dd>
+                            <ul>
+                                <li class="full">
+                                    <p class="desc">
+                                        공간 대여 여부를 먼저 선택해 주세요
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher03.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li class="full">
+                                    <p class="desc">
+                                        내 공간을 사용할 경우<br>
+                                        <span class="example">- 이미 등록된 공간 리스트가 노출되며, 등록된 공간이 없을 경우 공간관리에서 공간 등록 후 일정은 입력해주세요</span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher04.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li class="full">
+                                    <p class="desc">
+                                        공간을 대여할 경우<br>
+                                        <span class="example">
+                                            - 테마, 일정, 지역 선택 시 대여 가능한 공간이 노출됩니다<br>
+                                            - 노출된 공간에서 원하는 공간을 선택할 경우 공간 대여료를 확인할 수 있습니다
+                                        </span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher05.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li class="full">
+                                    <p class="desc">
+                                        공간 선택이 완료되었다면, 일정을 선택해 주세요<br>
+                                        <span class="example">- 달력에서 원하는 날짜 선택 시 오전/오후/저녁 시간대를 선택할 수 있는 버튼이 노출됩니다</span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher06.jpg" alt="">
+                                    </figure>
+                                    <p class="desc">
+                                        <span class="example">- 달력에서 원하는 날짜 선택 시 오전/오후/저녁 시간대를 선택할 수 있는 버튼이 노출됩니다</span>
+                                    </p>
+                                    <figure>
+                                        <img src="../../img/guide/img-teacher07.jpg" alt="">
+                                    </figure>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </div>
+        @include('../../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

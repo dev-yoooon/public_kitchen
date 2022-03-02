@@ -1,0 +1,328 @@
+%ico {
+    display: inline-block;
+    background-size: 100% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.ico {
+    &-tooltip {
+        @extend %ico;
+        width: 15px;
+        height: 15px;
+        margin-top: -3px;
+        background-image: url(../img/mypage/ico-tooltip.png);
+
+        &.white {
+            background-image: url(../img/mypage/ico-tooltip_white.png);
+        }
+
+        &:before {
+            content: '';
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &.on {
+            position: relative;
+            z-index: 2;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 50%;
+                width: 20px;
+                height: 13px;
+                background: url(../img/mypage/bg-tooltip.png) no-repeat 0 0/100% auto;
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .25s .1s ease-in-out;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &-more_arrow {
+        @extend %ico;
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+        background-image: url(../img/ico-more_type2.png);
+
+        &.dark {
+            background-image: url(../img/ico-more_type2-dark.png);
+        }
+
+        &.white {
+            background-image: url(../img/ico-more_type2-white.png);
+        }
+    }
+}
+
+img.square {
+    height: 100%;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+img.rect {
+    background-size: 100% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.tip {
+    position: absolute;
+    top: 23px;
+    right: -9px;
+    padding: 20px 82px 20px 20px;
+    background: $gray-f6;
+    border: 1px solid $gray-b7;
+    border-radius: 3px;
+    color: $gray-2e;
+    @include font(200, 13px);
+    line-height: 19px;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+
+    @at-root .on~& {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    p {
+        padding-left: 8px;
+        text-indent: -12px;
+    }
+
+    .btn-close-tooltip {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        background: url(../img/mypage/ico_delete.png) no-repeat 50%/16px auto;
+
+    }
+}
+
+// pop
+.pop {
+    &-wrap {
+        overflow: auto;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 81px 25px 0;
+        background: $white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease-in-out;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &.small {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+            background: rgba(0, 0, 0, .5);
+
+            .t-title1 {
+                font-weight: 600 !important;
+            }
+
+        }
+
+        .t-title1 {
+            display: block;
+        }
+    }
+
+    &-inner {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 93px 35px 0;
+        background: $white;
+
+    }
+
+    &-btn-close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        width: 30px;
+        height: 30px;
+        background: url(../img/btn-close.svg) no-repeat 50% / 30px auto;
+
+        @at-root .pop-inner & {
+            top: 24px;
+            right: 24px;
+            width: 18px;
+            height: 18px;
+        }
+
+        @at-root .photo & {
+            background-image: url(../img/mypage/btn-close_white.png);
+        }
+    }
+
+    &-share {
+        background: rgba(0, 0, 0, .8);
+        padding-top: 0;
+
+        .pop-cont {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        .t-title1 {
+            color: $white;
+            text-align: center;
+        }
+
+        ul {
+            margin-top: 30px;
+            font-size: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 33.33%;
+            margin-top: 30px;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                color: $white;
+                @include font(600, 16px);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 71px;
+                    height: 71px;
+                    margin: 0 auto 16px;
+                    border-radius: 50%;
+                    background: no-repeat 50%/71px auto;
+                }
+            }
+        }
+
+        .ico {
+            &-fb::before {
+                background-image: url(../img/detail/ico-share_fb.png);
+            }
+
+            &-tw::before {
+                background-image: url(../img/detail/ico-share_tw.png);
+            }
+
+            &-kas::before {
+                background-image: url(../img/detail/ico-share_kas.png);
+            }
+
+            &-band::before {
+                background-image: url(../img/detail/ico-share_band.png);
+            }
+
+            &-kat::before {
+                background-image: url(../img/detail/ico-share_kat.png);
+            }
+
+            &-line::before {
+                background-image: url(../img/detail/ico-share_line.png);
+            }
+
+            &-mail::before {
+                background-image: url(../img/detail/ico-share_mail.png);
+            }
+
+            &-url::before {
+                background-image: url(../img/detail/ico-share_url.png);
+            }
+        }
+
+
+        .pop-btn-close {
+            top: 70px;
+            background-image: url(../img/btn-close_white.png);
+        }
+    }
+}
+
+.profile {
+    display: block;
+    position: relative;
+    text-align: center;
+
+    .img {
+        overflow: hidden;
+        display: block;
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+        background: $gray-f6 url(../img/mypage/bg-no_profile.png) no-repeat 50%/100% auto;
+        border-radius: 50%;
+
+        @at-root .modify#{&} {
+            width: 109px;
+            height: 109px;
+            background-color: $white;
+        }
+    }
+
+    .inp-file {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 29px;
+        margin-left: 13px;
+        border-radius: 50%;
+        background: $white url(../img/mypage/ico-modify_plus02.png) no-repeat 7px 6px /16px auto;
+        box-shadow: 0 1px 3px rgba(176, 176, 176, .5);
+
+        @at-root .modify#{&} {
+            // right: auto;
+            margin-left: 27px;
+            // background-image: url(../img/mypage/ico-modify_plus.png);
+        }
+    }
+
+    .text {
+        box-sizing: border-box;
+        display: inline-block;
+        margin-top: 14px;
+        padding: 8px 15px;
+        border-radius: 3px;
+        border: 1px solid $gray-b7;
+        @include font(400, 15px);
+        color: $gray-b7;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+}

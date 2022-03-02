@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 선생님"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="lend">
+                <div class="sub-title">
+                    <h2 class="t-title1">클래스 만들기 <a href="#" class="oval type2">신규</a></h2>
+                </div>
+                <a href="#" class="account-box">정산 예정 금액
+                    <span class="cost">2,650,000 원</span>
+                </a>
+                <div class="tab-title">
+                    <a href="#" class="on">신규 클래스</a>
+                    <a href="#">진행 클래스</a>
+                    <a href="#">종료 클래스</a>
+                </div>
+                <div class="list-mypage">
+                    <!-- [D]: 신규 클래스가 없을 때 -->
+                    <div class="not-msg">
+                        <p>클래스가 없어요<br>내 클래스를 등록해보는건 어떠세요?</p><!-- [18.12.04] 수정: 텍스트 수정 -->
+                        <a href="#" class="more-arrow small">클래스 등록하러 가기 <i class="ico-more_arrow"></i> </a>
+                    </div>
+                    <!-- [D]: //신규 클래스가 없을 때 -->
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

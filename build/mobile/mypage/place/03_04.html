@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 마이페이지 | 호스트</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="gnb-bar">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="/common/img/logo.svg" alt="">
+                        <span class="arrow"></span>
+                    </a>
+                </h1>
+                <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
+                <a href="#" class="ico-gnb-search pop-open" data-pop="search"><span class="blind">검색</span></a>
+                <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+            </div>
+            <nav class="gnb-list">
+                <ul class="menu-default">
+                    <!-- [18.12.20] 클래스 추가 -->
+                    <!-- [D]: li에 active가 붙으면 하이라이트 처리됨 -->
+                    <li class="active"><a href="#">홈</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">클래스</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">공간</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">공공의주방 이야기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <div class="pop-wrap" id="search">
+                <div class="pop-cont">
+                    <form action="">
+                        <div class="inp-wrap">
+                            <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색">
+
+                            <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                            <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="list-wrap">
+                                <!-- [D]: 검색어 기능이 켜져있을 때-->
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                <!-- //[D]: 검색어 기능이 켜져있을 때-->
+
+                                <!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)-->
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                <!-- //[D]: 검색어 기능이 꺼져있을 때 -->
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </header>
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">공유관리 상세 내역</h2>
+                </div>
+
+                <div class="list-mypage head">
+                    <figure>
+                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                        <div class="list-content">
+                            <div class="list-num"><mark>No.</mark>1588296423</div>
+                            <strong class="list-tit">마리 앤 제이</strong>
+                            <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                        </div>
+                    </figure>
+                </div>
+                <ul class="class-info">
+                    <li>
+                        <div class="class-tit">공유 횟수</div>
+                        <div class="class-desc">총 5회 공유 / 현재 2회 마감</div>
+                    </li>
+                    <li>
+                        <div class="class-tit">공간테마</div>
+                        <div class="class-desc">베이킹 전문 스튜디오</div>
+                    </li>
+                    <li class="income-tooltip">
+                        <div class="class-tit">공간 대여료
+
+                            <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                            <div class="tip">
+                                <strong class="title">공간 이용료</strong>
+                                <div class="tip-rent">
+                                    <strong class="rent-status">쿠킹/베이킹 전문스튜디오 (요리시설 보유)</strong>
+                                    <ul class="rent-list">
+                                        <li>• 6명 이하 이용 시 : 80,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정-->
+                                        <li>• 7명 이상 이용 시 : 110,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정-->
+                                    </ul>
+                                </div>
+                                <div class="tip-rent">
+                                    <strong class="rent-status">쿠킹/베이킹 전문스튜디오 (요리시설 미보유)</strong><!-- [18.12.03] 수정: 텍스트 수정-->
+                                    <ul class="rent-list">
+                                        <li>• 6명 이하 이용 시 : 80,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정-->
+                                        <li>• 7명 이상 이용 시 : 110,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정-->
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                            </div>
+                        </div>
+                        <div class="class-desc">80,000원 또는 110,000원</div>
+                    </li>
+                </ul>
+
+                <div class="bg-grey full-box lend-detail">
+                    <h3 class="t-title2">상세관리</h3>
+                    <div class="inp-wrap">
+                        <span class="inp-tit">상세관리</span>
+                        <div class="cal">
+                            <div class="cal-header">
+                                <div class="date">
+                                    <span class="year">2018</span>
+                                    <span class="month">10</span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="month-prev"><span class="blind">이전</span></button>
+                                    <button class="month-next"><span class="blind">다음</span></button>
+                                </div>
+                            </div>
+                            <div class="cal-week">
+                                <span class="week-name">월</span>
+                                <span class="week-name">화</span>
+                                <span class="week-name">수</span>
+                                <span class="week-name">목</span>
+                                <span class="week-name">금</span>
+                                <span class="week-name">토</span>
+                                <span class="week-name">일</span>
+                            </div>
+                            <div class="cal-days">
+
+                                <!-- [D]: 
+            .day - 기본
+            .today - 오늘
+            .ing - 진행중(.ing.on - 진행중 선택)
+            .holy - 공휴일
+            .on - 선택되었을 때
+            .prev, .next - 그 전, 후 달의 남은 일 수
+            .disabled - 선택이 안되는 날 
+        -->
+                                <span class="day">1</span>
+                                <span class="day disabled">2</span>
+                                <span class="day disabled">3</span>
+                                <span class="day disabled">4</span>
+                                <span class="day disabled">5</span>
+                                <span class="day disabled">6</span>
+                                <span class="day disabled">7</span>
+
+                                <span class="day">8</span>
+                                <span class="day">9</span>
+                                <span class="day">10</span>
+                                <span class="day">11</span>
+                                <span class="day today ing">12</span>
+                                <span class="day">13</span>
+                                <span class="day">14</span>
+
+                                <span class="day">15</span>
+                                <span class="day">16</span>
+                                <span class="day">17</span>
+                                <span class="day ing">18</span>
+                                <span class="day ing">19</span>
+                                <span class="day ing">20</span>
+                                <span class="day holy">21</span>
+
+                                <span class="day">22</span>
+                                <span class="day on">23</span>
+                                <span class="day">24</span>
+                                <span class="day disabled">25</span>
+                                <span class="day disabled">26</span>
+                                <span class="day">27</span>
+                                <span class="day holy">28</span>
+
+                                <span class="day">29</span>
+                                <span class="day">30</span>
+                                <span class="day">31</span>
+                                <span class="day next">1</span>
+                                <span class="day next">2</span>
+                                <span class="day next">3</span>
+                                <span class="day next">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-form-wrap">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <button class="btn-form normal none-border">공간 공유 일정 추가/변경하기</button><!-- [18.12.03] 수정: class명 수정 -->
+                    </div>
+                    <div class="btn-form-wrap inp-mt">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <button class="btn-form active">공간 리뷰보기</button>
+                    </div>
+                </div>
+
+                <!-- [18.12.27] 추가: 환불규정 추가 -->
+                <div class="bottom-notice full-box">
+                    <div class="notice-wrap">
+                        <ul class="instr">
+                            <li>* 공공의 주방은 수강생, 선생님, 호스트 상호 신뢰를 기반으로 합니다.</li> <!-- [19.1.3] 추가: 마크업 추가 -->
+                            <li>* 공간대여는 클래스 수강일로부터 4일전 최소인원 모집시 최종확정됩니다. </li>
+                            <li>* 공간대여일정 추가등록시, 승인없이 실시간으로 반영됩니다.</li>
+                            <li>* 공간대여 일정변경이 가능하나, 취소 시 기간별 패널티가 부과됩니다. </li>
+                        </ul>
+                    </div>
+
+                    <!-- [19.1.3] 추가: 마크업 추가 -->
+                    <!-- [D]: .btn-notice에 .on이 붙으면 아래 .notice-wrap이 활성화 됩니다. -->
+                    <button class="btn-notice">취소보상금 및 패널티 정책</button>
+
+                    <div class="notice-wrap">
+                        <!-- [19.1.3] 추가: 마크업 추가 -->
+                        <strong class="title">취소보상금
+                            <small>(공공의 주방에서는 선생님이 클래스 취소 시 호스트의 공간 공유를 보상해주는 취소보상금 제도를 제공하고 있습니다)</small> <!-- [19.1.4] 수정: 텍스트 수정 -->
+                        </strong>
+                        <table class="table">
+                            <caption>선생님 클래스 취소 시</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>호스트보상금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>없음</td>
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>공간대여금액의 50%</td>
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>공간대여금액의 100%</td>
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>공간대여금액의 100%</td>
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>공간대여금액의 100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="notice-wrap">
+                        <strong class="title">패널티금액</strong>
+                        <table class="table">
+                            <caption>선생님에게 취소보상금 지급</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>선생님보상금</th><!-- [19.1.4] 수정: 텍스트 수정 -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>공간대여금액의 50%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>공간대여금액의 100%</td> <!-- [19.1.4] 수정: 텍스트 수정 -->
+                                    <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <caption>수강생에게 취소보상금 지급</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>수강생보상금</th> <!-- [19.1.4] 수정: 텍스트 수정 -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>없음</td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>없음</td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+            // dummy script
+            // [19.1.3] script 추가
+            $('.bottom-notice .btn-notice').on('click', function(e) {
+                e.preventDefault();
+                $(this).toggleClass('on');
+            });
+        });
+    </script>
+</body>
+
+</html>

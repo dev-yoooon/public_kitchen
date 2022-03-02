@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 마일리지/포인트/쿠폰"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">마이페이지</p>
+                    <h1>포인트</h1>
+                </div>
+            </section>
+            <section>
+                <div class="gray-box bg-grey">
+                    <strong class="title">사용가능 포인트</strong>
+                    <div class="t-title3">430P</div>
+                    <div class="bottom">
+                        <div class="tip">
+                            <p>• 적립된 포인트는 유효기간 만료일까지 사용 가능합니다.</p>
+                            <p>• 최근 24개월 포인트 적립/사용 내역을 확인할 수 있습니다.</p>
+                        </div>
+                        <p class="sub-desc">30일 이내 만료예정 : <em>2,600</em>P</p>
+                    </div>
+                </div>
+
+                <div class="list-text">
+                    <div class="select-box label-type al-r">
+                        <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                        <!-- [D]: label에 .active 추가하면 활성화 -->
+                        <label for="filter01">전체</label>
+                        <select name="" id="filter01">
+                            <option value="" selected>전체</option>
+                            <option value="">리뷰</option>
+                            <option value="">등록완료</option>
+                        </select>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>리뷰</span>
+                                    <span>등록완료</span>
+                                </div>
+                                <strong class="tit">리뷰작성</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">+1,000<em class="t-ko">P</em><small>적립</small></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>이벤트</span>
+                                </div>
+                                <strong class="tit">아욱 된장 요리 만들기</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">+40<em class="t-ko">P</em><small>적립</small></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>공간</span>
+                                    <span>대여완료</span>
+                                </div>
+                                <strong class="tit">르레브 쿠킹 베이커리</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">-200<em class="t-ko">P</em><small>사용</small></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="al-l">
+                                <div class="status">
+                                    <span>클래스</span>
+                                    <span>수강완료</span>
+                                </div>
+                                <strong class="tit">아욱 된장 요리 만들기</strong>
+                                <span class="time">2018.10.22 (만료일 : 2019.10.22)</span>
+                            </div>
+                            <div class="al-r">
+                                <p class="point">-1,600<em class="t-ko">P</em><small class="disabled">만료</small></p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 내역 없음
+                    <p class="not-msg">
+                        포인트 내역이 없어요.
+                    </p>
+                    //내역 없음 -->
+
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

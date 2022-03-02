@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 메세지</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="content">
+
+            <div class="btn-back-wrap full-box">
+                <a href="#" class="btn-back"><span class="blind">뒤로가기</span></a>
+            </div>
+
+            <section class="none-border msg">
+                <form action="">
+                    <div class="msg-wrap">
+                        <div class="msg-date">2018년 10월 12일 금요일</div>
+
+                        <!-- 관리자 메세지 -->
+                        <div class="msg-chat cnsl">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <div class="chat">
+                                <div class="chat-info">
+                                    <strong class="name">김수아</strong>
+                                    <span class="time">오후 2:04</span>
+                                </div>
+                                <div class="chat-box">
+                                    안녕하세요. <strong>‘우유 생크림 롤케이크’</strong> 클래스를 진행하는 김수아입니다. 무엇을 도와드릴까요?
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //관리자 메세지 -->
+
+                        <!-- 사용자 메세지 -->
+                        <div class="msg-chat user">
+                            <div class="chat">
+                                <div class="chat-info">
+                                    <span class="time">오후 2:05</span>
+                                </div>
+                                <div class="chat-box">
+                                    일정을 변경하고 싶어요.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //사용자 메세지 -->
+
+                    </div>
+                    <div class="msg-inp">
+                        <input type="text" name="" class="inp" placeholder="메세지를 입력하세요." title="메세지 입력">
+                        <!-- [D]: .btn-send에 .active 추가시 활성화 -->
+                        <button class="btn-send">전송</button>
+                    </div>
+                </form>
+
+            </section>
+
+        </div>
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.msg-inp .inp').on('blur', function() {
+                var _this = $(this);
+
+                if (_this.val() != '') {
+                    _this.siblings('.btn-send').addClass('active');
+                } else {
+                    _this.siblings('.btn-send').removeClass('active');
+                }
+            }).on('keydown', function() {
+                var _this = $(this);
+                _this.siblings('.btn-send').addClass('active');
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 선생님"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+        <div id="content">
+            <section class="main-desc">
+                <div class="swiper-container kivi full-box">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/@temp/img-teacher_visual01.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-teacher_visual01.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-teacher_visual01.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-teacher_visual01.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="share">
+                        <a href="#" class="pop-open btn-share" data-pop="share"><span class="blind">공유하기</span></a>
+                    </div>
+                </div>
+
+                <div class="title teacher">
+                    <h2 class="t-title1">김수아 <span>베이킹전문가</span></h2>
+                    <p>일본 요리학교 출신으로 신사에 위치한 하카타의 대표이자 오너쉐프입니다.</p>
+                </div>
+                <ul class="record">
+                    <li>(현) 루시드키친 대표</li>
+                    <li>(전) 한국 베이킹 협회 제 1 멤버</li>
+                    <li>(전) 2016년 베이킹 대회 심사위원</li>
+                </ul>
+                <ul class="info-list">
+                    <li class="ico-theme">
+                        <strong>테마</strong>
+                        <span>베이킹</span>
+                    </li>
+                    <!-- [18.12.24] 수정: 클래스 수정 -->
+                    <li class="ico-place">
+                        <strong>지역</strong> <!-- [18.12.24] 수정: 텍스트 수정 -->
+                        <span>서울시 강남구 논현동</span>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section class="introduce">
+                <h3 class="t-title2">선생님 소개</h3>
+
+                <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                <div class="cont overflow">
+                    <div class="inner">
+                        <p>루시드키친 쿠킹스튜디오를 운영하고 있습니다. 한국음식관광협회 이사, 이태원 뉴스의 국제F&B 위원, 한국카빙협회의 마스터로 활동중이며, 각종매체에 다수의 요리칼럼과 영상을 제공중입니다. 샤넬, 루이비통, BMW 루시드키친 쿠킹스튜디오를 운영하고 있습니다. 한국음식관광협회 이사, 이태원 뉴스의 국제F&B 위원, 한국카빙협회의 마스터로 활동중이며, 각종매체에 다수의 요리칼럼과 영상을 제공중입니다. 샤넬, 루이비통, BMW...</p>
+                    </div>
+                </div>
+
+                <!-- [D]: 더보기가 있는 경우 추가 -->
+                <a href="#" class="more">더 보기</a>
+            </section>
+
+            <section>
+                <h3 class="t-title2">진행중 클래스</h3>
+                <div class="list-scroll full-box">
+                    <ul>
+                        <!-- loop -->
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-main-thumb01.jpg" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>파티음식</span>
+                                        <span>경기도 수원시</span>
+                                        <span>10월 2회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-main-thumb01.jpg" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>파티음식</span>
+                                        <span>경기도 수원시</span>
+                                        <span>10월 2회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/mobile/img/@temp/img-main-thumb01.jpg" alt="" />
+                                </figure>
+                                <div class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>서울시 강남구</span>
+                                        <span>09월 - 10월</span>
+                                        <span>김수아</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="review">
+                <div class="flex-justify">
+                    <h3 class="t-title2">리뷰</h3>
+                    <a href="./detail_review.html" class="more-arrow small"><span>리뷰 더 보기</span> <i class="ico-more_arrow"></i> </a>
+                </div>
+                <ul class="review-list">
+                    <!-- loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <!-- [D]: icon type은 3가지 - .ico-review_type1~3 추천/만족/불만족 -->
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                        <div class="cont overflow">
+                            <div class="inner">
+                                <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다채 중간 브레이크 타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                                <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                            </div>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 추가 -->
+                        <a href="#" class="more">더 보기</a>
+                    </li>
+                    <!-- //loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type2">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- [D]: 신청하기 버튼이 없을 때 .floating에 .single 추가 -->
+            <div class="floating single">
+                <!-- floating icon -->
+                <div class="floating-ico">
+                    <a href="#" class="ico ico-fav"><span class="blind">즐겨찾기</span></a>
+                    <!-- [18.12.19] 클래스 추가 -->
+                    <a href="#" class="ico ico-msg on">
+                        <p>선생님께 궁금한점을 물어보세요.</p>
+                    </a>
+                </div>
+                <!-- //floating icon -->
+            </div>
+
+        </div>
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap pop-share" id="share">
+            <div class="pop-cont">
+                <div class="t-title1">공유하기</div>
+                <ul>
+                    <li><a href="#" class="ico-fb">페이스북</a></li>
+                    <li><a href="#" class="ico-tw">트위터</a></li>
+                    <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                    <li><a href="#" class="ico-band">밴드</a></li>
+                    <li><a href="#" class="ico-kat">카카오톡</a></li>
+                    <li><a href="#" class="ico-line">라인</a></li>
+                    <li><a href="#" class="ico-mail">메일</a></li>
+                    <li><a href="#" class="ico-url">URL복사</a></li>
+                </ul>
+            </div>
+            <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+        </div>
+        <!-- //공유하기 -->
+
+    </div>
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //kivi slide
+            $('.kivi.swiper-container').slider({
+                loop: true,
+                autoplay: {
+                    delay: 5000, // [18.12.19] 수정: 속성수정
+                    disableOnInteraction: false // [18.12.19] 수정: 속성수정
+                },
+                watchSlidesProgress: true,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                on: { // [18.12.17] 수정: on method 전체 수정
+                    init: function () {
+                        $('.kivi').addClass('start');
+                    },
+                    slideNextTransitionStart: function () {
+                        var index = this.realIndex;
+                        if (index > 0) $(this.pagination.bullets[(index - 1)]).addClass('prev');
+                        if (index == 0) $(this.pagination.el).children().removeClass('prev');;
+                    },
+                    slidePrevTransitionStart: function () {
+                        var index = this.realIndex;
+                        var len = this.pagination.bullets.length;
+                        if (index == (len - 1)) {
+                            $(this.pagination.el).children().addClass('prev');
+                            $(this.pagination.el).children().eq(len - 1).removeClass('prev');
+                        }
+
+                        $(this.pagination.bullets[(index + 1)]).removeClass('prev');
+
+                    }
+                }
+            });
+
+            // [18.12.20] 스크립트 추가
+            var kiviSlider = $('.kivi.swiper-container')[0].swiper;
+            if (kiviSlider.slides.length - 2 == 1) {
+                $(kiviSlider.params.pagination.el).eq(0).hide();
+                kiviSlider.destroy();
+            }
+
+            // more contents
+            var contH;
+            $('.more').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                var $thisCont = $this.parent().find('.cont');
+                var innerH = $thisCont.find('.inner').outerHeight();
+
+                if (!$thisCont.hasClass('more-show')) {
+                    $thisCont.addClass('more-show');
+                    $this.addClass('on').text('접기');
+
+                    contH = $thisCont.outerHeight();
+                    $thisCont._ani(0.25, {
+                        height: innerH
+                    });
+                } else {
+                    $thisCont.removeClass('more-show');
+                    $this.removeClass('on').text('더보기');;
+
+                    $thisCont._ani(0.25, {
+                        height: contH
+                    });
+                }
+
+            });
+
+            // [18.12.19] 추가
+            $('.ico-fav').on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+
+                if (_this.hasClass('on')) {
+                    _this.removeClass('on');
+                } else {
+                    _this.addClass('on');
+                }
+            })
+
+            // [18.12.19] 추가
+            var flag = false;
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    if (!flag) {
+                        flag = true;
+                        $('.ico-msg').removeClass('on');
+                    }
+
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

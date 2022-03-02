@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | about</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/about.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- #content -->
+        <div id="content">
+            <div class="btn-back-wrap">
+                <a href="#" class="btn-back"><span class="blind">뒤로가기</span></a>
+            </div>
+
+            <section>
+                <div class="board-wrap">
+                    <div class="board-cont">
+                        <h3 class="cont-title">
+                            신규 클래스 오픈 기념 이벤트
+                            <em class="b-date">18.10.22 - 18.10.29</em>
+                        </h3>
+                        <div class="cont-text">
+                            <figure>
+                                <img src="/mobile/img/@temp/img-event_content01.png" alt="">
+                            </figure>
+                            <p>
+                                공공의주방에서 새롭게 클래스를 등록하신<br> 모든 수강생분들에게 스타벅스 아메리카노 1잔을<br> 드립니다.<br><br>
+
+                                대상 : 신규 클래스를 등록하신 모든 수강생<br>
+                                상품 : 스타벅스 아메리카노 (1잔)<br>
+                                발송 : 매주 월요일 발송<br>
+                                기간 : 18.11.02 - 18.11.30
+                            </p>
+                                <div class="btn-form-wrap">
+                                    <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                                    <button class="btn-form active">클래스 등록하기</button>
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap pop-share" id="share">
+            <div class="pop-cont">
+                <div class="t-title1">공유하기</div>
+                <ul>
+                    <li><a href="#" class="ico-fb">페이스북</a></li>
+                    <li><a href="#" class="ico-tw">트위터</a></li>
+                    <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                    <li><a href="#" class="ico-band">밴드</a></li>
+                    <li><a href="#" class="ico-kat">카카오톡</a></li>
+                    <li><a href="#" class="ico-line">라인</a></li>
+                    <li><a href="#" class="ico-mail">메일</a></li>
+                    <li><a href="#" class="ico-url">URL복사</a></li>
+                </ul>
+            </div>
+            <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+        </div>
+        <!-- //공유하기 -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+            // tab
+            $('.tab-title a').on('click', function(e) {
+                e.preventDefault();
+                var tabList = $(this).index();
+
+                $(".tab-title a").removeClass("on");
+                $(this).addClass("on");
+
+                $(".tab-cont-wrap .tab-cont").hide();
+                $(".tab-cont-wrap .tab-cont").eq(tabList).show();
+            })
+
+            // faq list
+            $('.faq-list li a').on('click', function(e) {
+                e.preventDefault();
+
+                if (!$(this).parent().hasClass('on')) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

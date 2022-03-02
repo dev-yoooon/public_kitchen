@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="22px" viewBox="0 0 27 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="C.-검색" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MY_PLACE_MAKE_02" transform="translate(-29.000000, -74.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group" transform="translate(29.000000, 73.000000)">
+                <rect id="Rectangle" x="3" y="11" width="24" height="2.5" rx="1.25"></rect>
+                <rect id="Rectangle" transform="translate(6.833631, 7.318912) rotate(-45.000000) translate(-6.833631, -7.318912) " x="-1.16636906" y="6.06891232" width="16" height="2.5" rx="1.25"></rect>
+                <rect id="Rectangle" transform="translate(6.833631, 16.833631) scale(1, -1) rotate(-45.000000) translate(-6.833631, -16.833631) " x="-1.16636906" y="15.5836309" width="16" height="2.5" rx="1.25"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

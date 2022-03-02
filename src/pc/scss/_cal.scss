@@ -1,0 +1,198 @@
+%after {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.cal {
+    position: relative;
+    background: $white;
+
+    @at-root .half & {
+        margin-top: -15px;
+    }
+
+    &-header {
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 38px 32px 0;
+
+        .date {
+            display: table-cell;
+
+            .year {
+                @include font(600, 24px);
+            }
+
+            .month {
+                @include font(600, 24px);
+            }
+        }
+
+        .month-prev {
+            display: table-cell !important;
+            margin-left: 20px;
+            vertical-align: middle;
+            text-align: left;
+            
+            button {
+                width: 34px;
+                height: 34px;
+                background: url(../img/cal-month_arrow.png) no-repeat 47% 50% / 7px auto;
+                background-color: $gray-ea;
+            }
+
+            &.hidden {
+                visibility: hidden;
+            }
+        }
+
+        .month-next {
+            @extend .month-prev;
+            transform: rotate(180deg);
+        }
+
+    }
+
+    &-week {
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 32px 16px 22px;
+
+        .week-name {
+            display: table-cell;
+            font-size: 18px;
+            color: $basic-color;
+
+        }
+    }
+
+    &-days {
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0 16px 30px;
+        font-size: 19px;
+
+        .day {
+            display: inline-block;
+            position: relative;
+            z-index: 0;
+            width: 14.2%;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .today {
+            &:after {
+                @extend %after;
+                border: 1px solid $gray-2e;
+                content: 'today';
+                font-size: 12px;
+                writing-mode: vertical-lr;
+                line-height: 6.3em;
+                transform: rotate(-90deg) translate(-50%, -50%);
+                transform-origin: left top;
+            }
+        }
+
+
+        .ing {
+            &::before {
+                @extend %after;
+                width: 5px;
+                height: 5px;
+                top: auto;
+                bottom: 2px;
+                background: $point-color;
+                transform: translateX(-50%);
+            }
+        }
+
+        .prev {
+            color: $gray-83;
+        }
+
+        .next {
+            @extend .prev;
+        }
+
+        .holy {
+            color: #D0021B;
+        }
+
+        .on {
+            color: $white;
+
+            &::after {
+                @extend %after;
+                background: $point-color;
+            }
+        }
+
+        .disabled {
+            color: $gray-d9;
+        }
+
+    }
+
+    &-bull {
+        margin-top: 10px;
+        @include font(200, 12px);
+
+        .bull-active {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: $point-color;
+                vertical-align: middle;
+            }
+        }
+
+        .bull-end {
+            @extend .bull-active;
+            margin-left: 14px;
+
+            &:before {
+                background-color: $gray-2e;
+            }
+        }
+
+        .bull-cancel {
+            margin-left: 10px;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 2px;
+                margin-right: 5px;
+                margin-top: -2px;
+                border-radius: 1px;
+                background-color: $basic-color;
+                transform: rotate(-45deg);
+                vertical-align: middle;
+                transform-origin: center;
+
+            }
+        }
+    }
+}

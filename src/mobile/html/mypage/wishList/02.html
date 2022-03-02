@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 위시리스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <form>
+            <div id="content">
+                <section>
+                    <div class="sub-title">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <!-- [D]: 선택 클릭시 .list-check의 .hidden 삭제, 버튼 교체 -->
+                        <h2 class="t-title1">위시리스트 <button class="btn-normal">선택</button></h2>
+                    </div>
+                    <div class="tab-area">
+                        <div class="tab-title">
+                            <a href="#" class="on">클래스</a>
+                            <a href="#">선생님</a>
+                            <a href="#">공간</a>
+                        </div>
+                        <div class="list-mypage check">
+                            <ul>
+                                <!-- 클래스 -->
+                                <li>
+                                    <figure>
+                                        <!-- [18.12.14] 추가: 디폴트 이미지 추가 -->
+                                        <!-- [D]:  
+                                            클래스: img-default_class.png
+                                            선생님: img-default_teacher.png
+                                            공간: img-default_place.png
+                                        -->
+                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_class.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk01">
+                                            <label for="listChk01"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">쇠고기 버섯 볶음</strong>
+                                            <div class="text-info">
+                                                <span class="price">
+                                                    <em>₩</em>25,000
+                                                </span>
+                                            </div>
+                                            <div class="list-status"><span>진행중</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk01">
+                                            <label for="listChk01"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">쇠고기 버섯 볶음</strong>
+                                            <div class="text-info">
+                                                <span class="price">
+                                                    <em>₩</em>25,000
+                                                </span>
+                                            </div>
+                                            <div class="list-status"><span>진행중</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- //클래스 -->
+                                <!-- 선생님 -->
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_teacher.png" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk02">
+                                            <label for="listChk02"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">홍종윤 한식전문가</strong>
+                                            <div class="text-info"><span>서울시 중랑구</span> </div>
+                                            <div class="list-status"><span>한식</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk02">
+                                            <label for="listChk02"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">홍종윤 한식전문가</strong>
+                                            <div class="text-info"><span>서울시 중랑구</span> </div>
+                                            <div class="list-status"><span>한식</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- //선생님 -->
+                                <!-- 공간 -->
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_place.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk03">
+                                            <label for="listChk03"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">파시다로 지오</strong>
+                                            <div class="text-info"><span>서울시 강남구</span> </div>
+                                            <div class="list-status"><span>대여 가능한 공간</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk03">
+                                            <label for="listChk03"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">파시다로 지오</strong>
+                                            <div class="text-info"><span>서울시 강남구</span> </div>
+                                            <div class="list-status"><span>대여 가능한 공간</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- //공간 -->
+                                <!-- 공간 -->
+                                <li>
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-check hidden">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="listChk03">
+                                            <label for="listChk03"><span class="blind">선택</span></label>
+                                        </div>
+                                    </figure>
+                                    <a href="#">
+                                        <div class="list-content">
+                                            <strong class="list-tit">파시다로 지오</strong>
+                                            <div class="text-info"><span>서울시 강남구</span> </div>
+                                            <div class="list-status"><span>마감된 공간</span></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- //공간 -->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- [D]: 체크했을 때 .hidden 삭제 -->
+                <div class="btn-form-floating hidden">
+                    <button class="btn-form active">삭제하기</button>
+                </div>
+            </div>
+            <!-- // #content -->
+        </form>
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // dummy script
+            var $btn = $('.btn-normal');
+            var $check = $('.list-check');
+            var $radio = $('.list-check');
+            var $del = $('.btn-form-floating');
+
+            $btn.on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+                var txt = (!$btn.hasClass('on')) ? '선택해제' : '선택';
+
+                if (_this.hasClass('on')) {
+                    $check.addClass('hidden');
+                    $del.addClass('hidden');
+                    _this.removeClass('on');
+                } else {
+                    $check.removeClass('hidden');
+                    $del.removeClass('hidden');
+                    _this.addClass('on');
+                }
+                _this.text(txt);
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

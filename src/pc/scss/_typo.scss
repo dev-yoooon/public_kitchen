@@ -1,0 +1,76 @@
+.t {
+    &-title1 {
+        @include font(800 !important, 24px !important);
+        line-height: 1.5;
+    }
+
+    &-title2 {
+        @include font(800 !important, 22px !important);
+        line-height: 1.5;
+    }
+
+    &-title3 {
+        @include font(600 !important, 28px !important);
+        line-height: 1.5;
+    }
+
+    &-title4 {
+        @include font(600 !important, 18px !important);
+        line-height: 1.5;
+    }
+
+    &-desc1 {
+        @include font($size: 16px !important);
+        line-height: 1.5;
+    }
+
+    &-desc2 {
+        @include font(200, 20px !important);
+        line-height: 1.5;
+    }
+
+    &-desc3 {
+        @include font(200, 16px !important);
+        line-height: 1.5;
+    }
+
+    &-num {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    &-ko {
+        font-family: 'Noto', sans-serif !important;
+    }
+}
+
+
+.price {
+    display: block;
+    margin-top: 6px;
+    @include font(600, 20px);
+    line-height: 24px;
+
+    em {
+        margin-right: 5px;
+        font-size: 17px;
+        font-weight: inherit;
+        color: $point-color;
+    }
+
+    &-origin {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 15px;
+        color: rgba(0, 0, 0, .2);
+        text-decoration: line-through;
+        vertical-align: text-bottom;
+    }
+
+    &-dc {
+        display: inline-block;
+        margin-left: 3px;
+        @include font(600, 18px);
+        color: $point-color;
+        vertical-align: text-bottom;
+    }
+}

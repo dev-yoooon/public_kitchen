@@ -1,0 +1,260 @@
+.btn {
+	&-more {
+		width: 100%;
+		height: 62px;
+		font-size: 16px;
+		color: #8D8D8D;
+
+		strong {
+			font-weight: 600;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			height: 30px;
+			margin-top: 6px;
+			background: url(../img/ico-more.png) no-repeat 50%/auto 100%;
+			line-height: 21px;
+		}
+
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
+			transition: opacity .25s ease-in-out, visibility .25s ease-in-out, height .25s .25s ease-in-out;
+		}
+	}
+
+	&-form-wrap {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 52px;
+
+		&.mt-1 {
+			margin-top: 24px;
+		}
+	}
+
+	&-form {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 56px;
+		margin-left: 12px;
+		border-radius: 3px;
+		line-height: 56px;
+		text-align: center;
+		color: $gray-2e;
+
+		@at-root .btn-form-floating & {
+			border-radius: 0;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&.normal {
+			border: 1px solid #9B9B9B;
+			background: $white;
+		}
+
+		&.none-border {
+			border: 0;
+		}
+
+		&.active {
+			background: $point-color;
+			font-weight: 600;
+			color: $white;
+		}
+
+		&.disabled {
+			background: #D9D9D9;
+			color: $white;
+		}
+
+		&.small {
+			height: 45px;
+			margin-left: 9px;
+			font-size: 15px;
+			line-height: 45px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+	}
+
+	&-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.btn-form {
+			&.normal {
+				color: $gray-83;
+				border: 1px solid $gray-b7;
+			}
+		}
+	}
+
+	&-back-wrap {
+		position: relative;
+		margin-top: -80px;
+		padding-top: 100px;
+	}
+
+	&-back {
+		display: block;
+		position: absolute;
+		top: 34px;
+		left: 24px;
+		width: 26px;
+		height: 22px;
+		background-image: url(../img/btn-gnb_search-close.svg);
+	}
+}
+
+.select {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&-box {
+		display: inline-block;
+		position: relative;
+		font-size: 0;
+		vertical-align: middle;
+
+		label,
+		select {
+			display: inline-block;
+			box-sizing: border-box;
+			height: 32px;
+			margin-left: 7px;
+			@include font(600, 15px);
+			line-height: 32px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		select {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0;
+		}
+
+
+		&.btn-type {
+			label {
+				position: relative;
+				padding-left: 15px;
+				padding-right: 28px;
+				border-radius: 3px;
+				border: 1px solid rgba(0, 0, 0, .3);
+				background: url(../img/main/ico-sel_arrow.png) no-repeat calc(100% - 14px) 50%/7px auto;
+
+				&.active {
+					border-color: $point-color;
+					color: $white;
+					background-image: url(../img/main/ico-sel_arrow-white.png);
+					background-color: $point-color;
+				}
+			}
+
+			select {
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				transform: none;
+			}
+
+		}
+
+		&.label-type {
+			label {
+				position: relative;
+				padding-right: 18px;
+				background: url(../img/ico-sel_arrow.png) no-repeat 100% 50% / 8px auto;
+			}
+		}
+
+	}
+}
+
+
+.hash-tag {
+	display: block;
+	margin-top: 15px;
+	font-size: 0;
+
+	a {
+		display: inline-block;
+		height: 32px;
+		margin-right: 7px;
+		padding: 0 17px;
+		border: 1px solid #bbb;
+		border-radius: 17px;
+		font-size: 16px;
+		line-height: 34px;
+		color: $gray-2e;
+	}
+
+	&.delete {
+		margin-top: 0;
+
+		a {
+			margin-top: 8px;
+			padding-left: 15px;
+			padding-right: 32px;
+			background: #fff url('../img/bg-ico_tag-del.svg') right 13px top 50% no-repeat;
+			color: #707070;
+		}
+	}
+}
+
+.oval {
+	display: inline-block;
+	padding: 4px 19px;
+	border: 1px solid $basic-color;
+	@include font(400, 14px);
+	border-radius: 15px;
+	text-align: center;
+	vertical-align: middle;
+
+	&.type2 {
+		padding-left: 18px;
+		padding-right: 18px;
+		border: 1px solid $point-color;
+		color: $point-color;
+	}
+
+	&.type3 {
+		padding-left: 18px;
+		padding-right: 18px;
+		border: 1px solid $gray-b7;
+		color: $gray-b7;
+	}
+
+}
+
+@media only all and (min-width:320px) and (max-width:359px){
+	.oval{
+		&.type2{
+			padding-left: 13px;
+			padding-right: 13px;
+		}
+		&.type3{
+			padding-left: 13px;
+			padding-right: 13px;
+		}
+	}
+}

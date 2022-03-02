@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | about</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/pc/css/basic.css" />
+    <link rel="stylesheet" href="/pc/css/about.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="inner">
+                <div class="gnb-bar">
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="/common/img/logo.svg" alt="">
+                        </a>
+                    </h1>
+                    <nav class="gnb-list">
+                        <ul class="menu-default">
+                            <li><a href="#">클래스</a></li>
+                            <li><a href="#">선생님</a></li>
+                            <li><a href="#">공간</a></li>
+                        </ul>
+                    </nav>
+                    <div class="util">
+                        <div id="search">
+                            <form action="">
+                                <div class="inp-wrap">
+                                    <span class="ico-gnb-search">검색</span>
+                                    <label for="gnb-search" class="placeholder">
+                                        <span>어떤선생님의 클래스를 들어볼까?</span>
+                                        <span>나와 잘 맞는 공간을 찾아볼까?</span>
+                                    </label>
+                                    <input type="search" id="gnb-search" class="inp-search expansion" name="" placeholder="색다른 밥상을 차리고 싶을 때엔?" title="검색">
+
+                                    <!-- [D]: 검색 추가 메뉴 - open 클래스 추가시 활성화 -->
+                                    <div class="search-more">
+                                        <ul class="history">
+                                            <li><a href="#">파스타</a><a href="#" class="remove-item">검색어 삭제</a></li>
+                                            <li><a href="#">일식 혼밥</a><a href="#" class="remove-item">검색어 삭제</a></li>
+                                            <li><a href="#">집들이 음식</a><a href="#" class="remove-item">검색어 삭제</a></li>
+                                        </ul>
+                                        <div class="keyword-control">
+                                            <button class="history-off pop-open" data-pop="keyword-history">최근 검색어 끄기</button>
+                                            <button class="history-clear">전체삭제</button>
+                                        </div>
+                                        <h2>인기 키워드</h2>
+                                        <div class="keyword">
+                                            <a href="#">홈베이킹</a>
+                                            <a href="#">디저트</a>
+                                            <a href="#">파티음식</a>
+                                            <a href="#">집들이</a>
+                                            <a href="#">간식</a>
+                                            <a href="#">초보</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                                    <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                                </div>
+                                <!--div class="search-list">
+                            <div class="list-wrap">
+                                </*!-- [D]: 검색어 기능이 켜져있을 때--*/>
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                </*!-- //[D]: 검색어 기능이 켜져있을 때--*/>
+
+                                </*!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)--*/>
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                </*!-- //[D]: 검색어 기능이 꺼져있을 때 --*/>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div-->
+                            </form>
+                        </div>
+                        <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+                        <a href="#" class="ico-gnb-user expansion">
+                            <span class="blind">사용자</span>
+                            <span class="arrow">
+                        <svg width="9px" height="6px" viewBox="0 0 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g class="stroke" transform="translate(-1312.000000, -45.000000)" fill-rule="nonzero" stroke="#000000" stroke-width="1.5">
+                                    <polyline transform="translate(1316.333333, 47.904762) scale(-1, 1) translate(-1316.333333, -47.904762) " points="1313 46 1316.34105 49.8095238 1319.66667 46"></polyline>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                        </a>
+
+                        <!-- [D]: 사용자 추가 메뉴 - open 클래스 추가시 활성화 -->
+                        <div class="user-more">
+                            <ul>
+                                <li><a href="#">공공의주방 이야기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">자주하는 질문</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">마이페이지</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 최근 검색어 -->
+        <div class="pop-wrap pop-alert small" id="keyword-history">
+            <div class="pop-inner">
+                <div class="t-title2">최근 검색어</div>
+                <div class="pop-cont">
+                    <p class="desc1">최근 검색어 기능을 끄시겠습니까?</p>
+                </div>
+                <div class="btn-form-wrap">
+                    <a href="#" class="btn-form disabled btn-cancel">취소</a>
+                    <a href="#" class="btn-form active btn-ok">확인</a>
+                </div>
+            </div>
+        </div>
+        <!-- //최근 검색어 -->
+
+        <!-- #content -->
+        <div id="content">
+            <section class="about">
+                <h1 class="t-title1">공공의 주방 이야기</h1>
+                <p>특별한 쿠킹 클래스, 공공의 주방 플랫폼을 만나다.</p>
+                <p class="desc">다양한 요리를 내 집, 직장 가까이에서 배우고, 나만의 공간과 클래스를 공유해 보세요.</p>
+
+                <div class="about tab-title">
+                    <a href="#" class="on">수강생</a>
+                    <a href="#">선생님</a>
+                    <a href="#">호스트</a>
+                </div>
+            </section>
+            <section>
+                <h4 class="company-tit">평소에 <br />관심 있던 요리를 <br />배워보실래요?</h4>
+                    <div class="item-box">
+                        <figure><img src="/pc/img/about/img-about_tab01.jpg" alt="" /></figure>
+                        <p class="item-desc">공공의주방은 단순히 필요한 요리 레시피만 얻을 수 있는 곳이 아니라, <br />전국의 모든 분야 의 요리 선생님들이 소박한 주방에서 수다를 떨듯 다양한 이야기들과 배움이 가득한 편안 한 공간입니다.</p>
+                            <ul class="policy bg-grey">
+                                <li>
+                                    <strong class="title">전국 모든 쿠킹클래스가 한자리에</strong>
+                                    <p class="desc">간단한 정보 입력 만으로 현재 전국에서 열리는 모든 쿠킹클래스 정보를 빠르고 쉽게 검색/예약/결제할 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <strong class="title">우리 집처럼 편안한 요리교실 </strong>
+                                    <p class="desc">내 집, 내 직장, 배우고자 하는 곳 가까이 에서 열리는 쿠킹클래스를 실시간으로 파악할 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <strong class="title">나의 요리 멘토 선생님</strong>
+                                    <p class="desc">한번 배우고 끝나는 것이 아닌, 언제나 옆에서 따뜻하게 알려주시는 선생님과의 인연을 선물합니다.</p>
+                                </li>
+                                <li>
+                                    <strong class="title">스마트한 쿠킹클래스 쇼핑</strong>
+                                    <p class="desc">스마트폰을 통하여 간단하게 고르고 <br />리뷰하고, 예약 결제까지 가능합니다.</p>
+                                </li>
+                            </ul>
+                    </div>
+            </section>
+            <section>
+                <h4 class="company-tit">수강생들이 만든 <br />다양한 요리를 <br />확인해보세요</h4>
+                    <div class="item-box">
+                        <p class="item-desc">공공의주방은 자신만의 특별한 노하우를 팬시한 장소 어디서나 열릴 수 있도록 도와드립니다.</p>
+                        <div class="about-card-type">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <figure>
+                                            <img src="/pc/img/about/img-about_class01.jpg" alt="" />
+                                            <figcaption class="bg-grey news">
+                                                <strong class="desc">“배우고 싶었던 요리를 직장 근처에서 퇴근 후 배울 수 있다니, 너무 좋아요!”</strong>
+                                                <em>이탈리안 가정식 클래스, 김OO 수강생</em>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <figure>
+                                            <img src="/pc/img/about/img-about_class02.jpg" alt="" />
+                                            <figcaption class="bg-grey news">
+                                                <strong class="desc">“공공의 주방 덕분에 우리집 저녁 식탁이 풍성해졌어요.”</strong>
+                                                <em>프리미엄 반찬 클래스, 최OO 수강생</em>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <figure>
+                                            <img src="/pc/img/about/img-about_class03.jpg" alt="" />
+                                            <figcaption class="bg-grey news">
+                                                <strong class="desc">“이번 우리 엄마 생신 케이크, 제가 직접 만들어 드려 더욱 의미 있었어요.”</strong>
+                                                <em>나만의 케이크 만들기 클래스, 안OO 수강생</em>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <figure>
+                                            <img src="/pc/img/about/img-about_class04.jpg" alt="" />
+                                            <figcaption class="bg-grey news">
+                                                <strong class="desc">“제주도 여행지에서 현지 요리를 직접 배울 수 있어 재미있었어요.”</strong>
+                                                <em>제주 해산물 클래스, 장OO 수강생</em>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- navigator -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+            </section>
+            <section>
+                <h4 class="company-tit">배우고 싶은 <br />요리를 <br />찾아보세요</h4>
+                    <div class="item-box">
+                        <p class="item-desc">평소에 관심 있는 요리를 검색해서 이를 배울 수 있습니다. 다양한 커리큘럼 시간대를 선택할 수 있고 <br />직장동료, 친구, 가족 들과 함께 쿠킹클래스를 선청할수 있습니다.</p>
+                            <div class="step-info">
+                                <ul class="bg-grey">
+                                    <li>
+                                        <p><strong>STEP 01</strong> 회원가입하기</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>STEP 02</strong> 클래스 선택하기</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>STEP 03</strong>클래스 수강하기</p>
+                                    </li>
+                                </ul>
+                                <div class="btn-form-wrap">
+                                    <a href="#" class="btn-form active">클래스 찾아보기</a>
+                                </div>
+                            </div>
+                    </div>
+            </section>
+
+            <section>
+                <h4 class="company-tit">자주 묻는 <br>질문</h4>
+                    <div class="item-box">
+                        <ul class="faq-list">
+                            <li>
+                                <strong class="title">공공의주방은 어떤 서비스인가요?</strong>
+                                <p>언제 어디서나 나만의 요리를 가르치고, 배우고 싶은 요리를 편리하게 선택하고, 내집 내직장 가까운 곳에서 쿠킹클래스가 열리는, 천만가지 즐거운 요리경험을 제공하는 쿠킹클래스 공유 플랫폼 서비스입니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">회원가입을 어떻게 하나요?</strong>
+                                <p>공공의주방 서비스는 누구나 무료로 이용이 가능합니다. SNS 계정이나 이메일로 쉽고 간단하게 회원가입을 할 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">서비스 가능 지역이 궁금해요.</strong>
+                                <p>요리선생님이 활동하시는 지역이라면 전국에서 이용 가능한 서비스입니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">서비스를 이용하려면 필수사항이 있나요?</strong>
+                                <p>공공의주방은 요리선생님과 수강생의 본인인증을 통해 보다 안전하게 수업하실 수 있는 커뮤니티를 만들고 있습니다. 이와 같은 이유로 마이페이지>인증현황에서 본인인증을 요청드리고 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">요리 선생님에게 직접 문의하고 싶어요.</strong>
+                                <p>로그인 후, 클래스 소개페이지 설명 하단에 문의글을 남기면 선생님께 1:1 메세지가 전달되며 선생님이 직접 답변을 해 드립니다. 마이페이지>1:1메세지에서 확인하실수 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">수업은 언제 확정되나요?</strong>
+                                <p>수업일로부터 4일전, 최소인원 모집이 되면 클래스가 확정됩니다. 클래스 확정/취소 등에 대한 개별 알림 메세지를 받으실수 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="title">후기를 남기고 싶어요.</strong>
+                                <p>후기는 수강을 완료하신 수강생만 남길 수 있습니다. 클래스 상세 페이지에서 후기를 남기시고 후기작성 포인트도 받아보세요.</p>
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <section>
+                <div class="bg-grey item-box briefing">
+                    <h4>공공의 주방 설명회에 초대합니다</h4>
+                    <p class="item-desc">매월 공공의주방 서비스 설명회를 열고 있습니다. <br />클래스 개설, 장소공유에 대한 방법 및 관련 내용에 대해 궁금하시면, <br />아래 정보를 입력하여 신청해 주세요.</p>
+                        <form action="">
+                            <div class="check-list">
+                                <div class="title">
+                                    <strong>설명회 날짜 선택</strong>
+                                    <span>현재 <em class="active">7</em>회 설명회 오픈중</span>
+                                </div>
+                                <div class="cont">
+                                    <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="chk01" checked>
+                                    <label for="chk01">
+                                        <strong>2019. 01.10 (목)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk02">
+                                    <label for="chk02">
+                                        <strong>2019. 01.14 (월)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk03">
+                                    <label for="chk03">
+                                        <strong>2019. 01.16 (수)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk04">
+                                    <label for="chk04">
+                                        <strong>2019. 01.21 (월)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk05">
+                                    <label for="chk05">
+                                        <strong>2019. 01.24 (목)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk06">
+                                    <label for="chk06">
+                                        <strong>2019. 01.28 (월)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                    <span class="check-box">
+                                    <input type="checkbox" name="" id="chk07">
+                                    <label for="chk07">
+                                        <strong>2019. 01.30 (수)</strong>
+                                        <span>14:00 - 16:00 PM</span>
+                                    </label>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="inp-wrap"><span class="inp-tit">이름</span> <input type="text" class="inp-type2" name="" placeholder="이름을 입력해 주세요" /></div>
+                            <div class="inp-wrap"><span class="inp-tit">이메일</span> <input type="text" class="inp-type2" name="" placeholder="이메일을 입력해 주세요" /></div>
+                            <div class="inp-wrap"><span class="inp-tit">연락처</span> <input type="text" class="inp-type2" name="" placeholder="연락처를 입력해 주세요" /></div>
+                            <div class="inp-wrap"><span class="inp-tit">메시지</span> <textarea class="text-area-type2" name="" id="" rows="4" placeholder="제휴 관련된 상세한 내용을 입력해 주세요"></textarea></div>
+                            <div class="btn-form-wrap">
+                                <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                                <!-- [D]: button에 disabled 삭제하고 .active가 붙으면 컬러가 바뀝니다. -->
+                                <button class="btn-form active">제출하기</button>
+                            </div>
+                        </form>
+                </div>
+            </section>
+            <div class="share">
+                <a href="#" class="pop-open btn-share" data-pop="share"><span class="blind">공유하기</span></a>
+            </div>
+        </div>
+        <!-- // #content -->
+        <footer class="footer">
+            <div class="inner">
+                <div class="logo"><img src="/common/img/footer-logo.png" alt=""></div>
+                <ul class="footer-privacy">
+                    <li>공공의주방 회사소개</li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개설자약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                <div class="sns">
+                    <a href="#" class="facebook"><span class="blind">facebook</span></a>
+                    <a href="#" class="instagram"><span class="blind">instagram</span></a>
+                </div>
+                <ul class="footer-info">
+                    <li>
+                        <span class="title">상호명</span>
+                        <strong class="name">주식회사 공공의주방</strong>
+                    </li>
+                    <li>
+                        <span class="title">대표</span>
+                        <strong class="name">안상미</strong>
+                    </li>
+                    <li>
+                        <span class="title">개인정보책임자</span>
+                        <strong class="name">안상미</strong>
+                    </li>
+                    <li>
+                        <span class="title">사업자등록번호</span>
+                        <strong class="name">368-81-00400</strong>
+                    </li>
+                    <li>
+                        <span class="title">통신판매신고번호</span>
+                        <strong class="name">제 2017년-서울강남-03388호</strong>
+                    </li>
+                    <li>
+                        <span class="title">주소</span>
+                        <strong class="name">경기도 성남시 수정구 대왕판교로 815 7층 G-759호</strong>
+                    </li>
+                    <li>
+                        <span class="title">대표번호</span>
+                        <strong class="name">1800-5910</strong>
+                    </li>
+                    <li>
+                        <span class="title">이메일</span>
+                        <strong class="name">contact@public-kitchen.com</strong>
+                    </li>
+                </ul>
+                <div class="footer-copy">
+                    <p>(주)공공의주방은 통신판매중개자이며 통신판매 당사자가 아닙니다. 따라서 클래스/공간정보, 거래 및 판매에 대하여 책임을 지지 않습니다.</p>
+                    <p class="copy">Copyright &copy; 공공의주방. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap small pop-share" id="share">
+            <div class="pop-inner">
+                <div class="t-title1">공유하기</div>
+                <div class="pop-cont">
+                    <ul>
+                        <li><a href="#" class="ico-fb">페이스북</a></li>
+                        <li><a href="#" class="ico-tw">트위터</a></li>
+                        <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                        <li><a href="#" class="ico-band">밴드</a></li>
+                        <li><a href="#" class="ico-kat">카카오톡</a></li>
+                        <li><a href="#" class="ico-line">라인</a></li>
+                        <li><a href="#" class="ico-mail">메일</a></li>
+                        <li><a href="#" class="ico-url">URL복사</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+            </div>
+        </div>
+        <!-- //공유하기 -->
+    </div>
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+            // faq list
+            $('.faq-list li a').on('click', function(e) {
+                e.preventDefault();
+
+                if (
+                    !$(this).parent().hasClass('on')
+                ) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+            });
+
+            $('.swiper-container').slider({
+                slidesPerView: 'auto',
+                spaceBetween: 15,
+                threshold: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            });
+
+            // share button
+            var flag = false;
+            $(window).scroll(function() {
+                var _winS = $(window).scrollTop();
+                var btnShare = $('.btn-share');
+                var btnShareT = btnShare.offset().top;
+                var footerT = $('.footer').offset().top;
+
+                if ((_winS + $(window).height()) > footerT) {
+                    if (!flag) {
+                        flag = true;
+                        btnShare.parent().css('right', (1200 - $(this).width()) / 2 + 55);
+                        btnShare.parent().addClass('stop');
+                        btnShare.css('top', footerT - 120);
+                    }
+                } else {
+                    flag = false;
+                    btnShare.parent().css('right', 55);
+                    btnShare.parent().removeClass('stop');
+                    btnShare.css('top', '');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

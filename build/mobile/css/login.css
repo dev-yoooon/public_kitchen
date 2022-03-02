@@ -1,0 +1,181 @@
+section {
+  padding-bottom: 50px;
+}
+
+.t-desc2 {
+  margin-top: 15px;
+  padding-bottom: 10px;
+  line-height: 1.6;
+}
+
+.login-opt {
+  margin-top: 40px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.login-opt .social-login {
+  margin-top: 40px;
+}
+
+.login-opt .social-login a {
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  padding: 11px 0 13px;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.login-opt .social-login a:first-child {
+  margin-top: 0;
+}
+
+.login-opt .social-login a .txt:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+}
+
+.login-opt .social-login a.facebook {
+  border: 2px solid #405EA8;
+}
+
+.login-opt .social-login a.facebook .txt {
+  padding-left: 14px;
+}
+
+.login-opt .social-login a.facebook .txt:before {
+  width: 8px;
+  height: 18px;
+  left: 22.7%;
+  margin-right: 12px;
+  background: url(../img/login/ico_social_01.png) no-repeat 0 0/8px auto;
+}
+
+.login-opt .social-login a.naver {
+  border: 2px solid #4FAE48;
+}
+
+.login-opt .social-login a.naver .txt:before {
+  width: 13px;
+  height: 12px;
+  margin-right: 26px;
+  background: url(../img/login/ico_social_02.png) no-repeat 0 0/auto 12px;
+}
+
+.login-opt .social-login a.kakao {
+  border: 2px solid #EFDA43;
+}
+
+.login-opt .social-login a.kakao .txt:before {
+  width: 15px;
+  height: 14px;
+  margin-right: 24px;
+  background: url(../img/login/ico_social_03.png) no-repeat 0 0/auto 14px;
+}
+
+.find-opt {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0;
+}
+
+.find-opt li {
+  position: relative;
+  margin-left: 36px;
+  display: inline-block;
+}
+
+.find-opt li:first-child {
+  margin-left: 0;
+}
+
+.find-opt li:first-child:before {
+  width: 0;
+}
+
+.find-opt li:before {
+  position: absolute;
+  left: -18px;
+  top: 2px;
+  width: 1px;
+  height: 14px;
+  background: black;
+  content: '';
+}
+
+.find-opt li a {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.agree {
+  border-top: 1px solid #E5E5E5;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.agree .check-box {
+  display: block;
+  margin-top: 10px;
+}
+
+.argee-all {
+  display: block;
+}
+
+.t-desc2 mark {
+  font-weight: 400;
+  color: #8E0032;
+}
+
+.cms {
+  margin-top: 70px;
+}
+
+.cms span {
+  color: #000;
+}
+
+.btn-wrap {
+  margin-top: 30px;
+}
+
+.btn-wrap.login {
+  margin-top: 24px;
+}
+
+.btn-wrap .btn-form {
+  margin-left: 0;
+  margin-top: 8px;
+}
+
+.btn-wrap .btn-form:first-child {
+  margin-top: 0;
+}
+
+.btn-form-wrap {
+  margin-top: 40px;
+}
+
+.inp-mt {
+  margin-top: 8px;
+}
+
+.error {
+  line-height: 18px;
+}
+
+input.inp:-moz-read-only {
+  background: #fbfbfb;
+  border: 0;
+  color: #000;
+}
+
+input.inp:read-only {
+  background: #fbfbfb;
+  border: 0;
+  color: #000;
+}

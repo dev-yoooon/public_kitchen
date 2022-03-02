@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="lend">
+                <div class="sub-title">
+                    <h2 class="t-title1">공간 공유하기</h2>
+                </div>
+                <a href="#" class="account-box">정산 예정 금액
+                    <span class="cost">2,650,000 원</span>
+                </a>
+                <div class="tab-title">
+                    <a href="#">공간 관리</a>
+                    <a href="#">공유 관리</a>
+                    <a href="#" class="on">예약 관리</a>
+                </div>
+
+                <!-- 달력위치 -->
+                <div class="place-cal full-box">
+                    <div class="select-box label-type">
+                        <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                        <label for="filter01">전체</label>
+                        <select name="" id="filter01">
+                            <option value="" selected="">전체</option>
+                            <option value="">승인대기</option>
+                            <option value="">승인완료</option>
+                        </select>
+                    </div>
+
+                    <!-- [18.12.12] 수정: 마크업 수정 -->
+                    <a href="#" class="ico-cal"></a>
+
+                    <!-- 일정필터 -->
+                    <div class="cal-area">
+
+                        <div class="inp-wrap">
+                            <span class="inp-tit">일정 필터</span>
+                            @include('../../inc/_cal.html')
+                        </div>
+
+                        <div class="inp-wrap">
+                            <span class="inp-tit">공간 공유시간</span>
+
+                            <div class="rent-wrap">
+                                <strong class="rent-status">르누아르 쿠킹 스튜디오</strong>
+                                <ul class="rent-list">
+                                    <li>• 오후 14:00 - 18:00</li>
+                                    <li>• 저녁 18:00 - 22:00</li>
+                                </ul>
+                            </div>
+
+                            <div class="rent-wrap">
+                                <strong class="rent-status">BPU 카페</strong>
+                                <ul class="rent-list">
+                                    <li>• 오후 14:00 - 18:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //일정필터 -->
+                </div>
+                <!-- //달력위치 -->
+
+                <div class="place-type">
+                    <ul class="class-info">
+                        <li>
+                            <strong class="class-tit">공간명</strong>
+                            <div class="class-desc">르누아르 쿠킹 스튜디오</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">이름</strong>
+                            <div class="class-desc">홍종윤</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">핸드폰번호</strong>
+                            <div class="class-desc">010 1234 1234</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">대여신청</strong>
+                            <div class="class-desc">18.10.30 저녁(18:00-22:00)</div> <!-- [19.1.8] 수정: 텍스트 수정 -->
+                        </li>
+                        <li>
+                            <strong class="class-tit">최대 인원</strong>
+                            <div class="class-desc">12명</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">수익 예상 금액</strong>
+                            <div class="class-desc">110,000원</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">신청일</strong>
+                            <div class="class-desc">18.10.01</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">상태</strong>
+                            <div class="class-desc"><span class="active">공유확정</span></div>
+                        </li>
+                    </ul>
+                    <div class="btn-flex">
+                        <div class="state">
+                            <button class="oval type3">공유거절</button>
+                            <button class="oval type2">공유확정</button>
+                        </div>
+                        <a href="#" class="list-status">클래스 상세<i class="ico-more_arrow"></i></a>
+                    </div>
+                </div>
+                <div class="place-type">
+                    <ul class="class-info">
+                        <li>
+                            <strong class="class-tit">공간명</strong>
+                            <div class="class-desc">르누아르 쿠킹 스튜디오</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">이름</strong>
+                            <div class="class-desc">홍종윤</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">핸드폰번호</strong>
+                            <div class="class-desc">010 1234 1234</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">대여신청</strong>
+                            <div class="class-desc">18.10.30 저녁(18:00-22:00)</div> <!-- [19.1.8] 수정: 텍스트 수정 -->
+                        </li>
+                        <li>
+                            <strong class="class-tit">최대 인원</strong>
+                            <div class="class-desc">12명</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">수익 예상 금액</strong>
+                            <div class="class-desc">110,000원</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">신청일</strong>
+                            <div class="class-desc">18.10.01</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">상태</strong>
+                            <div class="class-desc"><span class="active">승인대기</span></div>
+                        </li>
+                    </ul>
+                    <div class="btn-flex">
+                        <div class="state">
+                            <button class="oval type3">공유확정 취소</button>
+                        </div>
+                        <a href="#" class="list-status">클래스 상세<i class="ico-more_arrow"></i></a>
+                    </div>
+                </div>
+                <div class="place-type">
+                    <ul class="class-info">
+                        <li>
+                            <strong class="class-tit">공간명</strong>
+                            <div class="class-desc">르누아르 쿠킹 스튜디오</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">이름</strong>
+                            <div class="class-desc">홍종윤</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">핸드폰번호</strong>
+                            <div class="class-desc">010 1234 1234</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">대여신청</strong>
+                            <div class="class-desc">18.10.30 저녁(18:00-22:00)</div> <!-- [19.1.8] 수정: 텍스트 수정 -->
+                        </li>
+                        <li>
+                            <strong class="class-tit">최대 인원</strong>
+                            <div class="class-desc">12명</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">수익 예상 금액</strong>
+                            <div class="class-desc">110,000원</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">신청일</strong>
+                            <div class="class-desc">18.10.01</div>
+                        </li>
+                        <li>
+                            <strong class="class-tit">상태</strong>
+                            <div class="class-desc"><span class="active">공유확정</span></div>
+                        </li>
+                    </ul>
+                    <div class="btn-flex">
+                        <div class="state">
+                            <span class="state-txt">기간 경과로 상태 변경 불가능</span>
+                        </div>
+                        <a href="#" class="list-status">클래스 상세<i class="ico-more_arrow"></i></a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            //dummy script
+
+            $('.ico-cal').on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+
+                if (_this.hasClass('on')) {
+                    _this.removeClass('on');
+                    $('.cal-area').slideUp(300, function () {
+                        $('.place-cal').removeClass('bg-grey');
+                    });
+                } else {
+                    _this.addClass('on');
+                    $('.place-cal').addClass('bg-grey');
+                    $('.cal-area').slideDown();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

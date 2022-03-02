@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 이메일 찾기"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="login">
+                <div class="sub-title">
+                    <h2 class="t-title">이메일 찾기</h2>
+                    <p class="t-desc"><mark class="active">dfy123@naver.com</mark> <br> 해당 이메일주소로 가입한 계정을 찾을 수 없습니다. 다시 확인해주세요.</p>
+                </div>
+
+                <div class="btn-wrap">
+                    <a href="#" class="btn-form active">이전 단계로</a><!-- [D] : 버튼 활성화 .active -->
+                </div>
+                <p class="t-desc1 cms">※계정을 찾지 못하셨다면 <br> 고객센터(1800-5910)로 문의해주세요.</p>
+            </section>
+        </div>
+        <!-- // #content -->
+
+        @include('../inc/_footer.html')
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

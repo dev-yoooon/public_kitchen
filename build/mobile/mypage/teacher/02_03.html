@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 마이페이지 | 선생님</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="gnb-bar">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="/common/img/logo.svg" alt="">
+                        <span class="arrow"></span>
+                    </a>
+                </h1>
+                <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
+                <a href="#" class="ico-gnb-search pop-open" data-pop="search"><span class="blind">검색</span></a>
+                <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+            </div>
+            <nav class="gnb-list">
+                <ul class="menu-default">
+                    <!-- [18.12.20] 클래스 추가 -->
+                    <!-- [D]: li에 active가 붙으면 하이라이트 처리됨 -->
+                    <li class="active"><a href="#">홈</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">클래스</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">공간</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">공공의주방 이야기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <div class="pop-wrap" id="search">
+                <div class="pop-cont">
+                    <form action="">
+                        <div class="inp-wrap">
+                            <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색">
+
+                            <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                            <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="list-wrap">
+                                <!-- [D]: 검색어 기능이 켜져있을 때-->
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                <!-- //[D]: 검색어 기능이 켜져있을 때-->
+
+                                <!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)-->
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                <!-- //[D]: 검색어 기능이 꺼져있을 때 -->
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </header>
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">클래스 만들기</h2>
+                    <p class="desc">클래스 등록을 하기 전에 가이드라인과 운영원칙을 확인해주세요</p>
+                    <a href="#" class="desc-small">가이드라인 확인하기<i class="ico-tooltip"></i></a>
+                </div>
+                <div class="tab-area full-box">
+                    <div class="tab-title check">
+                        <!-- [D]:
+                        .active - 입력 완료된 탭
+                        .on - 현재 선택된 탭
+                        .on.active - 수정하기에서 수정 중인 선택된 탭
+                        .dim.active - 수정하기에서 선택되지 않은 탭
+                        -->
+                        <a href="#" class="active">기본정보</a>
+                        <a href="#" class="on">상세소개</a>
+                        <a href="#" class="dim">일정/공간</a>
+                    </div>
+                    <div class="tab-content bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit">커버 이미지</span>
+                                <div class="inp-inner box">
+                                    <p class="desc">대표이미지는 클래스의 가장 중요한 시각적 요소입니다. 좋은 인상을 남길 수 있도록 사진/영상의 퀄리티를 신경써서 업로드해주세요</p><!-- [18.12.03] 수정: 텍스트 수정 -->
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <!-- [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-tit income-tooltip">
+                                        메인 썸네일용 이미지 <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                                        <div class="tip">메인 썸네일은 가로형 이미지를 권장하며 사이즈는 285X180입니다
+                                            <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                                        </div><!-- [18.12.04] 수정: 텍스트 수정-->
+                                    </div>
+                                    <!--// [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-file-wrap">
+                                        <label for="file08" class="inp-file land dot">
+                                            <span class="text-add">사진 추가하기</span>
+                                            <input type="file" id="file08">
+                                        </label>
+
+                                        <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        <img src="/mobile/img/@temp/img-class_visual01.png" alt="">
+
+                                        <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
+                                        <div class="btn-modify open">
+                                            <a class="ico-modify"><span class="blind">수정하기</span></a>
+                                            <!-- [D]: .btn-list에 .open이 붙으면 활성화됩니다. -->
+                                            <div class="btn-list open">
+                                                <a href="#">수정하기</a>
+                                                <a href="#">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-tit income-tooltip">
+                                        상세 썸네일용 이미지 <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                                        <div class="tip">
+                                            상세 썸네일은 세로형 이미지를 권장하며 사이즈는 340X340입니다
+                                            <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                                        </div><!-- [18.12.04] 수정: 텍스트 수정-->
+                                    </div>
+                                    <!--// [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-file-wrap">
+                                        <label for="file01" class="inp-file dot">
+                                            <span class="text-add">사진 추가하기</span>
+                                            <input type="file" id="file01">
+                                        </label>
+
+                                        <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        <img src="/mobile/img/blank.png" alt="" class="hidden">
+
+                                        <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
+                                        <div class="btn-modify">
+                                            <a class="ico-modify"><span class="blind">수정하기</span></a>
+                                            <!-- [D]: .btn-list에 .open이 붙으면 활성화됩니다. -->
+                                            <div class="btn-list">
+                                                <a href="#">수정하기</a>
+                                                <a href="#">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">상세 이미지 등록<small class="point">*최대 9개까지 등록 가능</small></span> <!-- [18.12.04] 수정: 텍스트 수정 -->
+                                <div class="inp-inner">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <div class="inp-file-wrap small">
+                                        <label for="file10" class="inp-file">
+                                            <input type="file" id="file10" disabled>
+
+                                            <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                            <!-- [D]: 파일 선택시 추가 -->
+                                        </label>
+                                        <img src="/mobile/img/@temp/img-class_visual01.png" alt="">
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </div>
+
+                                    <div class="inp-file-wrap small">
+                                        <label for="file20" class="inp-file">
+                                            <input type="file" id="file20">
+                                            <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        </label>
+                                        <img src="/mobile/img/blank.png" alt="" class="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">선생님 한 마디
+                                    <!-- [D]: em에 .active가 붙으면 컬러가 바뀝니다. -->
+                                    <span class="tit-right"><em>0</em> / 60</span> <!-- [18.12.04] 수정: 텍스트 수정 -->
+                                </span>
+                                <!-- [18.12.20] 수정: 마크업 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="2" placeholder="유명 베이커리 못지않는 생크림 롤을 만들 수 있어요"></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">클래스 상세 소개</span>
+                                <!-- [18.12.20] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="20" placeholder="클래스에 대한 상세 소개를 입력해 주세요 &#13;&#10;&#13;&#10; 예시 : 전라남도 함평군에서 금송식당을 19년동안 운영한 김정애선생님만의 노하우로 한우 등심과 목살을 활용하여 생고기 초밥과 갈비찜 요리레시피를 친절하게 가르쳐드려요.단순히 레시피 뿐만 아니라 좋은 육질의 고기를 고르는 법에서부터 고기를 손질하는 법, 특제 양념비법까지. 우리 같이 만들어 보면서 다양한 요리꿀팁도 얻어가세요"></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">참고사항</span>
+                                <!-- [18.12.20] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="5" placeholder="클래스 선택에 참고할 만한 사항을 입력해 주세요 &#13;&#10; (수업방식, 모집인원, 기타 준비물 등) &#13;&#10;&#13;&#10; 예시 : 수업은 2시간씩 진행될 예정으로 최소 인원 4명이 모집되면 클래스가 진행됩니다.수업은 시연 후, 일부 요리 또는 소스를 직접 만들어 보고 이후 요리와 함께 시식합니다. 실습이 중간에 있으니 앞치마는 지참해 주세요"></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">인원제한</span>
+                                <!-- [D]: 활성화시 increment에 .active 추가 -->
+                                <div class="inp-type2 increment">
+                                    <span class="tit">최소</span>
+                                    <div class="btn-wrap">
+                                        <!-- [D]: 더이상 입력되지 할 수 없을 때 .btn-에 .disabled 추가 -->
+                                        <button class="btn-decrement"><span class="blind">감소</span></button>
+                                        <span class="inp-num">1</span>
+                                        <button class="btn-increment"><span class="blind">증가</span></button>
+                                    </div>
+                                </div>
+                                <!-- //[D]: default일 때 -->
+
+                                <!-- [D]: active일 때 -->
+                                <div class="inp-type2 increment inp-mt active">
+                                    <span class="tit">최대</span>
+                                    <div class="btn-wrap">
+                                        <!-- [D]: 더이상 입력되지 할 수 없을 때 .btn-에 .disabled 추가 -->
+                                        <button class="btn-decrement disabled"><span class="blind">감소</span></button>
+                                        <span class="inp-num">2</span>
+                                        <button class="btn-increment"><span class="blind">증가</span></button>
+                                    </div>
+                                </div>
+                                <!-- //[D]: active일 때 -->
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">자주 묻는 질문</span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="formal" id="place01" checked>
+                                    <label for="place01">자주 묻는 질문을 등록합니다</label> <!-- [18.12.04] 수정: 텍스트 수정 -->
+                                </span>
+                                <span class="radio-box block">
+                                    <input type="radio" name="formal" id="place02">
+                                    <label for="place02">자주 묻는 질문을 등록하지 않습니다</label> <!-- [18.12.04] 수정: 텍스트 수정 -->
+                                </span>
+                            </div>
+                            <div class="inp-card">
+                                <strong class="card-tit t-ko">질문01 <a href="#" class="btn-close"><span class="blind">닫기</span></a></strong>
+                                <div class="qna-type">
+                                    <div class="inp-wrap">
+                                        <span class="inp-tit">Q. 자주 문의되는 질문을 입력해 주세요</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                        <textarea class="text-area-type3" name="" id="" rows="5" placeholder="클래스에 사용되는 재료는 국내산인가요?"></textarea>
+                                    </div>
+                                    <div class="inp-wrap">
+                                        <span class="inp-tit">A. 질문에 대한 답변을 입력해 주세요</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                        <textarea class="text-area-type3" name="" id="" rows="5" placeholder="네, 롤케이크 클래스에 사용되는 재료의 원산지는 모두 국내산입니다"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inp-card">
+                                <!-- [D]: .btn-close - 닫기, .btn-add - 추가 -->
+                                <strong class="card-tit t-ko">질문02 <a href="#" class="btn-add"><span class="blind">닫기</span></a></strong>
+                            </div>
+
+                            <div class="btn-form-wrap">
+                                <button class="btn-form normal none-border">임시저장</button>
+                                <button class="btn-form disabled">다음</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>

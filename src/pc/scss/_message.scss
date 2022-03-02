@@ -1,0 +1,160 @@
+#message .pop-inner {
+    padding-bottom: 114px;
+}
+
+.msg {
+    &-wrap {
+        height: 586px;
+        padding: 0 35px 0 0;
+        margin: 0 -35px 0 -5px;
+        text-align: left;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+
+    &-date {
+        padding-bottom: 8px;
+        @include font(400, 16px);
+        color: $gray-83;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &-chat {
+        position: relative;
+        margin-top: 42px;
+
+        &.cnsl {
+            padding-left: 84px;
+            padding-right: 25px;
+        }
+
+        &.user {
+            padding-left: 21px;
+            padding-right: 7px;
+            text-align: right;
+        }
+
+        figure {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .chat {
+            &-info {
+                line-height: 27px;
+                
+                .name {
+                    @include font(600, 18px);
+                }
+
+                .time {
+                    display: inline-block;
+                    margin-left: 6px;
+                    @include font(400, 14px);
+                    color: $gray-83;
+                    line-height: 21px;
+                    vertical-align: text-top;
+                }
+            }
+
+            &-box {
+                display: inline-block;
+                position: relative;
+                margin-top: 7px;
+                padding: 20px 25px;
+                border-radius: 3px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #3a3a3a;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -7px;
+                    top: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: url(../img/detail/bg-chat_cnsl.png) no-repeat 0 0/12px auto;
+
+                    @at-root .user#{&} {
+                        left: auto;
+                        right: -7px;
+                        width: 7px;
+                        top: 0;
+                        background-image: url(../img/mypage/bg-chat_user.png);
+                        background-position: 100% 0;
+                    }
+                }
+
+                @at-root .cnsl#{&} {
+                    background: $gray-f6;
+                }
+
+                @at-root .user#{&} {
+                    // border: 1px solid #c9c9c9;
+                    border-top-right-radius: 0;
+                    background: $gray-83;
+                    color: $white;
+                    text-align: left;
+
+                }
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &-inp {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 40px 40px;
+        background: $white;
+
+        .inp {
+            display: inline-block;
+            width: 335px;
+            height: 54px;
+            padding: 0 14px;
+            border-radius: 3px;
+            font-size: 16px;
+
+            &:focus {
+                border-color: transparent;
+            }
+
+            &:not(:placeholder-shown)~.btn-send {
+                background-color: $point-color;
+            }
+        }
+
+        .btn-send {
+            width: 125px;
+            height: 54px;
+            padding: 0 20px;
+            @include font(600, 18px);
+            color: $white;
+            border-radius: 3px;
+            background-color: $gray-d9;
+            line-height: 54px;
+
+            &.active {
+                background-color: $point-color;
+            }
+        }
+    }
+}

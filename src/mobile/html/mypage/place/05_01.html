@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">정산(공간 공유)</h2><!-- [18.11.28] 수정: 텍스트 변경 -->
+                </div>
+                <a href="#" class="account-box type2">연결계좌
+                    <span class="cost">국민 20680201257066</span>
+                </a>
+
+                <div class="income full-box bg-grey">
+
+                    <!-- 정산 금액 -->
+                    <div class="income-card">
+                        <a href="#">
+                            <span class="status">정산 예정 금액<i class="ico-more_arrow"></i></span>
+                            <strong class="cost">840,000<em class="t-ko">원</em></strong>
+                            <span class="term">18.09.01 - 18.09.15</span>
+                        </a>
+                        <div class="date">
+                            <dl>
+                                <dt>정산 예정일</dt><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                <dd>18.09.25</dd>
+                            </dl>
+                            <div class="deposit">입금대기</div>
+                        </div>
+                    </div>
+                    <!-- //정산 금액 -->
+
+                    <!-- 누적현황 -->
+                    <div class="inp-card">
+                        <div class="card-tit">
+                            <!-- [19.1.8] 삭제: 툴팁 -->
+                            <div class="income-tooltip">총 누적 현황 </div>
+                        </div>
+                        <div class="account-list">
+                            <ul>
+                                <li>
+                                    <strong>총 수입</strong>
+                                    <span>8,840,000 원</span>
+                                </li>
+                                <li>
+                                    <strong>총 누적 공간 공유</strong><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    <span>152 개</span>
+                                </li>
+                                <li>
+                                    <strong>총 누적 방문자수</strong>
+                                    <span>832 명</span>
+                                </li>
+                                <li>
+                                    <strong>총 리뷰수</strong>
+                                    <span>423 개</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //누적현황 -->
+
+                    <!-- 입금 완료 -->
+                    <div class="income-manage">
+
+                        <h3 class="t-title2">최근 정산된 금액</h3>
+                        <p class="desc">정산일 기준으로 정산금액이 입금됩니다. <br>(주말/공휴일 제외)</p>
+
+                        <div class="income-title full-box">
+                            <button class="prev"><span class="blind">이전</span></button>
+                            <span class="year">2018년</span>
+                            <button class="next"><span class="blind">다음</span></button>
+                        </div>
+
+                        <div class="income-content">
+
+                            <div class="income-list">
+                                <strong class="title">09월</strong>
+
+                                <!-- 입금완료 내역 -->
+                                <div class="list-item">
+                                    <div class="item-status">
+                                        <span class="date">09.10</span>
+                                        입금 완료
+                                    </div><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    <div class="item-content">
+                                        <strong class="cost">1,620,000원</strong>
+                                        <span class="date">18.08.16 - 18.08.31</span>
+                                        <span class="desc">공간 공유 8회 진행</span><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </div>
+                                </div>
+                                <!-- //입금완료 내역 -->
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">08월</strong>
+
+                                <!-- 입금완료 내역 -->
+                                <div class="list-item">
+                                    <div class="item-status">
+                                        <span class="date">09.10</span>
+                                        입금 완료
+                                    </div><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    <div class="item-content">
+                                        <strong class="cost">1,620,000원</strong>
+                                        <span class="date">18.08.16 - 18.08.31</span>
+                                        <span class="desc">공간 공유 8회 진행</span><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </div>
+                                </div>
+                                <!-- //입금완료 내역 -->
+
+                                <!-- 입금완료 내역 -->
+                                <div class="list-item">
+                                    <div class="item-status">
+                                        <span class="date">09.10</span>
+                                        입금 완료
+                                    </div><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    <div class="item-content">
+                                        <strong class="cost">1,620,000원</strong>
+                                        <span class="date">18.08.16 - 18.08.31</span>
+                                        <span class="desc">공간 공유 8회 진행</span><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </div>
+                                </div>
+                                <!-- //입금완료 내역 -->
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">07월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">06월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">05월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">04월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">03월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">02월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+
+                            <div class="income-list">
+                                <strong class="title">01월</strong>
+
+                                <!-- 내역 없음 -->
+                                <p class="no-item">내역이 없습니다</p>
+                                <!-- //내역 없음 -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //입금 완료 -->
+
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

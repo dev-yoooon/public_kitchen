@@ -1,0 +1,294 @@
+.account-box {
+    position: relative;
+    padding: 30px 40px;
+    border-radius: 3px;
+    background: $gray-f6;
+    @include font(400, 22px);
+    line-height: 27px;
+    text-align: right;
+
+    &.type2 {
+        display: block;
+        padding: 18px 40px;
+        background: $point-color;
+        color: $white;
+        @include font(600, 16px);
+        text-align: left;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            right: 38px;
+            top: 50%;
+            width: 6px;
+            height: 10px;
+            margin-bottom: 1px;
+            margin-left: 12px;
+            background: url(../img/mypage/ico-arrow_right-white.png) no-repeat 0 0 /6px auto;
+            transform: translateY(-50%);
+        }
+
+    }
+
+    a {
+        float: left;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 7px;
+            height: 12px;
+            margin: -6px 0 0 12px;
+            background: url(../img/cal-month_arrow.png) no-repeat 0 0 /7px auto;
+            transform: rotate(180deg);
+            transform-origin: center;
+            vertical-align: middle;
+
+            @at-root .type2#{&} {
+                background-image: url(../img/mypage/ico-arrow_right-white.png);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .date {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .cost {
+        display: block;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 43px;
+
+        em {
+            font-size: 35px;
+            vertical-align: bottom;
+        }
+
+        @at-root .type2#{&} {
+            display: inline-block;
+            margin-left: 40px;
+            @include font(400, inherit);
+            line-height: inherit;
+
+            .t-num {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &~.tab-title {
+        margin-top: 24px;
+    }
+
+    &~.income {
+        margin-top: 24px;
+    }
+
+    &+.btn-form-wrap {
+        display: block;
+        padding: 30px 0;
+        margin: 0 0 10px;
+        text-align: right;
+
+        .oval {
+            padding: 3px 18px;
+            font-size: 17px;
+            padding: 3px 18px;
+        }
+    }
+}
+
+.lend-view {
+    border-top: 1px solid $gray-ea;
+
+    .inp-wrap {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+.lend-detail {
+    min-height: inherit;
+    margin-top: 30px;
+    padding: 30px 25px 64px;
+
+    .btn-form-wrap:last-child {
+        margin-bottom: 50px;
+    }
+
+    .list-mypage {
+        padding-bottom: 0;
+
+        &+.btn-form-wrap {
+            margin: 30px 0 0;
+        }
+
+        .btn-form-wrap {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            width: 157px;
+            margin: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.recruit-list {
+    overflow: hidden;
+    height: 90px;
+
+    .bundle {
+        float: left;
+        width: 100%;
+        padding: 35px 18px;
+        border-top: 1px solid $gray-ea;
+        color: $gray-83;
+        box-sizing: border-box;
+
+        &+* {
+            clear: both;
+        }
+    }
+
+    .list-tit {
+        float: left;
+        margin-bottom: 0;
+        @include font(400, 14px);
+        line-height: 20px;
+    }
+
+    .btn-list {
+        float: right;
+        position: relative;
+        padding-right: 22px;
+        font-size: 14px;
+        color: $gray-83;
+        line-height: 20px;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 12px;
+            height: 7px;
+            background: url(../img/mypage/ico-sel_arrow.svg) no-repeat 100% 50%/100% auto;
+            transform: translateY(-50%) rotate(0);
+        }
+
+        &.on {
+            &:after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+    .recruit-status {
+        padding: 20px;
+        background: $gray-b7;
+        font-size: 16px;
+        line-height: 29px;
+        color: $white;
+        text-align: center;
+    }
+
+    ul {
+        max-height: 246px;
+        overflow: auto;
+    }
+
+    li {
+        display: inline-block;
+        width: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    .info {
+        float: left;
+
+        img {
+            display: inline-block;
+            width: 46px;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            display: inline-table;
+            margin-left: 12px;
+            line-height: 22px;
+            vertical-align: middle;
+
+            span {
+                display: inline-block;
+                position: relative;
+                font-size: 15px;
+                padding-right: 8px;
+                padding-left: 4px;
+
+                &:first-child {
+                    padding-left: 0;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 1px;
+                        height: 12px;
+                        background-color: $gray-2e;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+
+            .manager {
+                display: inline-block;
+                margin-left: 6px;
+                @include font(200, 14px);
+            }
+        }
+    }
+
+    .status {
+        display: inline-table;
+        line-height: 22px;
+
+        span {
+            display: inline-block;
+        }
+
+        .tit {
+            margin-right: 30px;
+            @include font(600, 16px);
+        }
+
+        .date {
+            @include font(200, 14px);
+        }
+    }
+
+    .disabled {
+        color: $gray-b7;
+
+        .info {
+            figcaption {
+                span:before {
+                    background: $gray-b7;
+                }
+            }
+        }
+    }
+}

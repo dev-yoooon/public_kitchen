@@ -1,0 +1,14 @@
+@mixin font($weight: 400, $size: inherit) {
+	font-weight: $weight;
+	font-size: $size;
+}
+@mixin noto($weight: 400, $size:'') {
+	font-weight: $weight;
+	font-size: $size;
+}
+
+@mixin roboto($weight: 400, $size:'') {
+	font-family: 'Roboto';
+	font-weight: $weight;
+	font-size: $size;
+}

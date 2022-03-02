@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">공간 공유하기 등록</h2>
+                </div>
+                <div class="swiper-container intro full-box">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/mobile/img/mypage/img-intro_place01.png" alt="" />
+                                <figcaption>
+                                    <p>공공의주방에서<br>호스트로 활동해 보세요!</p>
+                                </figcaption>
+                            </figure>
+                            <div class="step-box">
+                                <p><strong>STEP 01</strong> 공간 등록하기</p>
+                                <ul>
+                                    <li>① 하단 공간 등록하기 버튼 클릭</li>
+                                    <li>② 기본/상세 정보를 입력</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/mobile/img/mypage/img-intro_place02.png" alt="" />
+                                <figcaption>
+                                    <p>나만의 공간을<br>우리의 공간으로 만들어 보세요!</p>
+                                </figcaption>
+                            </figure>
+                            <div class="step-box">
+                                <p><strong>STEP 02</strong> 공간 공유하기</p>
+                                <ul>
+                                    <li>① 공유 날짜 지정</li>
+                                    <li>② 관리자 승인 대기</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="/mobile/img/mypage/img-intro_place03.png" alt="" />
+                                <figcaption>
+                                    <p>내 공간에서 <br>다양한 사람들과 소통해 보세요!</p>
+                                </figcaption>
+                            </figure>
+                            <div class="step-box">
+                                <p><strong>STEP 03</strong> 공간 관리하기</p>
+                                <ul>
+                                    <li>① 마이페이지&gt;예약 관리 클릭</li>
+                                    <li>② 예약 현황 실시간 확인 가능</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="btn-form-wrap">
+                    <a href="#" class="btn-form active">공간 공유하기</a>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.swiper-container').slider({
+                pagination: {
+                    el: '.swiper-pagination'
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

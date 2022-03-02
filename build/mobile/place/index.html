@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 공간</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/main.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="gnb-bar">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="/common/img/logo.svg" alt="">
+                        <span class="arrow"></span>
+                    </a>
+                </h1>
+                <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
+                <a href="#" class="ico-gnb-search pop-open" data-pop="search"><span class="blind">검색</span></a>
+                <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+            </div>
+            <nav class="gnb-list">
+                <ul class="menu-default">
+                    <!-- [18.12.20] 클래스 추가 -->
+                    <!-- [D]: li에 active가 붙으면 하이라이트 처리됨 -->
+                    <li class="active"><a href="#">홈</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">클래스</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">공간</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">공공의주방 이야기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <div class="pop-wrap" id="search">
+                <div class="pop-cont">
+                    <form action="">
+                        <div class="inp-wrap">
+                            <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색">
+
+                            <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                            <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="list-wrap">
+                                <!-- [D]: 검색어 기능이 켜져있을 때-->
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                <!-- //[D]: 검색어 기능이 켜져있을 때-->
+
+                                <!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)-->
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                <!-- //[D]: 검색어 기능이 꺼져있을 때 -->
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </header>
+        <div id="content">
+
+            <section>
+                <!-- 새로운 공간 -->
+                <div class="list-area">
+                    <h2 class="t-title1">새로운 공간</h2>
+                    <div class="list-scroll full-box">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <figure>
+                                    <a href="#"><img src="/mobile/img/@temp/img-similar01.png" alt="" /></a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">티엠 키친</strong>
+                                        <p>소수인원이 모이는 독립적 요리공간을 원하신다면 티엠키친으로 오세요.</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <figure>
+                                    <a href="#"><img src="/mobile/img/@temp/img-similar01.png" alt="" /></a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">돼지 갈비찜</strong>
+                                        <p>돼지 갈비찜 하나면 우리집 밥상도 한정식집 부럽지 않아요!</p>
+                                        <div class="text-info">
+                                            <span>손님초대</span>
+                                            <span>서울시 강남구</span>
+                                            <span>10월 2회 가능</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //새로운 공간 -->
+
+                <!-- 배너 -->
+                <div class="banner-area full-box">
+                    <a href="#"><img src="/mobile/img/main/bann-place.jpg" alt=""></a>
+                </div>
+                <!-- //배너 -->
+
+                <!-- 공간 -->
+                <div class="list-area">
+                    <h2 class="t-title1">공간</h2>
+                    <div class="select">
+
+                        <div class="select-box label-type">
+                            <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                            <!-- [D]: label에 .active 추가하면 활성화 -->
+                            <label for="sel01">인기순</label>
+                            <select name="" id="sel01">
+                                <option value="" selected>인기순</option>
+                                <option value="">최신순</option>
+                            </select>
+                        </div>
+
+                        <div class="select-box btn-type">
+                            <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                            <!-- [D]: label에 .on이 붙으면 하이라이트 됨 -->
+                            <label for="sel01" class="active">
+                                <span>베이킹스튜디오</span>
+                                <select name="" id="sel01">
+                                    <option value="베이킹스튜디오1">베이킹스튜디오1</option>
+                                    <option value="베이킹스튜디오2">베이킹스튜디오2</option>
+                                </select>
+                            </label>
+
+                            <label for="sel02">
+                                <span>요리시설</span>
+                                <select name="" id="sel02">
+                                    <option value="요리시설1">요리시설1</option>
+                                    <option value="요리시설2">요리시설2</option>
+                                </select>
+                            </label>
+
+                            <label for="sel03">
+                                <span>지역</span>
+                                <select name="" id="sel03">
+                                    <option value="지역1">지역1</option>
+                                    <option value="지역2">지역2</option>
+                                </select>
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="list-default">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb04.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">이쿡 요리 스튜디오</strong>
+                                        <p>넓은 테이블들 덕분에 그룹 클래스에도 더 이상 좁지 않아요.</p>
+                                        <div class="text-info">
+                                            <span>스타일링</span>
+                                            <span>서울시 강남구</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <!-- //loop -->
+                            <li>
+                                <figure>
+                                    <!-- visual slide -->
+                                    <a href="#">
+                                        <div class="swiper-container paging">
+                                            <div class="swiper-wrapper">
+                                                <!-- loop -->
+                                                <div class="swiper-slide"><img src="/mobile/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                                <!-- //loop -->
+                                                <div class="swiper-slide"><img src="/mobile/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                                <div class="swiper-slide"><img src="/mobile/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </a>
+                                    <!-- //visual slide -->
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">어반 키친</strong>
+                                        <p>튀김기와 토스터 등 간편한 요리기구들을 다수 보유하고 있어요.</p>
+                                        <div class="text-info">
+                                            <span>스타일링</span>
+                                            <span>인천 광역시</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb04.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">모더니크 스튜디오</strong>
+                                        <p>마치 내 집에서 요리하는 듯한 편안하고 아늑한 분위기가 강점이에요.</p>
+                                        <div class="text-info">
+                                            <span>스타일링</span>
+                                            <span>서울시 중랑구</span>
+                                        </div>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb04.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">스피지오</strong>
+                                        <p>프라이빗한 공간에서 수업을 하고 싶다면 스파지오로 오세요.</p>
+                                        <div class="text-info">
+                                            <span>스타일링</span>
+                                            <span>경기도 용인시</span>
+                                        </div>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href="#">
+                                        <img src="/mobile/img/@temp/img-main-thumb04.jpg" alt="" />
+                                    </a>
+                                    <figcaption class="list-content">
+                                        <strong class="t-title2">ST 정우남</strong>
+                                        <p>팝한 분위기 속에서 다양한 주류 수업을 진행해보세요!</p>
+                                        <div class="text-info">
+                                            <span>스타일링</span>
+                                            <span>서울시 마포구</span>
+                                        </div>
+                                </figure>
+                            </li>
+                        </ul>
+
+                        <div class="btn-area">
+                            <!-- [D]: .btn-more에 .hide가 붙으면 사라집니다. -->
+                            <button class="btn-more">더 많은 <strong>공간</strong>이 궁금하다면?</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //공간 -->
+
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="logo"><img src="/common/img/footer-logo.png" alt=""></div>
+            <ul class="footer-privacy">
+                <li><a href="#">제휴문의</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개설자약관</a></li><!-- [18.12.12] 수정: 텍스트 수정 -->
+                <li><a href="#">개인정보처리방침</a></li><!-- [19.1.2] 수정: 텍스트 수정 -->
+                <li class="last"><a href="#">공공의주방 회사소개</a></li><!-- [19.1.2] 수정: 텍스트 수정 -->
+                <!-- [18.12.11] 수정: 텍스트 수정 -->
+            </ul>
+            <ul class="footer-info">
+                <li>
+                    <span class="title">상호명</span>
+                    <strong class="name">주식회사 공공의주방</strong>
+                </li>
+                <li>
+                    <span class="title">대표</span>
+                    <strong class="name">안상미</strong>
+                </li>
+                <li>
+                    <span class="title">개인정보책임자</span>
+                    <strong class="name">안상미</strong><!-- [19.1.8] 수정: 텍스트 수정 -->
+                </li>
+                <li>
+                    <span class="title">사업자등록번호</span>
+                    <strong class="name">368-81-00400</strong>
+                </li>
+                <li>
+                    <span class="title">통신판매신고번호</span>
+                    <strong class="name">제 2017년-서울강남-03388호</strong>
+                </li>
+                <li>
+                    <span class="title">주소</span>
+                    <strong class="name">경기도 성남시 수정구 대왕판교로 815 7층 G-759호</strong>
+                </li>
+                <li>
+                    <span class="title">대표번호</span>
+                    <strong class="name">1800-5910</strong>
+                </li>
+                <li>
+                    <span class="title">이메일</span>
+                    <strong class="name">contact@public-kitchen.com</strong>
+                </li>
+            </ul>
+            <div class="footer-copy">
+                <p class="desc">(주)공공의주방은 통신판매중개자이며 통신판매 당사자가 아닙 니다. 따라서 클래스/공간정보, 거래 및 판매에 대하여 책임을 지지 않습니다.</p> <!-- [19.1.2] 추가: 마크업 추가 -->
+                <p class="copy">&copy; 공공의주방. <span>All Rights Reserved.</span></p> <!-- [19.1.2] 수정: 텍스트 수정 -->
+                <div class="sns">
+                    <a href="#" class="facebook"><span class="blind">facebook</span></a>
+                    <a href="#" class="instagram"><span class="blind">instagram</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.btn-more').click(function(e) {
+                e.preventDefault();
+                $(this).addClass('hide');
+            })
+        });
+    </script>
+</body>
+
+</html>

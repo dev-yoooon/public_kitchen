@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">새 공간 등록하기</h2>
+                    <p class="desc">공간을 등록하기 전에 가이드라인과 운영원칙을 확인해주세요</p>
+                    <a href="#" class="desc-small">가이드라인 확인하기<i class="ico-tooltip"></i></a>
+                </div>
+                <div class="tab-area">
+                    <div class="tab-content full-box">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간 테마</span>
+                                <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                <select name="" class="form-select-type2">
+                                    <option value="">요리 스튜디오</option>
+                                    <option value="">선택1</option>
+                                    <option value="">선택2</option>
+                                </select>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">수용 가능 인원</span>
+                                <!-- [D]: 활성화시 increment에 .active 추가 -->
+                                <div class="inp-type2 increment active">
+                                    <span class="tit">최대</span>
+                                    <div class="btn-wrap">
+                                        <!-- [D]: 더이상 입력되지 할 수 없을 때 .btn-에 .disabled 추가 -->
+                                        <button class="btn-decrement"><span class="blind">감소</span></button>
+                                        <span class="inp-num">5</span>
+                                        <button class="btn-increment"><span class="blind">증가</span></button>
+                                    </div>
+                                </div>
+                                <!-- //[D]: default일 때 -->
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간명
+                                    <!-- [D]: em에 .active가 붙으면 컬러가 바뀝니다. -->
+                                    <span class="tit-right"><em>0</em> / 15</span>
+                                </span>
+                                <input type="text" class="inp-type2" name="" placeholder="공간 명을 입력해 주세요"> <!-- [18.12.14] 수정: placeholder 수정 -->
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간 한 줄 설명
+                                    <!-- [D]: em에 .active가 붙으면 컬러가 바뀝니다. -->
+                                    <span class="tit-right"><em>0</em> / 45</span> <!-- [18.12.04] 수정: 텍스트 수정 -->
+                                </span>
+                                <!-- [18.12.14] 수정: placeholder 수정 -->
+                                <!-- [18.12.18] 수정: placeholder 수정 -->
+                                <!-- [18.12.20] 수정: 마크업 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="2" placeholder="매력적인 설명을 작성해주세요"></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">해시태그</span>
+                                <span class="inner">
+                                    <!-- [18.12.18] 수정: placeholder 수정 -->
+                                    <input type="text" class="inp-type2" name="" placeholder="#태그 를 입력해 주세요"> <!-- [18.12.14] 수정: placeholder 수정 -->
+                                    <a href="#" class="btn-add"><span class="blind">추가</span></a>
+                                </span>
+
+                                <!-- [D]: a에 .hidden 추가시 숨겨집니다. -->
+                                <span class="hash-tag delete hidden">
+                                    <a href="#">#베이킹</a>
+                                    <a href="#">#초보</a>
+                                    <a href="#">#간식</a>
+                                </span>
+                                <p class="enclosed">최대 3개까지 등록 가능합니다.</p>
+
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">대표 이미지</span>
+                                <div class="inp-inner box">
+                                    <p class="desc">대표이미지는 공간의 가장 중요한 시각적 요소입니다. 좋은 인상을 남길 수 있도록 사진/영상의 퀄리티를 신경써서 업로드해 주세요.</p>
+                                    <!-- [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-tit income-tooltip">
+                                        메인 썸네일용 이미지 <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                                        <div class="tip">메인 썸네일은 가로형 이미지를 권장하며 사이즈는 285X180입니다
+                                            <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                                        </div><!-- [18.12.04] 수정: 텍스트 수정-->
+                                    </div>
+                                    <!--// [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-file-wrap">
+                                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                        <label for="file08" class="inp-file land dot">
+                                            <span class="text-add">사진 추가하기</span>
+                                            <input type="file" id="file08">
+                                        </label>
+
+                                        <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        <img src="/mobile/img/@temp/img-class_visual01.png" alt="" class="hidden">
+
+                                        <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
+                                        <div class="btn-modify">
+                                            <a class="ico-modify"><span class="blind">수정하기</span></a>
+                                            <!-- [D]: .btn-list에 .open이 붙으면 활성화됩니다. -->
+                                            <div class="btn-list open">
+                                                <a href="#">수정하기</a>
+                                                <a href="#">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-tit income-tooltip">
+                                        상세 썸네일용 이미지 <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                                        <div class="tip">
+                                            상세 썸네일은 세로형 이미지를 권장하며 사이즈는 340X340입니다
+                                            <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                                        </div><!-- [18.12.04] 수정: 텍스트 수정-->
+                                    </div>
+                                    <!--// [18.12.03] 수정: 마크업 수정-->
+                                    <div class="inp-file-wrap">
+                                        <label for="file01" class="inp-file dot">
+                                            <span class="text-add">사진 추가하기</span>
+                                            <input type="file" id="file01">
+                                        </label>
+
+                                        <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        <img src="/mobile/img/blank.png" alt="" class="hidden">
+
+                                        <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
+                                        <div class="btn-modify">
+                                            <a class="ico-modify"><span class="blind">수정하기</span></a>
+                                            <!-- [D]: .btn-list에 .open이 붙으면 활성화됩니다. -->
+                                            <div class="btn-list">
+                                                <a href="#">수정하기</a>
+                                                <a href="#">삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">상세 이미지 등록<small class="point">*최대 9개까지 추가 등록 가능합니다.</small></span>
+                                <div class="inp-inner">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <div class="inp-file-wrap small">
+                                        <label for="file10" class="inp-file">
+                                            <input type="file" id="file10" disabled>
+
+                                            <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                            <!-- [D]: 파일 선택시 추가 -->
+                                        </label>
+                                        <img src="/mobile/img/@temp/img-class_visual01.png" alt="">
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </div>
+
+                                    <div class="inp-file-wrap small">
+                                        <label for="file20" class="inp-file">
+                                            <input type="file" id="file20">
+                                            <!-- [D]: 이미지 추가시 .hidden 삭제 -->
+                                        </label>
+                                        <img src="/mobile/img/blank.png" alt="" class="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간 상세 설명</span>
+                                <!-- [18.12.14] 수정: placeholder 수정 -->
+                                <!-- [18.12.18] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="15" placeholder="공간의 특징(분위기, 수용인원, 사용용도 등)이 잘 들어날 수 있도록 상세하게 적어주세요&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;예시 : 잠실에 위치한 OOO은 베이킹 전문공간입니다. 최대인원 10명이 수업 가능하며 기본주방시설과 2단 데크오븐이 있어 베이킹 전문수업으로 공간 대여 가능합니다. 전체분위기는 화이트톤이며 자세한 문의는 1:1메시지 주시면 공간에 대해 답변 드리겠습니다."></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">참고사항</span>
+                                <!-- [18.12.14] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="5" placeholder="공간에서 사용가능한 집기 비품 종류에 대해 상세히 입력해 주세요 &#13;&#10;&#13;&#10;예시 : 기본주방설비/오븐 2개/ 각종 소품 및 조리도구가 구비되어 있고, 무료 와이파이가 제공됩니다. *빔프로젝트 사용은 예약시 미리 말씀해 주세요. "></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">공간 위치 등록</span>
+                                <div class="post-box">
+                                    <div class="inp-bundle">
+                                        <input type="text" class="inp-type2" name="" placeholder="우편번호">
+                                        <a href="#" class="btn-form active">우편번호 찾기</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                                    </div>
+                                    <input type="text" class="inp-type2 inp-mt" name="" placeholder="">
+                                    <input type="text" class="inp-type2 inp-mt" name="" placeholder="상세주소를 입력해주세요.">
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">편의시설 <small class="point">*중복 선택 가능</small></span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="comfort01" checked>
+                                    <label for="comfort01">화장실</label>
+                                </span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="comfort02">
+                                    <label for="comfort02">환풍기</label>
+                                </span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="comfort03">
+                                    <label for="comfort03">전등</label>
+                                </span>
+                                <span class="check-box block inp-mt">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="comfort04">
+                                    <label for="comfort04">주차가능</label>
+                                </span>
+                                <!-- [D]: 주차가능에 체크시 .hidden 삭제됩니다. -->
+                                <!-- [18.12.14] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2 inp-mt" name="" id="" rows="6" placeholder="주차 관련 내용을 상세히 입력해 주세요&#13;&#10;&#13;&#10; 예시 : 주차공간이 협소하여 대중교통을 이용해 주시길 바랍니다 또는 주차는 건물 지하에 해주시고 3시간동안 무료주차가 가능합니다"></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">안전시설 <small class="point">*중복 선택 가능</small></span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="safety01">
+                                    <label for="safety01">소화기</label>
+                                </span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="safety02">
+                                    <label for="safety02">화재감지기</label>
+                                </span>
+                                <span class="check-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="safety03">
+                                    <label for="safety03">안전카드</label>
+                                </span>
+                                <span class="check-box block inp-mt">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="checkbox" name="" id="safety04" checked>
+                                    <label for="safety04">구급상자</label>
+                                </span>
+                            </div>
+                            <div class="btn-form-wrap">
+                                <button class="btn-form active">공간 변경하기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

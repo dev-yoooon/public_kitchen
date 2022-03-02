@@ -1,0 +1,11 @@
+.blind {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	text-indent: -9999em;
+}
+
+#wrap {
+	overflow: hidden;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 공통"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="focus-area">
+                <div class="sub-title">
+                    <h2 class="t-title1">비밀번호 변경</h2>
+                </div>
+                <form action="">
+                    <div class="inp-wrap inner-tit">
+                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                        <input type="password" class="inp" id="login02" name="" placeholder="기존 비밀번호">
+                        <label for="login02">기존 비밀번호</label>
+
+                        <!-- [D]: .hidden 추가시 숨김처리 됩니다. -->
+                        <p class="error hidden">기존 비밀번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                    </div>
+
+                    <!-- [D]: validation check 완료시 .inp-wrap에 .active 추가 -->
+                    <div class="inp-wrap inner-tit active">
+                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                        <input type="password" class="inp" id="login01" name="" placeholder="새 비밀번호 (8~20자 이내 영문, 숫자의 조합)">
+                        <label for="login01">새 비밀번호</label>
+
+                        <!-- [D]: .hidden 추가시 숨김처리 됩니다. -->
+                        <p class="error hidden">8~20자 영문,숫자의 조합을 사용하여 다시 입력해주세요.</p>
+                    </div>
+
+                    <!-- [D]: validation check 완료시 .inp-wrap에 .active 추가 -->
+                    <div class="inp-wrap inner-tit">
+                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                        <input type="password" class="inp" id="login01" name="" placeholder="새 비밀번호 확인">
+                        <label for="login01">새 비밀번호 확인</label>
+
+                        <!-- [D]: .hidden 추가시 숨김처리 됩니다. -->
+                        <p class="error">비밀번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                    </div>
+
+                    <div class="btn-form-wrap mt-1">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <button class="btn-form active">확인</button>
+                    </div>
+                </form>
+
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

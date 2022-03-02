@@ -1,0 +1,179 @@
+#wrap {
+	min-width: 1280px;
+}
+
+.blind {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	text-align: -9999em;
+}
+
+.hide {
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+	transition: opacity .25s ease-in-out, visibility .25s ease-in-out, height .25s .25s ease-in-out;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.visible {
+	display: block !important;
+}
+
+.dp-ib {
+	display: inline-block !important;
+	width: 100%;
+	box-sizing: border-box;
+
+	&.hidden {
+		display: none !important;
+	}
+}
+
+.full-box {
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.pd {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.al-r {
+	text-align: right;
+}
+.al-l {
+	text-align: left !important;
+}
+.al-c {
+	text-align: center !important;
+}
+
+.bg-grey {
+	background: #F6F5F5 !important;
+}
+
+.lock {
+	min-width: 1200px;
+}
+
+.active {
+	color: $point-color;
+}
+
+#content {
+	position: relative;
+	width: 1200px;
+	min-height: calc(100vh - 343px);
+	padding-top: 146px;
+	margin: 0 auto;
+	
+	&.ie {
+		min-height: calc(100vh - 345px);
+	}
+
+	&>section {
+
+		&.aside {
+			float: left;
+			width: 285px;
+
+			.breadcrumb {
+				margin-bottom: 60px;
+
+				.parent {
+					font-size: 16px;
+					line-height: 24px;
+				}
+
+				h1 {
+					font-size: 30px;
+					line-height: 43px;
+					font-weight: 700;
+				}
+				
+				h2 {
+					font-size: 24px;
+					line-height: 36px;
+					font-weight: 700;
+				}
+
+				.desc {
+					max-width: 14.6em;
+					margin-top: 24px;
+					font-size: 15px;
+					line-height: 24px;
+					word-break: break-all;
+
+					&-small {
+						display: inline-block;
+						margin-top: 16px;
+						color: $gray-83;
+						font-size: 15px;
+						line-height: 24px;
+
+						i {
+							margin-left: 6px;
+						}
+					}
+				}
+			}
+
+			&~section {
+				float: right;
+				width: calc(100% - 285px);
+
+				&:last-child {
+					padding-bottom: 120px;
+				}
+			}
+
+			&+section~section {
+				clear: both;
+			}
+		}
+
+		&.focus-area {
+			max-width: 350px;
+			margin: 0 auto;
+
+			.sub-title {
+				margin-top: 4px;
+
+				.t-title1 {
+					font-size: 30px !important;
+				}
+			}
+
+			.btn-form {
+				height: 50px;
+				font-size: 16px;
+				line-height: 50px;
+			}
+
+			.inp-wrap:nth-of-type(1) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.sub-title {
+	margin-top: 21px;
+}
+
+header .inner,
+footer .inner {
+	width: 1200px;
+	margin: 0 auto;
+	font-size: 0;
+}
+footer .inner {
+	overflow: hidden;
+}

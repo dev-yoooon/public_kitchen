@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(-1286.000000, -32.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#232323" stroke-width="2.3">
+            <g id="Group">
+                <g transform="translate(929.000000, 32.000000)">
+                    <g id="Group-6" transform="translate(357.000000, 2.000000)">
+                        <path d="M1.15,20.85 L20.85,20.85 L20.85,14.5 C20.85,10.4407071 17.5592929,7.15 13.5,7.15 L8.5,7.15 C4.44070709,7.15 1.15,10.4407071 1.15,14.5 L1.15,20.85 Z" id="Rectangle"></path>
+                        <circle id="Oval" cx="11" cy="5" r="5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

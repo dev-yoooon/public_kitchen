@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| footer"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/about.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">공공의 주방</p>
+                    <h1>이벤트</h1>
+                </div>
+            </section>
+            <section class="about">
+                <div class="list-mypage">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/pc/img/@temp/img-wish-class_list01.jpg">
+                                    <figcaption class="content">
+                                        <p class="b-title">수강생대상 <br/>스타벅스 아메리카노 증정 이벤트</p>
+                                        <p class="b-date">18.11.02 - 18.11.30</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/pc/img/@temp/img-wish-class_list02.jpg">
+                                    <figcaption class="content">
+                                        <p class="b-title">신규 클래스 <br/>오픈 기념 이벤트</p>
+                                        <p class="b-date">18.10.22 - 18.10.29</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="/pc/img/@temp/img-wish-class_list03.jpg">
+                                    <figcaption class="content">
+                                        <p class="b-title">클래스 신청하고 이벤트 참여하면 <br/>100% 경품 증정!</p>
+                                        <p class="b-date">18.10.01 - 18.10.12</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="last">
+                            <a href="#">
+                                <figure>
+                                    <img src="/pc/img/@temp/img-wish-class_list01.jpg">
+                                    <figcaption class="content">
+                                        <p class="b-title">클래스 공유하고, <br/>30%할인 쿠폰받자!</p>
+                                        <p class="b-date">18.09.01 - 18.09.30</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paging">
+                    <p class="first">첫 페이지로 이동</p>
+                    <p class="prev">이전 페이지로 이동</p>
+                    <ul>
+                        <li class="current">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                    </ul>
+                    <p class="next">다음 페이지로 이동</p>
+                    <p class="last">마지막 페이지로 이동</p>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+        @include('../inc/_footer.html')
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+        });
+    </script>
+</body>
+
+</html>

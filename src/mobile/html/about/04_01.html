@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| footer"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/about.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="about">
+                <h2 class="t-title1">자주하는 질문</h2>
+                <div class="board-wrap">
+                    <ul class="board-list faq-type">
+                        <li>
+                            <a href="#">
+                                <p class="b-title">공공의 주방</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b-title">이용방법</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b-title">요리선생님 등록</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b-title">쿠킹클래스 개설</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b-title">모임장소 등록</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b-title">모임장소 공유</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // tab
+            $('.tab-title a').on('click', function(e){
+                e.preventDefault();
+                var tabList = $(this).index();
+
+                $(".tab-title a").removeClass("on");
+                $(this).addClass("on");
+
+                $(".tab-cont-wrap .tab-cont").hide();
+                $(".tab-cont-wrap .tab-cont").eq(tabList).show();
+            })
+
+            // faq list
+            $('.faq-list li a').on('click', function (e) {
+                e.preventDefault();
+
+                if (!$(this).parent().hasClass('on')) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

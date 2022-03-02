@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 결제하기"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <div id="content" class="detail-wrap">
+            <div class="detail-inner">
+                <section class="apply">
+                    <h2 class="t-title1">신청내역</h2>
+                    <div class="list-mypage">
+                        <figure><img src="/pc/img/@temp/img-mypage_thumb.jpg" alt="">
+                        </figure>
+                    </div>
+                    <ul class="class-info">
+                        <li class="list-tit">조랭이 궁중 떡볶이찜</li>
+                        <li class="price"><em>₩</em>54,700</li>
+                        <li>
+                            <dl class="t-ko">
+                                <dt>수강일</dt>
+                                <dd>18.10.25(목) / 19:00 - 21:00</dd>
+                                <dt>선생님</dt>
+                                <dd>오수연 한식 전문가</dd>
+                                <dt>주소</dt>
+                                <dd>[06039] 서울특별시 강남구 강남대로 146길 37(논현동) 매틴빌딩 1층</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </section>
+                <form action="">
+                    <section class="aside apply pay-cost sticky">
+                        <div class="inner">
+                            <h3 class="t-title2">결제 금액</h3>
+                            <ul>
+                                <li class="t-desc1">
+                                    <strong>클래스 금액</strong>
+                                    <span>64,700원</span>
+                                </li>
+                                <li class="t-desc1">
+                                    <strong>쿠폰 사용 금액</strong>
+                                    <span>0원</span>
+                                </li>
+                                <li class="t-desc1">
+                                    <strong>포인트 사용 금액</strong>
+                                    <span>0원</span>
+                                </li>
+                                <li class="t-desc1">
+                                    <strong>마일리지 사용 금액</strong>
+                                    <span>0원</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            <strong>총 결제 금액</strong><span><b>64,700</b>원</span>
+                        </p>
+                        <a href="#" class="btn-form active">결제하기</a>
+                    </section>
+                    <section class="apply">
+                        <h3 class="t-title2">신청자 정보</h3>
+                        <div>
+                            <span class="inp-tit">이름</span>
+                            <input type="text" class="inp" id="name" name="" placeholder="이름을 입력해 주세요">
+                        </div>
+                        <div class="inp-wrap gen">
+                            <span class="inp-tit">성별</span>
+                            <span class="radio-box">
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="radio" name="" id="gender01" checked>
+                                <label for="gender01">남자</label>
+                            </span>
+                            <span class="radio-box">
+                                <input type="radio" name="" id="gender02">
+                                <label for="gender02">여자</label>
+                            </span>
+                        </div>
+                        <div class="inp-wrap">
+                            <span class="inp-tit">생년월일</span>
+                            <input type="text" class="inp" id="birth" name="" placeholder="6자리로 입력해 주세요(예시 : 880101)"><!-- [18.11.28] 수정: placeholder 변경 -->
+                        </div>
+                        <div class="inp-wrap">
+                            <span class="inp-tit">핸드폰 번호 인증</span>
+                            <div class="inp-bundle">
+                                <input type="text" class="inp t-num" name="" placeholder="010-0000-0000">
+                                <a href="#" class="btn-form disabled">인증요청</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                            </div>
+                            <div class="inp-bundle inp-mt">
+                                <input type="text" class="inp" name="" placeholder="인증번호 6자리">
+                                <span class="val-type t-num limit">02:59</span>
+                                <a href="#" class="btn-form active">인증확인</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="apply">
+                        <h3 class="t-title2">쿠폰/포인트/마일리지</h3>
+                        <div>
+                            <span class="inp-tit">쿠폰</span>
+                            <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                            <select name="" class="form-select">
+                                <option value="">쿠폰을 선택해 주세요.</option>
+                                <option value="">선택1</option>
+                                <option value="">선택2</option>
+                            </select>
+                        </div>
+                        <div class="inp-wrap">
+                            <span class="inp-tit">포인트 사용<small>잔여 포인트 <em class="t-num">1,990</em>원</small></span>
+                            <!-- [D]: 포인트 사용 전일 때  -->
+                            <div class="inp-bundle">
+                                <div class="inner won">
+                                    <input type="number" class="inp" name="" placeholder="0 원">
+                                    <div class="unit"><span class="value"></span>원</div>
+                                </div>
+                                <a href="#" class="btn-form active">전체사용</a>
+                            </div>
+                            <!-- //포인트 사용 전일 때  -->
+
+                            <!-- [D]: 포인트 사용 입력 후(.hidden을 삭제하면 활성화) -->
+                            <div class="inp-bundle hidden">
+                                <div class="inner won">
+                                    <input type="number" class="inp" name="" placeholder="0 원">
+                                    <div class="unit"><span class="value"></span>원</div>
+                                </div>
+                                <a href="#" class="btn-form active">사용취소</a>
+                            </div>
+                            <!-- 포인트 사용 입력 후  -->
+                        </div>
+                        <div class="inp-wrap">
+                            <span class="inp-tit">마일리지 사용<small>잔여 포인트 <em class="t-num">1,990</em>원</small></span>
+                            <div class="inp-bundle">
+                                <div class="inner won">
+                                    <input type="number" class="inp" name="" placeholder="0 원">
+                                    <div class="unit"><span class="value"></span>원</div>
+                                </div>
+                                <a href="#" class="btn-form active">전체사용</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                            </div>
+                            <div class="inp-bundle hidden">
+                                <div class="inner won">
+                                    <input type="number" class="inp" name="" placeholder="0 원">
+                                    <div class="unit"><span class="value"></span>원</div>
+                                </div>
+                                <a href="#" class="btn-form active">사용취소</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="apply pay-choice">
+                        <h3 class="t-title2">결제방법 선택</h3>
+                        <div class="inp-wrap btn-set">
+                            <!---// select-pay -->
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-form active">신용/체크카드</button>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-form normal">계좌이체</button>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-form normal">휴대폰결제</button>
+                            </div>
+                        </div>
+
+                        <!-- [D]: .pay-choice_content에 .hidden을 추가하면 숨겨집니다. -->
+                        <div class="pay-choice_content">
+
+                            <!-- [D]: 신용/체크일 때 -->
+                            <div class="choice-card">
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">카드 종류</span>
+                                    <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                    <select name="" class="form-select">
+                                        <option value="">카드를 선택해주세요.</option>
+                                        <option value="">카드1</option>
+                                        <option value="">카드2</option>
+                                    </select>
+                                </div>
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">할부 기간</span>
+                                    <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                    <select name="" class="form-select">
+                                        <option value="">일시불</option>
+                                        <option value="">할부1</option>
+                                        <option value="">할부2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- //신용/체크일 때 -->
+
+                        </div>
+
+                        <div class="pay-choice_content hidden">
+
+                            <!-- [D]: 계좌이체일 때 -->
+                            <div class="choice-bank">
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">현금영수증 신청</span>
+                                    <div class="radio-wrap">
+                                        <span class="radio-box">
+                                            <input type="radio" name="" id="cash01" checked>
+                                            <label for="cash01">개인소득공제</label>
+                                        </span>
+                                        <span class="radio-box">
+                                            <input type="radio" name="" id="cash02">
+                                            <label for="cash02">법인지출증빙</label>
+                                        </span>
+                                        <span class="radio-box">
+                                            <input type="radio" name="" id="cash03">
+                                            <label for="cash03">미발행</label>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- [D]: 개인소득공제일 때 -->
+                                <div class="inp-wrap">
+                                    <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                    <select name="" class="form-select">
+                                        <option value="">휴대폰 번호</option>
+                                        <option value="">선택1</option>
+                                        <option value="">선택2</option>
+                                    </select>
+                                    <input type="text" class="inp inp-mt" name="">
+                                </div>
+                                <!-- //개인소득공제일 때 -->
+
+                                <!-- [D]: 법인지출증빙일 때 (활성화시 .hidden 삭제) -->
+                                <div class="inp-wrap hidden">
+                                    <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                    <select name="" class="form-select">
+                                        <option value="">사업자 등록번호</option>
+                                        <option value="">선택1</option>
+                                        <option value="">선택2</option>
+                                    </select>
+                                    <input type="text" class="inp inp-mt" name="">
+                                </div>
+                                <!-- //법인지출증빙일 때 -->
+
+                            </div>
+                            <!-- //계좌이체일 때 -->
+
+                        </div>
+
+                        <span class="check-box block">
+                            <input type="checkbox" name="" id="payTypeCheck">
+                            <label for="payTypeCheck">주문내역 확인 동의(필수)</label>
+                            <span>클래스/선생님/공간정보, 가격, 할인내역, 환불정책등을 최종확인하였으며, 구매에 동의하시겠습니까? (전자상거래법 제 8조 2항)</span>
+                        </span>
+
+                    </section>
+                    <section class="apply manager-apply">
+                        <h3 class="t-title2">한끼매니저 신청</h3>
+                        <p> 한끼매니저는 해당 클래스의 일일 매니저가 되어서 소정의 혜택을 제공받습니다. <br/>신청하신 분 중에서 임의로 선정하여 추후 개별 연락드립니다. </p>
+                        <span class="check-box">
+                            <input type="checkbox" name="" id="manageCheck">
+                            <label for="manageCheck">신청합니다.</label>
+                        </span>
+                    </section>
+                </form>
+            </div>
+        </div>
+        <!-- // #content -->
+        @include('../inc/_footer.html')
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.won input').on('input change', function() {
+                var _val = $(this).val();
+                var $unit = $(this).parents('.won').find('.unit');
+                if(!_val) {
+                    $unit.addClass('error');
+                } else {
+                    $unit.removeClass('error');
+                }
+                $unit.find('.value').text(_val);
+            });
+        });
+    </script>
+</body>
+
+</html>

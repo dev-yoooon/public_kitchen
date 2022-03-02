@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">공간 등록하기</h2>
+                    <p class="desc">공간을 등록하기 전에 가이드라인과 운영원칙을 확인해주세요</p>
+                    <a href="#" class="desc-small">가이드라인 확인하기<i class="ico-tooltip"></i></a>
+                </div>
+                <div class="tab-area full-box">
+                    <div class="tab-title check">
+                        <!-- [D]:
+                        .active - 입력 완료된 탭
+                        .on - 현재 선택된 탭
+                        .on.active - 수정하기에서 수정 중인 선택된 탭
+                        .dim.active - 수정하기에서 선택되지 않은 탭
+                        -->
+                        <a href="#" class="on">기본정보</a>
+                        <a href="#" class="dim">공간소개</a>
+                        <a href="#" class="dim">공유일정</a>
+                    </div>
+                    <div class="tab-content bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit">이름</span>
+                                <!-- [D]: 수정되지 않는것은 readonly -->
+                                <input type="text" class="inp-type2" name="" placeholder="이름을 입력해 주세요." value="김수아" readonly>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">성별</span>
+                                <span class="radio-box">
+                                    <input type="radio" name="" id="male">
+                                    <label for="male">남자</label>
+                                </span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="" id="female" checked>
+                                    <label for="female">여자</label>
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">생년월일</span>
+                                <div class="inp-bundle inp-mt">
+                                    <!-- [18.12.18] 수정: placeholder 변경 -->
+                                    <input type="number" class="inp-type2" name="" placeholder="8자리로 입력해 주세요(예시 : 19880101)" value=""><!-- [18.11.28] 수정: placeholder 변경 -->
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">핸드폰 번호</span>
+                                <div class="inp-bundle">
+                                    <input type="text" class="inp-type2" name="" placeholder="‘ - ’ 빼고 입력해주세요">
+                                    <a href="#" class="btn-form disabled">인증번호 발송</a><!-- [D]: button에 .active가 붙으면 컬러가 바뀝니다. -->
+                                </div>
+                                <div class="inp-bundle inp-mt">
+                                    <input type="text" class="inp-type2" name="" placeholder="인증번호 입력해주세요">
+                                    <!-- [D]: hidden 삭제시 입력시간 카운트 보입니다. -->
+                                    <span class="val-type t-num hidden">02:59</span>
+                                </div>
+                                <div class="btn-form-wrap inp-mt">
+                                    <button class="btn-form disabled none-border">확인</button>
+                                </div>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">자기소개</span>
+                                <!-- [18.12.14] 수정: placeholder 수정 -->
+                                <!-- [18.12.18] 수정: placeholder 수정 -->
+                                <textarea class="text-area-type2" name="" id="" rows="18" placeholder="공공의주방은 수강생, 선생님, 호스트와의 관계를 기반으로 만들어졌습니다. 호스트가 어떤 사람인지 친절하게 알려주세요&#13;&#10;&#13;&#10;예시 : 반갑습니다. 저는 잠실에서 쿠킹스튜디오, OOO라는 공간을 운영하고 있습니다. 평소 요리를 너무 좋아하고 가끔 수업도 합니다. 평소 이 공간은 요리수업이 진행되는 곳으로  보다 다양한 선생님들의 수업이 진행되면 좋을 것 같아 공간을 공유합니다."></textarea>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">사업자 유형</span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="" id="company01">
+                                    <label for="company01">개인</label>
+                                </span>
+                                <span class="radio-box">
+                                    <input type="radio" name="" id="company02" checked>
+                                    <label for="company02">면세사업자</label> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </span>
+
+                                <!-- [18.12.27] 추가: 사업자 유형 추가 -->
+                                <span class="radio-box">
+                                    <input type="radio" name="biz" id="biz03">
+                                    <label for="biz03">간이과세자</label> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </span>
+                                <span class="radio-box block">
+                                    <input type="radio" name="biz" id="biz04">
+                                    <label for="biz04">일반과세자</label>
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">은행/증권사 선택</span>
+                                <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                <select name="" class="form-select-type2">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="">선택1</option>
+                                    <option value="">선택2</option>
+                                </select>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">계좌번호 입력</span>
+                                <input type="number" class="inp-type2" name="" placeholder="‘ - ’ 제외하고 숫자만 입력해주세요"><!-- [18.11.28] 수정: placeholder 변경 -->
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">예금주 명</span>
+                                <input type="text" class="inp-type2" name="" placeholder="텍스트를 입력해 주세요.">
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">통장 사본 첨부</span>
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="file" id="file01" placeholder="이미지를 첨부해주세요.">
+                                <!-- [D]: label에 .active가 붙으면 텍스트 활성화됩니다. -->
+                                <label for="file01" class="inp-type2 attach">
+                                    <span>이미지를 첨부해주세요.</span>
+                                </label>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">사업자등록증 첨부</span>
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="file" id="file01" placeholder="이미지를 첨부해주세요.">
+                                <!-- [D]: label에 .active가 붙으면 텍스트 활성화됩니다. -->
+                                <label for="file01" class="inp-type2 attach">
+                                    <span>이미지를 첨부해주세요.</span>
+                                </label>
+                            </div>
+                            <div class="btn-form-wrap">
+                                <button class="btn-form normal none-border">임시저장</button>
+                                <button class="btn-form active">다음</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

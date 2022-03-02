@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 마이페이지 | 공통</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="gnb-bar">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="/common/img/logo.svg" alt="">
+                        <span class="arrow"></span>
+                    </a>
+                </h1>
+                <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
+                <a href="#" class="ico-gnb-search pop-open" data-pop="search"><span class="blind">검색</span></a>
+                <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+            </div>
+            <nav class="gnb-list">
+                <ul class="menu-default">
+                    <!-- [18.12.20] 클래스 추가 -->
+                    <!-- [D]: li에 active가 붙으면 하이라이트 처리됨 -->
+                    <li class="active"><a href="#">홈</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">클래스</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">공간</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">공공의주방 이야기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <div class="pop-wrap" id="search">
+                <div class="pop-cont">
+                    <form action="">
+                        <div class="inp-wrap">
+                            <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색">
+
+                            <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                            <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="list-wrap">
+                                <!-- [D]: 검색어 기능이 켜져있을 때-->
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                <!-- //[D]: 검색어 기능이 켜져있을 때-->
+
+                                <!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)-->
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                <!-- //[D]: 검색어 기능이 꺼져있을 때 -->
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </header>
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">프로필 수정하기</h2>
+                </div>
+                <div class="tab-area full-box">
+                    <div class="tab-title">
+                        <a href="#">회원</a>
+                        <a href="#">선생님</a>
+                        <a href="#">호스트</a>
+                        <a href="#" class="on">정산</a>
+                    </div>
+                    <div class="tab-content bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <span class="inp-tit">사업자 유형</span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="biz" id="biz01">
+                                    <label for="biz01">개인</label>
+                                </span>
+                                <span class="radio-box">
+                                    <input type="radio" name="biz" id="biz02" checked>
+                                    <label for="biz02">면세사업자</label> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </span>
+
+                                <!-- [18.12.27] 추가: 사업자 유형 추가 -->
+                                <span class="radio-box">
+                                    <input type="radio" name="biz" id="biz03">
+                                    <label for="biz03">간이과세자</label> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </span>
+                                <span class="radio-box block">
+                                    <input type="radio" name="biz" id="biz04">
+                                    <label for="biz04">일반과세자</label>
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">은행/증권사 선택</span>
+                                <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                <select name="" class="form-select-type2">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="">선택1</option>
+                                    <option value="">선택2</option>
+                                </select>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">계좌번호</span>
+                                <input type="number" class="inp-type2" name="" placeholder="‘ - ’ 제외하고 숫자만 입력해주세요">
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">예금주 명</span>
+                                <input type="text" class="inp-type2" name="" placeholder="입력해주세요">
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">예금주 명</span>
+                                <input type="text" class="inp-type2" name="" placeholder="입력해주세요">
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">통장 사본 첨부</span>
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="file" id="file02" placeholder="이미지를 첨부해주세요.">
+                                <!-- [D]: label에 .active가 붙으면 텍스트 활성화됩니다. -->
+                                <label for="file02" class="inp-type2 attach">
+                                    <span>이미지를 첨부해주세요.</span>
+                                </label>
+                            </div>
+
+                            <!-- [D]: 사업자일 경우 .hidden 삭제시 활성화 -->
+                            <div class="inp-wrap">
+                                <span class="inp-tit">사업자등록증 첨부</span>
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="file" id="file02" placeholder="이미지를 첨부해주세요.">
+                                <!-- [D]: label에 .active가 붙으면 텍스트 활성화됩니다. -->
+                                <label for="file02" class="inp-type2 attach">
+                                    <span>이미지를 첨부해주세요.</span>
+                                </label>
+                            </div>
+
+
+                            <div class="btn-form-wrap">
+                                <!-- <button class="btn-form normal none-border">회원탈퇴</button> -->
+                                <!-- [18.12.04] 삭제: 마크업 삭제 -->
+                                <button class="btn-form active">변경사항 저장</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 회원가입"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">회원가입</h2>
+                </div>
+                <form action="">
+                    <!-- [D]: validation check 완료시 .inp-wrap에 .active 추가 -->
+                    <div class="inp-wrap inner-tit active">
+                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                        <input type="text" class="inp" name="join01" placeholder="이메일 (name@example.com)" value="dfy123@naver.com" readonly>
+                        <label for="join01">이메일</label>
+
+                        <!-- [D]: .hidden 삭제시 활성화 됩니다. -->
+                        <p class="error hidden">중복된 이메일입니다. 다른 이메일로 다시 입력해주세요.</p>
+                    </div>
+
+                    <!-- [D]: validation check 완료시 .inp-wrap에 .active 추가 -->
+                    <div class="inp-wrap">
+                        <span class="inp-tit">이름
+                            <!-- [D]: em에 .active가 붙으면 컬러가 바뀝니다. -->
+                            <span class="tit-right t-num"><em class="active">2</em> / 15</span>
+                        </span>
+                        <input type="text" class="inp" id="" name="" placeholder="최대 20자 한글/영문 입력">
+
+                        <!-- [D]: .hidden 추가시 숨김처리 됩니다. -->
+                        <p class="error">최대 20자 한글 또는 영문으로 다시 입력해주세요.</p>
+                    </div>
+
+                    <div class="inp-wrap">
+                        <span class="check-box argee-all">
+                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                            <input type="checkbox" name="" id="agree01">
+                            <label for="agree01">전체 동의</label>
+                        </span>
+                        <div class="agree">
+                            <span class="check-box block">
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="checkbox" name="" id="agree02">
+                                <label for="agree02">이용약관 (필수)</label>
+                                <a href="#" class="inp-btn"><span class="blind">전체보기</span></a>
+                            </span>
+
+                            <!-- [18.11.23] 수정: 마크업 추가 -->
+                            <span class="check-box block">
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="checkbox" name="" id="agree05">
+                                <label for="agree05">개설자약관(필수)</label>
+                                <a href="#" class="inp-btn"><span class="blind">전체보기</span></a>
+                            </span>
+                            <!-- //[18.11.23] 수정: 마크업 추가 -->
+
+                            <span class="check-box block">
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="checkbox" name="" id="agree03">
+                                <label for="agree03">개인정보 수집 및 이용동의 (필수)</label>
+                                <a href="#" class="inp-btn"><span class="blind">전체보기</span></a>
+                            </span>
+                            <span class="check-box block">
+                                <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                <input type="checkbox" name="" id="agree04">
+                                <label for="agree04">SMS 및 이메일 수신동의 (선택)</label>
+                                <a href="#" class="inp-btn"><span class="blind">전체보기</span></a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="btn-form-wrap">
+                        <!-- [D]: button은 a로 바꿔도 상관없음. 클래스만 맞춰주면 됨 -->
+                        <!-- [D] : 버튼 활성화 .active, 비활성화 .disabled-->
+                        <button class="btn-form active">회원가입</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!-- // #content -->
+
+        <!-- @include('../inc/_footer.html') -->
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

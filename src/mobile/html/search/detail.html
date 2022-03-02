@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 검색"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/search.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="sch-header">
+                <div class="inp-wrap">
+                    <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" value="베이킹">
+
+                    <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                </div>
+                <div class="tab-title simple">
+                    <a href="#" class="on">전체</a>
+                    <a href="#">클래스</a>
+                    <a href="#">공간</a>
+                    <a href="#">선생님</a>
+                </div>
+                <h2 class="t-title1">총 48개의 검색결과</h2>
+            </section>
+            <section class="result inp-wrap">
+                <div class="sch-list">
+                    <div class="flex-justify">
+                        <h3>클래스</h3>
+                        <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                    </div>
+                    <div class="list-mypage">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list01.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">생크림 롤케이크</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>서울시 강남구</span>
+                                                <span class="last">10월 2회가능</span>
+                                            </p>
+                                            <span class="price">
+                                                <em>₩</em>13,500</span>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list02.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">소금 버터빵</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>경기도 성남시</span>
+                                                <span class="last">10월 10회가능</span>
+                                            </p>
+                                            <span class="price">
+                                                <em>₩</em>25,000</span>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list03.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">에쉬레 크로와상</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>서울시 마포구</span>
+                                                <span class="last">11월 5회가능</span>
+                                            </p>
+                                            <span class="price">
+                                                <em>₩</em>25,000</span>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="result inp-wrap">
+                <div class="sch-list">
+                    <div class="flex-justify">
+                        <h3>공간</h3>
+                        <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                    </div>
+                    <div class="list-mypage">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list04.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">마리 앤 제이</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>카페</span>
+                                                <span>서울시 마포구</span>
+                                                <span class="last">10월 2회가능</span>
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list05.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">파시다로</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>카페</span>
+                                                <span>서울시 마포구</span>
+                                                <span class="last">10월 5회가능</span>
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list05.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">소울키친</strong> <!-- [19.1.8] 삭제: multi-line2 클래스 삭제 -->
+                                            <p class="list-desc">
+                                                <span>카페</span>
+                                                <span>서울시 마포구</span>
+                                                <span class="last">10월 5회가능</span>
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="result inp-wrap">
+                <div class="sch-list teacher">
+                    <div class="flex-justify">
+                        <h3>선생님</h3>
+                        <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                    </div>
+                    <div class="list-mypage">
+                        <ul>
+                            <!-- loop -->
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list06.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <!-- [D]: 두줄 말줄임인 경우 : multi-line2 클래스를 사용합니다.-->
+                                            <strong class="list-tit multi-line2">김수아 베이킹 전문가</strong>
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>서울시 마포구</span>
+                                                <!-- <span>10월 2회가능</span> -->
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list07.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <!-- [D]: 두줄 말줄임인 경우 : multi-line2 클래스를 사용합니다.-->
+                                            <strong class="list-tit multi-line2">조승진 베이킹 전문가</strong>
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>서울시 마포구</span>
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-sch_list08.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <!-- [D]: 두줄 말줄임인 경우 : multi-line2 클래스를 사용합니다.-->
+                                            <strong class="list-tit multi-line2">홍종윤 베이킹 전문가</strong>
+                                            <p class="list-desc">
+                                                <span>베이킹</span>
+                                                <span>서울시 마포구</span>
+                                            </p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

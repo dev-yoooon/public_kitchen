@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 공간"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+        <div id="content">
+            <section class="main-desc">
+                <div class="swiper-container kivi full-box">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/@temp/img-place_visual01.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-class_visual02.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-class_visual03.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="../img/@temp/img-class_visual04.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="share">
+                        <a href="#" class="pop-open btn-share" data-pop="share"><span class="blind">공유하기</span></a>
+                    </div>
+                </div>
+
+                <div class="title">
+                    <h2 class="t-title1">마리 앤 제이</h2>
+                    <p>소수인원이 모이는 독립적 요리공간을 원하신다면 티엠키친으로 오세요.</p>
+                </div>
+                <span class="hash-tag">
+                    <a href="#">#베이킹</a>
+                    <a href="#">#초보</a>
+                    <a href="#">#간식</a>
+                </span>
+                <ul class="info-list">
+                    <li class="ico-theme">
+                        <strong>테마</strong>
+                        <span>스타일링</span>
+                    </li>
+                    <li class="ico-place">
+                        <strong>위치</strong>
+                        <span>서울시 강남구 논현동</span>
+                    </li>
+                    <!-- [18.12.24] 수정: 클래스 수정 -->
+                    <li class="ico-people">
+                        <strong>인원</strong>
+                        <span>5명-10명</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="introduce">
+                <h3 class="t-title2">공간 소개</h3>
+                <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                <div class="cont overflow">
+                    <div class="inner">
+                        <p>강남구 논현동에 위치한 마리 앤 제이는 소규모에 적합한 나눔공간입니다. 퓨어화이트 의인테리어 풍으로 어떤 요리를 만들어도 그 요리가 가장 돋보일 수 있게, 최적의 도구와 공간으로 갖춰져 있습니다. 기본적으로...</p>
+                    </div>
+                </div>
+
+                <!-- [D]: 더보기가 있는 경우 추가 -->
+                <a href="#" class="more">더 보기</a>
+            </section>
+
+            <section>
+                <h3 class="t-title2">참고사항</h3>
+                <p>공간 공유 신청은 접수 후, 승인과정을 거쳐 이용가능합니다.<br>최대 8명(선생님 제외)이 이용가능합니다.</p>
+            </section>
+
+            <section>
+                <h3 class="t-title2">위치</h3>
+                <div class="full-box place-map">
+                    <!-- [D]: 지도가 들어가는 위치 -->
+                    <img src="../img/@temp/img-map.png" alt="" />
+                    <!-- [D]: 마킹이 필요하다면 추가. 현재는 임의 위치 -->
+                    <div class="mark" style="top: 155px;left: 170px;"></div>
+                </div>
+                <!-- [D]: 주소 노출, 상세 주소 숨김 -->
+                <p>서울시 강남구 논현동</p>
+            </section>
+
+            <section class="review">
+                <div class="flex-justify">
+                    <h3 class="t-title2">리뷰</h3>
+                    <a href="./detail_review.html" class="more-arrow small">
+                        <span>리뷰 더 보기</span><i class="ico-more_arrow"></i>
+                    </a>
+                </div>
+                <ul class="review-list">
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다. 중간 브레이크
+                                타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                            <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                        </div>
+                        <a href="#" class="more">
+                            <span class="open">더 보기</span>
+                            <span class="close">접기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다. 중간 브레이크
+                                타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                            <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                        </div>
+                        <a href="#" class="more">
+                            <span class="open">더 보기</span>
+                            <span class="close">접기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다. 중간 브레이크
+                                타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                            <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                        </div>
+                        <a href="#" class="more">
+                            <span class="open">더 보기</span>
+                            <span class="close">접기</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section class="more-bottom">
+                <h3 class="t-title2">편의시설</h3>
+                <div class="cont info">
+                    화장실, 주차가능(4대의 차를 주차할 수 있습니다.)
+                </div>
+            </section>
+            <section class="more-bottom">
+                <h3 class="t-title2">안전시설</h3>
+                <div class="cont info">
+                    소화기, 화재감지기
+                </div>
+            </section>
+
+            <!-- [19.01.10] 자주묻는 질문을 편의시설, 안전시설로 대체 -->
+
+            <section>
+                <h3 class="t-title2">진행중 클래스</h3>
+                <div class="list-scroll full-box">
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                                <figcaption class="list-content">
+                                    <strong class="t-title2">우유 생크림 롤케이크</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛을 만들어보아요!</p>
+                                    <div class="text-info">
+                                        <span>베이킹</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 7회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>35,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                                <figcaption class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>베이킹</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 7회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                                <figcaption class="list-content">
+                                    <strong class="t-title2">에쉬레 크로와상</strong>
+                                    <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                    <div class="text-info">
+                                        <span>베이킹</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 7회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>25,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="t-title2">비슷한 클래스</h3>
+                <div class="list-scroll full-box">
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                            </figure>
+                            <div class="list-content">
+                                <strong class="t-title2">소울 키친</strong>
+                                <p>넓고 깔끔한 인테리어로 많은 숫자의 인원도 복잡하지 않아요.</p>
+                                <div class="text-info">
+                                    <span>파티음식</span>
+                                    <span>경기도 수원시</span>
+                                </div>
+                                <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                            </figure>
+                            <div class="list-content">
+                                <strong class="t-title2">에쉬레 크로와상</strong>
+                                <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                <div class="text-info">
+                                    <span>파티음식</span>
+                                    <span>경기도 수원시</span>
+                                </div>
+                                <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="../img/@temp/img-300x205.jpg" alt="" />
+                            </figure>
+                            <div class="list-content">
+                                <strong class="t-title2">에쉬레 크로와상</strong>
+                                <p>영혼이 담긴 에쉬레 버터로 만든 깊고 농후한 맛</p>
+                                <div class="text-info">
+                                    <span>파티음식</span>
+                                    <span>경기도 수원시</span>
+                                </div>
+                                <span class="price">
+                                    <em>₩</em>25,000
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="floating">
+                <!-- floating icon -->
+                <div class="floating-ico">
+                    <a href="#" class="ico ico-fav"><span class="blind">즐겨찾기</span></a>
+                    <!-- [18.12.19] 클래스 추가 -->
+                    <a href="#" class="ico ico-msg on">
+                        <p>호스트님께 궁금한 점을 물어보세요.</p> <!-- [18.12.24] 수정: 텍스트 수정 -->
+                    </a>
+                </div>
+                <!-- //floating icon -->
+                <!-- floating button -->
+                <div class="floating-box">
+                    <a href="#" class="active">공간 대여 신청하기</a><!-- [18.12.03] 수정: 텍스트 수정 -->
+                </div>
+                <!-- //floating button -->
+            </div>
+        </div>
+
+        <!-- 공유하기 -->
+        <div class="pop-wrap pop-share" id="share">
+            <div class="pop-cont">
+                <div class="t-title1">공유하기</div>
+                <ul>
+                    <li><a href="#" class="ico-fb">페이스북</a></li>
+                    <li><a href="#" class="ico-tw">트위터</a></li>
+                    <li><a href="#" class="ico-kas">카카오스토리</a></li>
+                    <li><a href="#" class="ico-band">밴드</a></li>
+                    <li><a href="#" class="ico-kat">카카오톡</a></li>
+                    <li><a href="#" class="ico-line">라인</a></li>
+                    <li><a href="#" class="ico-mail">메일</a></li>
+                    <li><a href="#" class="ico-url">URL복사</a></li>
+                </ul>
+            </div>
+            <a href="#" class="pop-btn-close"> <span class="blind">닫기</span> </a>
+        </div>
+        <!-- //공유하기 -->
+    </div>
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //kivi slide
+            $('.kivi.swiper-container').slider({
+                loop: true,
+                autoplay: {
+                    delay: 5000, // [18.12.19] 수정: 속성수정
+                    disableOnInteraction: false // [18.12.19] 수정: 속성수정
+                },
+                watchSlidesProgress: true,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                on: { // [18.12.17] 수정: on method 전체 수정
+                    init: function () {
+                        $('.kivi').addClass('start');
+                    },
+                    slideNextTransitionStart: function () {
+                        var index = this.realIndex;
+                        if (index > 0) $(this.pagination.bullets[(index - 1)]).addClass('prev');
+                        if (index == 0) $(this.pagination.el).children().removeClass('prev');;
+                    },
+                    slidePrevTransitionStart: function () {
+                        var index = this.realIndex;
+                        var len = this.pagination.bullets.length;
+                        if (index == (len - 1)) {
+                            $(this.pagination.el).children().addClass('prev');
+                            $(this.pagination.el).children().eq(len - 1).removeClass('prev');
+                        }
+
+                        $(this.pagination.bullets[(index + 1)]).removeClass('prev');
+
+                    }
+                }
+            });
+
+            // [18.12.20] 스크립트 추가
+            var kiviSlider = $('.kivi.swiper-container')[0].swiper;
+            if (kiviSlider.slides.length - 2 == 1) {
+                $(kiviSlider.params.pagination.el).eq(0).hide();
+                kiviSlider.destroy();
+            }
+
+            // faq list
+            $('.faq-list li a').on('click', function (e) {
+                e.preventDefault();
+
+                if (!$(this).parent().hasClass('on')) {
+                    $('.faq-list li.on').removeClass('on');
+                    $(this).parent().addClass('on');
+                } else {
+                    $(this).parent().removeClass('on');
+                }
+
+                var innerH = $(this).closest('.cont').find('.inner').outerHeight();
+                $(this).closest('.cont')._ani(0.25, {
+                    height: innerH
+                });
+
+            });
+
+            // more contents
+            var contH;
+            $('.more').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                var $thisCont = $this.parent().find('.cont');
+                var innerH = $thisCont.find('.inner').outerHeight();
+
+                if (!$thisCont.hasClass('more-show')) {
+                    $thisCont.addClass('more-show');
+                    $this.addClass('on').text('접기');
+
+                    contH = $thisCont.outerHeight();
+                    $thisCont._ani(0.25, {
+                        height: innerH
+                    });
+                } else {
+                    $thisCont.removeClass('more-show');
+                    $this.removeClass('on').text('더보기');;
+
+                    $thisCont._ani(0.25, {
+                        height: contH
+                    });
+                }
+
+            });
+
+            // [18.12.19] 추가
+            $('.ico-fav').on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+
+                if (_this.hasClass('on')) {
+                    _this.removeClass('on');
+                } else {
+                    _this.addClass('on');
+                }
+            });
+
+            // [18.12.19] 추가
+            var flag = false;
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    if (!flag) {
+                        flag = true;
+                        $('.ico-msg').removeClass('on');
+                    }
+
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

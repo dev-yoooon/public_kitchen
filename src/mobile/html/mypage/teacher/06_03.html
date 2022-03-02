@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 선생님"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">종료 클래스 내역</h2>
+                </div>
+                <div class="list-mypage head">
+                    <a href="#">
+                        <figure>
+                            <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                            <div class="list-content">
+                                <div class="list-num"><mark>No.</mark>1588296423</div>
+                                <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                <span class="price"><em>₩</em>55,000</span>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <ul class="class-info">
+                    <li>
+                        <strong class="class-tit">클래스 횟수</strong>
+                        <div class="class-desc">총 5회 진행 / 5회 마감</div>
+                    </li>
+                </ul>
+                <div class="bg-grey full-box lend-detail">
+                    <h3 class="t-title2">상세내역</h3>
+
+                    <div class="inp-wrap">
+                        <dl class="inp-tit">
+                            <dt>수업 공간</dt><!-- [18.12.04] 수정: 텍스트 수정 -->
+                            <dd>대여 공간</dd>
+                        </dl>
+                        <div class="list-mypage type2">
+                            <figure>
+                                <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                <div class="list-content">
+                                    <strong class="list-tit">마리 앤 제이</strong>
+                                    <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="btn-form-wrap mt-1">
+                            <a href="#" class="btn-form active">리뷰 작성</a>
+                        </div>
+                    </div>
+
+                    <div class="inp-wrap">
+                        <span class="inp-tit">선택한 공간 대여료</span>
+                        <strong class="rent-status">쿠킹/베이킹 전문스튜디오 (요리시설 보유)</strong>
+                        <ul class="rent-list">
+                            <li>• 6명 이하 이용 시 : 80,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정 -->
+                            <li>• 7명 이상 이용 시 : 110,000원 (4시간 기준)</li><!-- [18.12.03] 수정: 텍스트 수정 -->
+                        </ul>
+                    </div>
+
+                    <div class="inp-wrap">
+                        <span class="inp-tit">상세관리</span>
+                        @include('../../inc/_cal.html')
+                    </div>
+
+                    <!-- 종료된 클래스 -->
+                    <!-- inp-card -->
+                    <div class="inp-card">
+                        <strong class="card-tit t-ko">10.11(목) - 종료된 클래스</strong>
+
+                        <div class="inp-wrap">
+                            <span class="inp-tit">수업시간대</span>
+
+                            <div class="btn-flex">
+                                <!-- [D]: 활성화시 .normal 삭제 후 .active 추가 -->
+                                <a href="#" class="btn-form small active">오후</a>
+                                <a href="#" class="btn-form small normal">저녁</a>
+                            </div>
+                        </div>
+
+                        <div class="lend-view">
+                            <!-- 종료 타입 -->
+                            <div class="inp-wrap">
+                                <span class="inp-tit">클래스 시간 (오후)</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                <div class="inp-bundle">
+                                    <label class="sel-tit">수업 시작</label>
+                                    <input type="text" name="" class="inp" id="" value="09:00" readonly="">
+                                </div>
+                                <div class="inp-bundle">
+                                    <label class="sel-tit">수업 종료</label>
+                                    <input type="text" name="" class="inp" id="" value="09:00" readonly="">
+                                </div>
+                            </div>
+                            <!-- 종료 타입 -->
+                            <div class="recruit-list">
+                                <div class="bundle">
+                                    <span class="list-tit">수강생 명단보기</span> <!-- [19.1.3] 수정: 수강생 텍스트 수정 -->
+                                    <a href="#" class="btn-list"><em class="active">3</em> / <em>20</em>명 모집중</a><!-- [18.12.04] 수정: 마크업 변경 -->
+                                </div>
+                                <div class="inner">
+                                    <p class="recruit-status">수강생 모집중입니다</p><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                    <ul>
+                                        <li>
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약대기</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                    <!-- [D]: 한끼매니저 신청 시 추가 -->
+                                                    <div class="manager">한 끼 매니저(대기)</div>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약대기</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                        <!-- [D]: 예약취소 시 .disabled 추가 -->
+                                        <li class="disabled">
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                    <div class="manager">한 끼 매니저(대기)</div>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약취소</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lend-view hidden">
+                            <!-- 종료 타입 -->
+                            <div class="inp-wrap">
+                                <span class="inp-tit">클래스 시간 (저녁)</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                <div class="inp-bundle">
+                                    <label class="sel-tit">수업 시작</label>
+                                    <input type="text" name="" class="inp" id="" value="09:00" readonly="">
+                                </div>
+                                <div class="inp-bundle">
+                                    <label class="sel-tit">수업 종료</label>
+                                    <input type="text" name="" class="inp" id="" value="09:00" readonly="">
+                                </div>
+                            </div>
+                            <!-- 종료 타입 -->
+                            <div class="recruit-list">
+                                <div class="bundle">
+                                    <span class="list-tit">수강생 명단보기</span> <!-- [19.1.3] 수정: 수강생 텍스트 수정 -->
+                                    <a href="#" class="btn-list"><em class="active">3</em> / <em>20</em>명 모집중</a><!-- [18.12.04] 수정: 마크업 변경 -->
+                                </div>
+                                <div class="inner">
+                                    <p class="recruit-status">수강생 모집중입니다</p><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                    <ul>
+                                        <li>
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약대기</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                    <!-- [D]: 한끼매니저 신청 시 추가 -->
+                                                    <div class="manager">한 끼 매니저(대기)</div>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약대기</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                        <!-- [D]: 예약취소 시 .disabled 추가 -->
+                                        <li class="disabled">
+                                            <figure class="info">
+                                                <img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <figcaption>
+                                                    <span>이지수</span>
+                                                    <span>여</span>
+                                                    <div class="manager">한 끼 매니저(대기)</div>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="status al-r">
+                                                <span class="tit">예약대기</span>
+                                                <span class="date">2018.09.13 예약</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //inp-card -->
+                    <!-- //종료된 클래스 -->
+
+                    <div class="btn-form-wrap">
+                        <button class="btn-form normal none-border">일정 재시작하기</button>
+                        <button class="btn-form active">리뷰 보기</button>
+                    </div>
+
+                </div>
+
+                <!-- [18.12.27] 수정: 마크업 변경 -->
+                <div class="bottom-notice full-box">
+                    <div class="notice-wrap">
+                        <ul class="instr">
+                            <li>* 공공의 주방은 수강생, 선생님, 호스트 상호 신뢰를 기반으로 합니다.</li> <!-- [19.1.3] 추가: 마크업 추가 -->
+                            <li>* 클래스는 수강일로부터 4일전 최소인원 모집시 최종확정됩니다. </li>
+                            <li>* 일정재시작하기에서 클래스 일정을 추가등록 가능합니다.</li>
+                            <li>* 공간을 변경하실 경우에는, 신규클래스로 재등록 신청해 주세요.</li>
+                        </ul>
+                    </div>
+
+                    <!-- [19.1.3] 추가: 마크업 추가 -->
+                    <!-- [D]: .btn-notice에 .on이 붙으면 아래 .notice-wrap이 활성화 됩니다. -->
+                    <button class="btn-notice">취소보상금 및 패널티 정책</button>
+
+                    <div class="notice-wrap">
+                        <!-- [19.1.3] 추가: 마크업 추가 -->
+                        <strong class="title">취소보상금 <small>(공공의 주방에서는 수강생이 클래스를 취소하거나, 호스트가 공간 대여 취소 시 선생님의 클래스를 보상해주는 취소보상금 제도를 제공하고 있습니다)</small></strong>
+                        <table class="table">
+                            <caption>수강생 클래스 취소 시</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>선생님보상금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>없음</td>
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>없음</td>
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 20%</td>
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 50%</td>
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <caption>호스트 공간대여 취소 시</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>선생님보상금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>공간대여금액의 50%</td>
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>공간대여금액의 100%</td>
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td>
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td>
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="notice-wrap">
+                        <strong class="title">패널티금액</strong>
+                        <table class="table">
+                            <caption>선생님에게 취소보상금 지급</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>선생님보상금</th><!-- [19.1.4] 수정: 텍스트 수정 -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>공간대여금액의 50%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>공간대여금액의 100%</td> <!-- [19.1.4] 수정: 텍스트 수정 -->
+                                    <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스금액(모집최대인원)의 30%</td> <!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <caption>수강생에게 취소보상금 지급</caption>
+                            <colgroup>
+                                <col width="40%">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>취소일</th>
+                                    <th>수강생보상금</th> <!-- [19.1.4] 수정: 텍스트 수정 -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5일전</td>
+                                    <td>없음</td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>4일전</td>
+                                    <td>없음</td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>3일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>2일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                                <tr>
+                                    <td>1일전(클래스확정)</td>
+                                    <td>클래스 개설금액의 10% 쿠폰<small>(호스트 또는 선생님으로부터)</small></td><!-- [19.1.3] 수정: 텍스트 수정 -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //dummy script
+            var $class = $('.btn-flex a');
+            var $recruitBtn = $('.recruit-list .btn-list');
+
+            $class.on('click', function (e) {
+                e.preventDefault();
+
+                var _this = $(this);
+                var idx = _this.index();
+                var $view = _this.closest('.inp-card').find('.lend-view');
+
+                _this.siblings().removeClass('active').addClass('normal');
+                _this.removeClass('normal').addClass('active');
+                $view.addClass('hidden').eq(idx).removeClass('hidden');
+
+            });
+
+            $recruitBtn.on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+                var $parent = _this.closest('.recruit-list');
+                var baseH = $parent.find('.bundle').outerHeight();
+                var moveH = baseH + $parent.find('.inner').outerHeight();
+
+                if (_this.hasClass('on')) {
+                    _this.removeClass('on');
+                    $parent._ani(0.25, {
+                        height: baseH
+                    })
+
+                } else {
+                    _this.addClass('on');
+                    $parent._ani(0.25, {
+                        height: moveH
+                    })
+                }
+
+            });
+
+            // [19.1.3] script 추가
+            $('.bottom-notice .btn-notice').on('click', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('on');
+            });
+
+        });
+    </script>
+</body>
+
+</html>

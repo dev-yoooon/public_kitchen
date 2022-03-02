@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 클래스"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">수강생</p>
+                    <h1>요리 배우기</h1>
+                </div>
+                <div class="tab-title">
+                    <a href="#" class="on">예약 클래스</a>
+                    <a href="#">취소/환불</a>
+                    <a href="#">종료 클래스</a>
+                </div>
+            </section>
+            <section>
+                <div class="tab-area">
+                    <div class="list-mypage">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="/pc/img/@temp/img-mypage_list.jpg" alt=""></figure>
+                                </a>
+                                <div class="list-content">
+                                    <div class="list-num"><mark>No.</mark>1588296423</div>
+                                    <strong class="list-tit multi-line2">두줄 말줄임인 경우 multi-line2 클래스를 사용합니다.</strong>
+                                    <div class="text-info">
+                                        <span>18.10.27 (토)</span>
+                                        <span>09:00 - 13:00</span>
+                                    </div>
+                                    <div class="list-status"><span>예약대기</span><i class="ico-more_arrow"></i></div>
+                                    
+                                    <!-- [D]: 종료 클래스일 때 추가 -->
+                                    <!-- [D]: .tooltip에 .on추가시 활성화 -->
+                                    <div class="tooltip small on">
+                                        <a href="#" class="oval type2">리뷰 작성</a>
+                                        <!-- [D]: .tip에 .hidden을 추가하면 비활성화. -->
+                                        <div class="tip hidden">
+                                            리뷰 쓰고 <strong class="t-num">2000P +</strong>
+                                        </div>
+                                    </div>
+                                    <!-- //[D]: 종료 클래스일 때 추가 -->
+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="/pc/img/@temp/img-mypage_list02.jpg" alt=""></figure>
+                                </a>
+                                <div class="list-content">
+                                    <div class="list-num"><mark>No.</mark>1588296423</div>
+                                    <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                    <div class="text-info">
+                                        <span>18.10.27 (토)</span>
+                                        <span>09:00 - 13:00</span>
+                                    </div>
+                                    <div class="list-status"><span>예약대기</span><i class="ico-more_arrow"></i></div>
+                                    
+                                    <!-- [D]: 종료 클래스일 때 추가 -->
+                                    <!-- [D]: .tooltip에 .on추가시 활성화 -->
+                                    <div class="tooltip small on">
+                                        <a href="#" class="oval type2">리뷰 작성</a>
+                                        <!-- [D]: .tip에 .hidden을 추가하면 비활성화. -->
+                                        <div class="tip">
+                                            리뷰 쓰고 <strong class="t-num">2000P +</strong>
+                                        </div>
+                                    </div>
+                                    <!-- //[D]: 종료 클래스일 때 추가 -->
+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <figure><img src="/pc/img/@temp/img-mypage_list03.jpg" alt=""></figure>
+                                </a>
+                                <div class="list-content">
+                                    <div class="list-num"><mark>No.</mark>1588296423</div>
+                                    <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                    <div class="text-info">
+                                        <span>18.10.27 (토)</span>
+                                        <span>09:00 - 13:00</span>
+                                    </div>
+                                    <div class="list-status"><span>예약확정</span><i class="ico-more_arrow"></i></div>
+                                    
+                                    <!-- [D]: 종료 클래스일 때 추가 -->
+                                    <!-- [D]: .tooltip에 .on추가시 활성화 -->
+                                    <div class="tooltip small on">
+                                        <a href="#" class="oval type3">리뷰 완료</a>
+                                    </div>
+                                    <!-- //[D]: 종료 클래스일 때 추가 -->
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @include('../../inc/_footer.html')
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

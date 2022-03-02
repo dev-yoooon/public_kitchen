@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 선생님"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">선생님</p>
+                    <!-- [18.12.31] 타이틀 수정 -->
+                    <h1>정산 <br />내역</h1>
+                </div>
+            </section>
+            <section>
+                <div class="income bg-grey gray-box">
+
+                    <!-- 정산 금액 -->
+                    <div class="income-card">
+                        <!-- [18.12.31] 클릭요소 및 클래스 삭제 -->
+                        <span class="status">정산 예정 금액</span>
+                        <strong class="cost">1,620,000</strong>
+                        <span class="term">18.09.01 - 18.09.15</span>
+                        <!-- //[18.12.31] 클릭요소 및 클래스 삭제 -->
+
+                        <div class="date">
+                            <dl>
+                                <dt>정산일</dt>
+                                <dd>18.09.25</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- //정산 금액 -->
+
+                    <div class="income-info">
+                        <!-- 정산 내역 -->
+                        <div class="income-wrap">
+                            <strong class="inp-tit">정산 계좌</strong>
+                            <p class="txt">국민은행 <em class="t-num">20680201257066</em> / 김주방</p>
+                        </div>
+
+                        <div class="income-wrap">
+                            <strong class="inp-tit">총 클래스 개설 횟수</strong>
+                            <p class="txt">총 <em class="t-num">8</em>회 진행</p>
+                        </div>
+
+                        <div class="income-wrap">
+                            <strong class="inp-tit">총 클래스 수강생</strong>
+                            <p class="txt"><em class="t-num">56</em>명</p>
+                        </div>
+                        <!-- //정산 내역 -->
+                    </div>
+
+                </div>
+
+                <!-- 입금 완료 -->
+                <div class="income-manage full-box">
+                    <div class="income-title">클래스 정산 내역</div>
+
+                    <div class="income-txt_list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="list-content">
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <div class="text-info">
+                                            <span>18.08.23</span>
+                                            <span>오전</span>
+                                            <span>15명</span>
+                                        </div>
+                                    </div>
+                                    <div class="cost">125,000원</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="list-content">
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <div class="text-info">
+                                            <span>18.08.23</span>
+                                            <span>오전</span>
+                                            <span>호스트취소</span>
+                                        </div>
+                                    </div>
+                                    <div class="cost">125,000원</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="list-content">
+                                        <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                                        <div class="text-info">
+                                            <span>18.08.23</span>
+                                            <span>오전</span>
+                                            <span>15명</span>
+                                        </div>
+                                    </div>
+                                    <div class="cost">125,000원</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //입금 완료 -->
+            </section>
+        </div>
+        <!-- //#content -->
+        @include('../../inc/_footer.html')
+
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

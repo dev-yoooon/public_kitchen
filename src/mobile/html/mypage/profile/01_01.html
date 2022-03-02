@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 공통"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">프로필 수정하기</h2>
+                </div>
+                <div class="tab-area full-box">
+                    <div class="tab-title">
+                        <a href="#" class="on">회원</a>
+                        <a href="#">선생님</a>
+                        <a href="#">호스트</a>
+                        <a href="#">정산</a>
+                    </div>
+                    <div class="tab-content bg-grey">
+                        <form action="">
+                            <figure class="profile modify">
+                                <span class="img"></span>
+
+                                <!-- [D]: label for=""값과 input id값은 매칭시켜주세요. -->
+                                <label class="inp-file">
+                                    <input type="file" name="">
+                                    <span class="blind">수정하기</span>
+                                </label>
+
+                                <p class="text">suaaaa27@naver.com</p>
+                            </figure>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">이름</span>
+                                <input type="text" class="inp-type2" name="" placeholder="이름을 입력해 주세요." value="정지은">
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">비밀번호</span>
+                                <span class="inp-bundle inp-mt">
+                                    <input type="password" class="inp-type2" name="" placeholder="비밀번호를 입력해 주세요." value="******" readonly><!-- [18.12.03] 수정 : readonly 추가 -->
+                                    <a href="#" class="val-type t-ko">변경하기</a><!-- [18.12.03] 수정 : 태그 수정 -->
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">핸드폰 번호</span>
+                                <span class="inp-bundle inp-mt">
+                                    <!-- [18.12.18] 수정: placeholder 변경 -->
+                                    <input type="text" class="inp-type2" name="" placeholder="핸드폰 번호를 입력해 주세요." value="010-1234-5678" readonly><!-- [18.12.03] 수정 : readonly 추가 -->
+                                    <a href="#" class="val-type t-ko">등록하기</a><!-- [18.12.03] 수정 : 태그 수정 -->
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">생년월일</span>
+                                <span class="inp-bundle inp-mt">
+                                    <input type="number" class="inp-type2" name="" placeholder="8자리로 입력해 주세요(예시 : 19880101)" value="890212"><!-- [18.11.28] 수정: placeholder 변경 -->
+                                </span>
+                            </div>
+                            <div class="inp-wrap">
+                                <span class="inp-tit">성별</span>
+                                <span class="radio-box">
+                                    <input type="radio" name="" id="male">
+                                    <label for="male">남자</label>
+                                </span>
+                                <span class="radio-box">
+                                    <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                    <input type="radio" name="" id="female" checked>
+                                    <label for="female">여자</label>
+                                </span>
+                            </div>
+                            <span class="inp-wrap check-box">
+                                <input type="checkbox" name="" id="smschk">
+                                <label for="smschk">SMS 및 이메일 수신동의 (선택)</label>
+                                <a href="#" class="inp-btn"><span class="blind">전체보기</span></a>
+                            </span>
+                            <div class="btn-form-wrap">
+                                <!-- <button class="btn-form normal none-border">회원탈퇴</button> -->
+                                <!-- [18.12.03] 삭제: 마크업 삭제 -->
+                                <button class="btn-form active">변경사항 저장</button>
+                            </div>
+                            <!-- [18.12.03] 추가: 마크업 추가 -->
+                            <div class="status">
+                                <a href="#" class="btn-link">회원 탈퇴<i class="ico-more_arrow"></i></a>
+                            </div>
+                            <!--// [18.12.03] 추가: 마크업 추가 -->
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

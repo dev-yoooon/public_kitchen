@@ -1,0 +1,126 @@
+.photo {
+    position: absolute;
+    width: 100vw;
+    min-width: 1200px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    .pop-inner {
+        width: 100%;
+        max-width: 625px;
+        padding: 0;
+        margin: 127px auto 50px;
+
+        .pop-btn-close {
+            top: 0;
+            right: 50%;
+            margin-right: -600px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .btn-form-wrap {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    
+    .pop-cont {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding-top: 138.72%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: $white;
+        overflow: hidden;
+    }
+
+    .bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    .dim {
+        position: absolute;
+        left: -5%;
+        width: 110%;
+        height: 110%;
+        background: rgba(0, 0, 0, 0.6);
+
+        &.top {
+            bottom: 100%;
+            margin-bottom: 1px;
+        }
+        
+        &.bottom {
+            top: 100%;
+            margin-top: 1px;
+        }
+    }
+
+    .view-box {
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: 66.66666%;
+        border: 1px solid $white;
+        background-color: rgba(0, 0, 0, 0);
+
+        .desc {
+            position: absolute;
+            right: 1em;
+            bottom: -2.3em;
+            font-size: 15px;
+            color: #B7B7B7;
+        }
+
+        .line {
+            &::before {
+                content: "";
+                position: absolute;
+                background: $white;
+            }
+
+            &::after {
+                @extend .line::before;
+            }
+
+            &.horizontal {
+                &::before {
+                    top: 0;
+                    width: 1px;
+                    height: 100%;
+                    left: 33.33%;
+                }
+
+                &::after {
+                    left: 66.66%;
+                }
+            }
+
+            &.vertical {
+                &::before {
+                    width: 100%;
+                    height: 1px;
+                    top: 50%;
+                }
+
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}

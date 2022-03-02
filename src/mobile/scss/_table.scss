@@ -1,0 +1,43 @@
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid $gray-b7;
+    @include font(400, 13px);
+
+    caption {
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: left;
+        color: $gray-2e;
+
+        p {
+            font-weight: 200;
+            color: $gray-2e;
+        }
+    }
+
+    th {
+        height: 32px;
+        border: 1px solid $gray-b7;
+        background: $gray-ea;
+        font-weight: 400;
+    }
+
+    td {
+        height: 32px;
+        border-left: 1px solid $gray-d9;
+        border-top: 1px solid $gray-d9;
+        background: $white;
+        font-weight: 200;
+        text-align: center;
+
+        &:first-child {
+            border-left: 0;
+        }
+
+        small {
+            font-size: 11px;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 리뷰"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="content">
+            <div class="btn-back-wrap full-box">
+                <a href="#" class="btn-back"><span class="blind">뒤로가기</span></a>
+            </div>
+
+            <section class="review review-detail none-border">
+                <div class="flex-justify">
+                    <h3>총 64개의 리뷰</h3>
+                </div>
+                <ul class="review-list">
+                    <!-- loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <!-- [D]: icon type은 3가지 - .ico-review_type1~3 추천/만족/불만족 -->
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                        <div class="cont overflow">
+                            <div class="inner">
+                                <p>평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다채 중간 브레이크 타임때에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
+                                <figure><img src="../img/@temp/img-review.png" alt="" /></figure>
+                            </div>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 추가 -->
+                        <a href="#" class="more">더 보기</a>
+                    </li>
+                    <!-- //loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type2">만족해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type3">아쉬워요.</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type2">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>클래스에서 만든 앙버터를 부모님께 드렸는 데 맛있다고 엄청 칭찬해주셨어요!</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div>
+        @include('../inc/_footer.html')
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // more contents
+            var contH;
+            $('.more').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                var $thisCont = $this.parent().find('.cont');
+                var innerH = $thisCont.find('.inner').outerHeight();
+
+                if (!$thisCont.hasClass('more-show')) {
+                    $thisCont.addClass('more-show');
+                    $this.addClass('on').text('접기');
+
+                    contH = $thisCont.outerHeight();
+                    $thisCont._ani(0.25, {
+                        height: innerH
+                    });
+                } else {
+                    $thisCont.removeClass('more-show');
+                    $this.removeClass('on').text('더보기');;
+
+                    $thisCont._ani(0.25, {
+                        height: contH
+                    });
+                }
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

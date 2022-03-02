@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">공간 공유하기</p>
+                    <h1>공유관리 <br>상세내역</h1>
+                </div>
+            </section>
+            <section>
+                <div class="list-mypage head">
+                    <hr />
+                    <figure><img src="/pc/img/@temp/img-mypage_list03.png" alt="">
+                        <div class="list-content">
+                            <strong class="list-tit">마리 앤 제이</strong>
+                            <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                        </div>
+                    </figure>
+                    <hr class="slim" />
+                </div>
+                <ul class="class-info">
+                    <li>
+                        <strong class="class-tit">공유 횟수</strong>
+                        <div class="class-desc">총 5회 진행 / 현재 2회 마감</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">공간 테마</strong>
+                        <div class="class-desc">요리 시설 보유</div>
+                    </li>
+                    <li class="income-tooltip">
+                        <div class="class-tit">공간 대여료
+
+                            <a href="#" class="ico-tooltip"><span class="blind">툴팁열기</span></a>
+                            <div class="tip">
+                                <strong class="title">공간 이용료</strong>
+                                <div class="tip-rent">
+                                    <strong class="rent-status">쿠킹/베이킹 전문스튜디오 (요리시설 보유)</strong>
+                                    <ul class="rent-list">
+                                        <li>• 6명 이하 이용 시 : 80,000원 (4시간 기준)</li>
+                                        <li>• 7명 이상 이용 시 : 110,000원 (4시간 기준)</li>
+                                    </ul>
+                                </div>
+                                <div class="tip-rent">
+                                    <strong class="rent-status">쿠킹/베이킹 전문스튜디오 (요리시설 미보유)</strong>
+                                    <ul class="rent-list">
+                                        <li>• 6명 이하 이용 시 : 60,000원 (4시간 기준)</li>
+                                        <li>• 7명 이상 이용 시 : 90,000원 (4시간 기준)</li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn-close-tooltip"><span class="blind">툴팁닫기</span></a>
+                            </div>
+                        </div>
+                        <div class="class-desc">80,000원 또는 110,000원</div>
+                    </li>
+                </ul>
+                <div class="box-type2 bg-grey lend-detail">
+                    <h3 class="t-title2">상세관리</h3>
+
+                    <div class="inp-wrap dp-ib">
+                        <span class="inp-tit full">상세 관리</span>
+                        <div class="half">
+                            @include('../../inc/_cal.html', {
+                            "year": "2018년",
+                            "month": "10월",
+                            "prev": "",
+                            "next": "hidden"
+                            })
+                        </div>
+                        <div class="half">
+                            @include('../../inc/_cal.html', {
+                            "year": "2018년",
+                            "month": "11월",
+                            "prev": "hidden",
+                            "next": ""
+                            })
+                        </div>
+                    </div>
+
+
+                    <div class="btn-form-wrap">
+                        <button class="btn-form w1 normal none-border">공간 공유 일정 추가/변경하기</button>
+                        <button class="btn-form w1 active">공간 리뷰보기</button>
+                    </div>
+                </div>
+                    
+                <div class="more-bottom">
+                    <div class="inner">
+                        <ul>
+                            <li>* 공공의 주방은 수강생, 선생님, 호스트 상호 신뢰를 기반으로 합니다.</li>
+                            <li>* 공간대여는 클래스 수강일로부터 4일전 최소인원 모집시 최종확정됩니다.</li>
+                            <li>* 공간대여일정 추가등록시, 승인없이 실시간으로 반영됩니다.</li>
+                            <li>* 공간대여 일정변경이 가능하나, 취소 시 기간별 패널티가 부과됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="more-bottom">
+                    <h3 class="t-title3">취소보상금 및 패널티 정책</h3>
+                
+                    <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                    <div class="cont overflow">
+                        <div class="inner">
+                            <p class="t-tit">취소보상금</p>
+                            <p>(공공의 주방에서는 선생님이 클래스 취소 시 호스트의 공간 공유를 보상해주는 취소보상금 제도를 제공하고 있습니다)</p>
+                            
+                            <ul class="table">
+                                <li>
+                                    <p>선생님 클래스 취소 시</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>호스트보상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>공간대여금액의 50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td>공간대여금액의 100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td>공간대여금액의 100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td>공간대여금액의 100%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="clear">
+                                    <p class="strong">패널티금액</p>
+                                    <p>선생님에게 취소보상금 지급</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>선생님보상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>공간대여금액의 50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>공간대여금액의 100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td class="multi-line">클래스금액<span>(모집최대인원)</span>의 30%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td class="multi-line">클래스금액<span>(모집최대인원)</span>의 30%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td class="multi-line">클래스금액<span>(모집최대인원)</span>의 30%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <p class="strong">&nbsp;</p>
+                                    <p>수강생에게 취소보상금 지급</p>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>취소일</th>
+                                                <th>수강생보상금</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4일전</td>
+                                                <td>없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1일전(클래스확정)</td>
+                                                <td class="multi-line">클래스 개설금액의 10% 쿠폰<br/><span>(호스트 또는 선생님으로부터)</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- [D]: 더보기가 있는 경우 추가 -->
+                    <a href="#" class="more">더 보기</a>
+                </div>
+            </section>
+        </div>
+        @include('../../inc/_footer.html')
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //dummy script
+            var $class = $('.btn-flex a');
+            var $recruitBtn = $('.recruit-list .btn-list');
+
+            $class.on('click', function (e) {
+                e.preventDefault();
+
+                var _this = $(this);
+                var idx = _this.index();
+                var $view = _this.closest('.inp-card').find('.lend-view');
+
+                _this.siblings().removeClass('active').addClass('normal');
+                _this.removeClass('normal').addClass('active');
+                $view.addClass('hidden').eq(idx).removeClass('hidden');
+
+            });
+
+            $recruitBtn.on('click', function (e) {
+                e.preventDefault();
+                var _this = $(this);
+                var $parent = _this.closest('.recruit-list');
+                var baseH = $parent.find('.bundle').outerHeight();
+                var moveH = baseH + $parent.find('.inner').outerHeight();
+
+                if (_this.hasClass('on')) {
+                    _this.removeClass('on');
+                    $parent._ani(0.25, {
+                        height: baseH
+                    })
+
+                } else {
+                    _this.addClass('on');
+                    $parent._ani(0.25, {
+                        height: moveH
+                    })
+                }
+            })
+
+            // more contents
+            var contH;
+            $('.more').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                var $thisCont = $this.parent().find('.cont');
+                var innerH = $thisCont.find('.inner').outerHeight();
+
+                if (!$thisCont.hasClass('more-show')) {
+                    $thisCont.addClass('more-show');
+                    $this.addClass('on').text('접기');
+
+                    contH = $thisCont.outerHeight();
+                    $thisCont._ani(0.25, {
+                        height: innerH
+                    });
+                } else {
+                    $thisCont.removeClass('more-show');
+                    $this.removeClass('on').text('더보기');;
+
+                    $thisCont._ani(0.25, {
+                        height: contH
+                    });
+                }
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

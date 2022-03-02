@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 클래스"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">요리 배우기</p>
+                    <h1>예약 상세</h1>
+                </div>
+            </section>
+            <section>
+                <div class="list-mypage head">
+                    <div class="list-num"><mark>No.</mark>1588296423</div>
+                    <a href="#" class="oval type2 pop-open" data-pop="input-review">리뷰작성</a>
+                    <hr/>
+                    <figure><img src="/pc/img/@temp/img-mypage_thumb.jpg" alt="">
+                        <div class="list-content">
+                            <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
+                            <span class="price"><em>₩</em>78,000</span>
+                        </div>
+                    </figure>
+                    <hr class="slim"/>
+                </div>
+                <ul class="class-info">
+                    <li>
+                        <strong class="class-tit">상태</strong>
+                        <div class="class-desc step">
+                            <!-- [D]: .step을 빼면 span 옆 화살표가 사라집니다. -->
+                            <span>예약대기</span>
+                            <span>예약확정</span>
+                            <span class="active">수강완료</span>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">예약일</strong>
+                        <div class="class-desc">18.10.07(화) / 17:56</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">수강일</strong>
+                        <div class="class-desc">18.10.25(목) / 19:00 - 21:00</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">선생님</strong>
+                        <div class="class-desc">오수연 한식 전문가</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">주소</strong>
+                        <div class="class-desc">
+                            <span class="post-add">[06039] 서울특별시 강남구 강남대로146길 37(논현동) 매틴빌딩 1층</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="map">
+                    <!-- [D]: 지도가 들어가는 위치 -->
+                    <img src="../../img/@temp/img-map_class.png" alt="" />
+                </div>
+            </section>
+            <section class="reserve">
+                <h2 class="t-title2">한끼매니저</h2>
+                <!-- [18.11.22] 수정: 텍스트 추가 -->
+                <p class="reserve-desc">한끼매니저는 해당 클래스의 일일 매니저가 되어서 소정의 혜택을 제공받습니다. 신정하신 분 중에서 임의로 선정하여 추후 개별 연락드립니다.</p>
+                <ul class="class-info">
+                    <li>
+                        <strong class="class-tit">신청현황</strong>
+                        <!-- [D]: .step을 빼면 span 옆 화살표가 사라집니다. -->
+                        <div class="class-desc step">
+                            <span>승인대기</span>
+                            <span class="active">신청확정</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="cost-info">
+                <h2 class="t-title2">결제 정보</h2>
+                <ul class="pay-info-total">
+                    <li>
+                        <strong class="class-tit">결제방법</strong>
+                        <div class="class-desc">신용카드</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">결제일시</strong>
+                        <div class="class-desc">2018.10.07 / 20:28:45</div>
+                    </li>
+                </ul>
+                <p class="pay-last">
+                    <strong class="class-tit">상품금액</strong>
+                    <span class="class-desc"><b>78,000</b> 원</span>
+                </p>
+                <ul class="pay-info-total">
+                    <li>
+                        <strong class="class-tit">쿠폰사용</strong>
+                        <div class="class-desc">11,700 원</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">마일리지사용</strong>
+                        <div class="class-desc">700 원</div>
+                    </li>
+                    <li>
+                        <strong class="class-tit">포인트사용</strong>
+                        <div class="class-desc">0 원</div>
+                    </li>
+                </ul>
+                <p class="pay-last">
+                    <strong class="class-tit">할인금액</strong>
+                    <span class="class-desc"><b>12,400</b> 원</span>
+                </p>
+                <div class="total-list">
+                    <p class="pay-cost">
+                        <strong class="class-tit">상품금액</strong>
+                        <span class="class-desc"><b>78,000</b> 원</span>
+                    </p>
+                    <p class="pay-cost">
+                        <strong class="class-tit">할인금액</strong>
+                        <span class="class-desc">(-) <b>12,400</b> 원</span>
+                    </p>
+
+                    <p class="pay-result">
+                        <strong class="class-tit">총 결제금액</strong>
+                        <span class="class-desc"><span class="total-pay">65,000</span> 원</span>
+                    </p>
+                </div>
+                <ul class="instr">
+                    <li>* 최소 인원 모집이 완료될 경우 자동으로 수강생들의 예약상태가 예약대기 → 예약확정으로 변경됩니다</li>
+                    <li>* 수강 신청인원이 없을 경우 클래스의 일정/공간 변경이 가능하며, 관리자의 승인이 추가로 필요합니다</li>
+                    <li>* 수강 신청인원이 있을 경우 클래스의 일정/공간/인원 변경이 가능하나, 패널티가 부과됩니다</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- 전체 팝업 내용 (#content 밖으로 생성) -->
+        <div class="pop-wrap small open" id="input-review">
+            <div class="pop-inner review-wrap">
+                <section>
+                    <div class="sub-title">
+                        <h2 class="t-title1">공간 대여 리뷰 작성</h2>
+                    </div>
+                    <div class="list-mypage head">
+                        <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                            <div class="list-content">
+                                <div class="list-num"><mark>No.</mark>1588296423</div>
+                                <strong class="list-tit">소울 키친 스튜디오</strong>
+                                <div class="text-info">
+                                    <span>경기도 성남시 수정구</span>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </section>
+                <section class="bg-grey">
+                    <form action="">
+                        <div class="inp-wrap chk-colum">
+                            <span class="inp-tit">대여한 공간은 어떠셨나요?</span>
+                            <p class="inp-txt">추천해요</p>
+                        </div>
+                        <div class="inp-wrap">
+                            <span class="inp-tit">리뷰를 남겨주세요</span>
+                            <p class="text-area-type2">사진으로 봤던 것 보다 더 넓고 깨끗했어요.<br/>다음 번에도 이용하고 싶은 공간이네요.</p>
+                            <figure class="review-img"><img src="/mobile/img/@temp/img-review.png" alt=""></figure>
+                        </div>
+                        <ul class="instr md">
+                            <li>* 작성된 리뷰는 등록 즉시 사이트에 게재, 모두 공개를 원칙으로 합니다</li>
+                            <li>* 리뷰에 적합하지 않은 내용, 오해의 소지가 있는 내용은 통보없이 삭제될 수 있으며, 적립된 포인트는 회수될 수 있습니다</li>
+                        </ul>
+                    </form>
+                </section>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </div>
+        <!-- //팝업 내용 -->
+        @include('../../inc/_footer.html')
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

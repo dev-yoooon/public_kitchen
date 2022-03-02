@@ -1,0 +1,128 @@
+#content {
+    padding-bottom: 40px;
+}
+
+.list {
+    &-content {
+        p {
+            margin-top: 3px;
+            line-height: 1.45;
+        }
+
+        .text-info {
+            span {
+                margin-right: 7px;
+                padding-left: 7px;
+                @include font(400, 15px);
+                color: $gray-7f;
+            }
+        }
+
+        .t-title2 {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+
+            >span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    &-area {
+        position: relative;
+        margin-top: 50px;
+
+        @at-root section &:first-child {
+            margin-top: 22px;
+        }
+
+        @at-root .kivi+section & {
+            margin-top: 50px;
+        }
+
+        .label-type {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+
+    &-scroll {
+        .text-info {
+            margin-top: 4px;
+        }
+    }
+
+}
+
+.btn-area {
+    margin-top: 40px;
+}
+
+.banner-area {
+    margin-top: 50px;
+
+    a {
+        display: block;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.select {
+    margin-top: 20px;
+
+    .select-box {
+
+        &.btn-type {
+            margin-right: -7px;
+
+            label {
+                margin-left: 0;
+                margin-right: 7px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.hash-tag {
+    padding-bottom: 13px;
+}
+
+.main-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+    padding: 0 26px;
+    background: $gray-2e;
+
+    p {
+        @include font(600, 12px);
+        color: #CECECE;
+
+        em {
+            color: $white;
+            font-weight: inherit;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 7px 21px 6px 10px;
+        border-radius: 3px;
+        background: $point-color url(../img/main/btn-download.png) no-repeat right 8px top 8px/9px auto;
+        @include font(600, 10px);
+        color: $white;
+    }
+}
+
+.kivi .swiper-pagination {
+    bottom: 15px;
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>공공의 주방 | 마이페이지 | 선생님</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/css/common.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/common/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/common/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/common/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/common/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/common/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/common/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/common/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/common/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/common/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/common/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/common/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/common/img/favicon-96x96.png">
+    <link rel="shortcut icon" href="/common/img/favicon.ico">
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="gnb">
+            <div class="gnb-bar">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="/common/img/logo.svg" alt="">
+                        <span class="arrow"></span>
+                    </a>
+                </h1>
+                <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
+                <a href="#" class="ico-gnb-search pop-open" data-pop="search"><span class="blind">검색</span></a>
+                <a href="#" class="ico-gnb-favor"><span class="blind">좋아요</span></a>
+            </div>
+            <nav class="gnb-list">
+                <ul class="menu-default">
+                    <!-- [18.12.20] 클래스 추가 -->
+                    <!-- [D]: li에 active가 붙으면 하이라이트 처리됨 -->
+                    <li class="active"><a href="#">홈</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">클래스</a></li>
+                    <li><a href="#">선생님</a></li>
+                    <li><a href="#">공간</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">공공의주방 이야기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                </ul>
+                <ul class="menu-default">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </nav>
+            <div class="pop-wrap" id="search">
+                <div class="pop-cont">
+                    <form action="">
+                        <div class="inp-wrap">
+                            <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색">
+
+                            <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
+                            <button class="inp-search_del"><span class="blind">입력내용 지움</span></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="list-wrap">
+                                <!-- [D]: 검색어 기능이 켜져있을 때-->
+                                <ul>
+                                    <li>
+                                        <a href="#">파스타</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">일식 혼밥</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">집들이 음식</a>
+                                        <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                                <!-- //[D]: 검색어 기능이 켜져있을 때-->
+
+                                <!-- [D]: 검색어 기능이 꺼져있을 때 (추가시 .hidden은 삭제해주세요.)-->
+                                <p class="empty-text hidden">최근 검색어 기능이 꺼져있습니다.</p>
+                                <!-- //[D]: 검색어 기능이 꺼져있을 때 -->
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#" class="latest">최근 검색어 끄기</a>
+                                <a href="#" class="del-all">전체 삭제</a>
+                            </div>
+                        </div>
+                        <div class="hash-tag">
+                            <strong class="t-title4">인기 키워드</strong>
+                            <a href="#">#베이킹</a>
+                            <a href="#">#초보</a>
+                            <a href="#">#파티음식</a>
+                            <a href="#">#혼밥</a>
+                            <a href="#">#집들이</a>
+                            <a href="#">#간식</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </header>
+        <!-- #content -->
+        <div id="content">
+            <section>
+                <div class="sub-title">
+                    <h2 class="t-title1">일정 재시작하기</h2>
+                    <p class="desc">종료된 클래스는 일정 수정 후 시작이 가능합니다. 단, 공간은 기존과 동일 해야하며, 공간 수정을 원할 경우에는 새로 등록해 주세요.</p>
+                </div>
+                <div class="tab-area full-box">
+                    <div class="tab-title check">
+                        <!-- [D]:
+                        .active - 입력 완료된 탭
+                        .on - 현재 선택된 탭
+                        .on.active - 수정하기에서 수정 중인 선택된 탭
+                        .dim.active - 수정하기에서 선택되지 않은 탭
+                        -->
+                        <a href="#" class="dim active">기본정보</a>
+                        <a href="#" class="dim active">상세소개</a>
+                        <a href="#" class="on">일정/공간</a>
+                    </div>
+                    <div class="tab-content bg-grey">
+                        <form action="">
+                            <div class="inp-wrap">
+                                <dl class="inp-tit">
+                                    <dt>수업공간</dt>
+                                    <dd>내 공간</dd><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                </dl>
+                                <div class="list-mypage type2">
+                                    <figure>
+                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <div class="list-content">
+                                            <strong class="list-tit">마리 앤 제이</strong>
+                                            <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="inp-wrap">
+                                <span class="inp-tit">일정</span>
+                                <div class="cal">
+                                    <div class="cal-header">
+                                        <div class="date">
+                                            <span class="year">2018</span>
+                                            <span class="month">10</span>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="month-prev"><span class="blind">이전</span></button>
+                                            <button class="month-next"><span class="blind">다음</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="cal-week">
+                                        <span class="week-name">월</span>
+                                        <span class="week-name">화</span>
+                                        <span class="week-name">수</span>
+                                        <span class="week-name">목</span>
+                                        <span class="week-name">금</span>
+                                        <span class="week-name">토</span>
+                                        <span class="week-name">일</span>
+                                    </div>
+                                    <div class="cal-days">
+
+                                        <!-- [D]: 
+            .day - 기본
+            .today - 오늘
+            .ing - 진행중(.ing.on - 진행중 선택)
+            .holy - 공휴일
+            .on - 선택되었을 때
+            .prev, .next - 그 전, 후 달의 남은 일 수
+            .disabled - 선택이 안되는 날 
+        -->
+                                        <span class="day">1</span>
+                                        <span class="day disabled">2</span>
+                                        <span class="day disabled">3</span>
+                                        <span class="day disabled">4</span>
+                                        <span class="day disabled">5</span>
+                                        <span class="day disabled">6</span>
+                                        <span class="day disabled">7</span>
+
+                                        <span class="day">8</span>
+                                        <span class="day">9</span>
+                                        <span class="day">10</span>
+                                        <span class="day">11</span>
+                                        <span class="day today ing">12</span>
+                                        <span class="day">13</span>
+                                        <span class="day">14</span>
+
+                                        <span class="day">15</span>
+                                        <span class="day">16</span>
+                                        <span class="day">17</span>
+                                        <span class="day ing">18</span>
+                                        <span class="day ing">19</span>
+                                        <span class="day ing">20</span>
+                                        <span class="day holy">21</span>
+
+                                        <span class="day">22</span>
+                                        <span class="day on">23</span>
+                                        <span class="day">24</span>
+                                        <span class="day disabled">25</span>
+                                        <span class="day disabled">26</span>
+                                        <span class="day">27</span>
+                                        <span class="day holy">28</span>
+
+                                        <span class="day">29</span>
+                                        <span class="day">30</span>
+                                        <span class="day">31</span>
+                                        <span class="day next">1</span>
+                                        <span class="day next">2</span>
+                                        <span class="day next">3</span>
+                                        <span class="day next">4</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 새로 날짜 추가 -->
+                            <div class="new-date full-box">
+                                <span class="inp-tit">날짜 추가</span>
+                                <div class="inp-card">
+                                    <strong class="card-tit t-ko">10.23(월)</strong>
+
+                                    <!-- 체크박스 타입 - 진행클래스일 경우 type="radio"로 변경 -->
+                                    <div class="inp-wrap">
+                                        <span class="inp-tit">공간사용 시간대 선택</span> <!-- [18.11.29] 수정: 텍스트 변경 -->
+                                        <span class="check-box_tag">
+                                            <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                            <input type="checkbox" name="" id="chk02" checked>
+                                            <label for="chk02">오전</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                        </span>
+
+                                        <span class="check-box_tag">
+                                            <input type="checkbox" name="" id="chk01">
+                                            <label for="chk01">오후</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                        </span>
+
+
+                                        <span class="check-box_tag">
+                                            <input type="checkbox" name="" id="chk03">
+                                            <label for="chk03">저녁</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                        </span>
+                                    </div>
+                                    <!-- //체크박스 타입 - 진행클래스일 경우 type="radio"로 변경 -->
+
+                                    <div class="inp-wrap">
+                                        <span class="inp-tit">클래스 시간 (오후)</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                        <div class="inp-bundle">
+                                            <label class="sel-tit">수업 시작</label>
+                                            <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                            <select name="" class="form-select">
+                                                <option value="">선택해주세요.</option>
+                                                <option value="">선택1</option>
+                                                <option value="">선택2</option>
+                                            </select>
+                                        </div>
+                                        <div class="inp-bundle">
+                                            <label class="sel-tit">수업 종료</label>
+                                            <select name="" class="form-select">
+                                                <option value="">선택해주세요.</option>
+                                                <option value="">선택1</option>
+                                                <option value="">선택2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 새로 날짜 추가 -->
+
+                            <!-- inp-card -->
+                            <div class="inp-card">
+                                <strong class="card-tit t-ko">10.18(목)</strong>
+                                <p class="dim">종료된 클래스입니다.</p>
+
+                                <!-- 체크박스 타입 - 진행클래스일 경우 type="radio"로 변경 -->
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">공간사용 시간대 선택</span> <!-- [18.11.29] 수정: 텍스트 변경 -->
+                                    <span class="check-box_tag">
+                                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                        <input type="checkbox" name="" id="chk01" disabled>
+                                        <!-- [D]: 종료된 클래스일 때 선택은 되지 않고 선택되어 있는 상태일 때 label에 .active 추가 -->
+                                        <label for="chk01" class="active">오전</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </span>
+
+                                    <span class="check-box_tag">
+                                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                        <input type="checkbox" name="" id="chk02" disabled>
+                                        <label for="chk02">오후</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </span>
+
+                                    <span class="check-box_tag">
+                                        <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
+                                        <input type="checkbox" name="" id="chk03" disabled>
+                                        <label for="chk03">저녁</label><!-- [18.11.28] 수정: 텍스트 변경 -->
+                                    </span>
+                                </div>
+                                <!-- //체크박스 타입 - 진행클래스일 경우 type="radio"로 변경 -->
+
+                                <!-- 종료 타입 -->
+                                <div class="inp-wrap">
+                                    <span class="inp-tit">클래스 시간 (오후)</span><!-- [18.12.04] 수정: 텍스트 수정 -->
+                                    <div class="inp-bundle">
+                                        <label class="sel-tit">수업 시작</label>
+                                        <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                        <select name="" class="form-select active">
+                                            <option value="">09:00</option>
+                                            <option value="">선택1</option>
+                                            <option value="">선택2</option>
+                                        </select>
+                                    </div>
+                                    <div class="inp-bundle">
+                                        <label class="sel-tit">수업 종료</label>
+                                        <!-- [D]: select에 .active 추가시 선택된 텍스트 색 -->
+                                        <select name="" class="form-select active">
+                                            <option value="">09:00</option>
+                                            <option value="">선택1</option>
+                                            <option value="">선택2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- 종료 타입 -->
+
+                            </div>
+                            <!-- //inp-card -->
+
+                            <div class="btn-form-wrap">
+                                <!-- [D]: 비활성일경우 .disabled 활성일 경우 .active -->
+                                <button class="btn-form active">수업 일정 변경완료</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>

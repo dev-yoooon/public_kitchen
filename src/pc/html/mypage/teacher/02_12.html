@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 선생님"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content" class="mypage-main">
+            
+        </div>
+        <div class="pop-wrap small open">
+            <div class="pop-inner">
+                <section class="status-info">
+                    <p class="status-desc">
+                        죄송합니다 <br>
+                        아쉽게도 신규 클래스 신청이 <br>
+                        <mark>승인거절</mark> 되었습니다
+                    </p>
+                    <div class="gray-box">
+                        <strong>사유</strong>
+                        <p>관리자 : 주요 내역이 누락되어 있어 <br/>승인이 거절되었습니다</p>
+                    </div>
+                    <a href="#" class="btn-link">홈으로 이동하기 <i class="ico-more_arrow"></i> </a>
+
+                    <div class="btn-wrap">
+                        <a href="#" class="btn-form active">클래스 재신청하기</a>
+                    </div>
+                </section>
+                <a href="#" class="pop-btn-close">
+                    <span class="blind">닫기</span>
+                </a>
+            </div>
+        </div>
+        @include('../../inc/_footer.html')
+    </div>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/mobile/js/common.js"></script>
+</body>
+
+</html>

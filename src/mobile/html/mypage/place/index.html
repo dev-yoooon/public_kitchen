@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 클래스"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content" class="mypage-main">
+            <section class="none-border">
+                <div class="intro">
+                    <p class="t-title"><strong>김수아</strong>님 <br>반갑습니다</p>
+                    <div class="badge">
+                        <span class="host">호스트</span>
+                    </div>
+                    <figure class="profile">
+                        <span class="img"><img src="/mobile/img/@temp/img-reiew_thumbnail02.jpg" alt=""></span>
+
+                        <!-- [D]: label for=""값과 input id값은 매칭시켜주세요. -->
+                        <label class="inp-file">
+                            <input type="file" name="">
+                            <span class="blind">수정하기</span>
+                        </label>
+                    </figure>
+                </div>
+                <div class="info">
+                    <dl>
+                        <dt>쿠폰</dt>
+                        <dd>0</dd>
+                    </dl>
+                    <dl>
+                        <dt>알림</dt>
+                        <dd>3</dd>
+                    </dl>
+                    <dl>
+                        <dt>위시리스트</dt>
+                        <dd>13</dd>
+                    </dl>
+                </div>
+                <div class="point">
+                    <dl>
+                        <dt>포인트</dt>
+                        <dd>2,000 <em>P</em></dd>
+                    </dl>
+                    <dl>
+                        <dt>마일리지</dt>
+                        <dd>13 <em class="t-ko">원</em></dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="none-border main-list">
+                <div class="list-wrap">
+                    <h2 class="title">요리 배우기</h2>
+                    <ul class="list">
+                        <li><a href="#">예약 클래스</a></li>
+                        <li><a href="#">취소/환불</a></li>
+                        <li><a href="#">종료 클래스</a></li>
+                    </ul>
+                </div>
+                <div class="list-wrap">
+                    <h2 class="title">클래스 만들기 <a href="#" class="btn-link">신청하기 <i class="ico-more_arrow dark"></i></a></h2>
+                </div>
+                <div class="list-wrap">
+                    <h2 class="title">공간 공유하기</h2>
+                    <ul class="list">
+                        <li><a href="#">공간 관리</a></li>
+                        <li><a href="#">공유 관리</a></li>
+                        <li><a href="#">예약 관리</a></li>
+                    </ul>
+                </div>
+                <div class="list-wrap">
+                    <h2 class="title">1:1 메시지</h2>
+                    <h2 class="title">로그아웃</h2>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/mobile/js/common.js"></script>
+</body>
+
+</html>

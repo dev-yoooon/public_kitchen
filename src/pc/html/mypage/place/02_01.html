@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/mypage.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="aside">
+                <div class="breadcrumb">
+                    <p class="parent">호스트</p>
+                    <h1>공간<br>공유하기</h1>
+                </div>
+                <div class="tab-title">
+                    <a href="#" class="on">공간 관리</a>
+                    <a href="#">공유 관리</a>
+                    <a href="#">예약 관리</a>
+                </div>
+            </section>
+            <section class="lend">
+                <div class="account-box">
+                    <a href="#">정산 예정 금액</a>
+                    <span class="date">기간 18.09.01 - 18.09.15</span>
+                    <span class="cost"><em>2,650,000</em> 원</span>
+                </div>
+                <div class="btn-form-wrap">
+                    <a href="#" class="oval type2">공간 등록하기</a>
+                </div>
+                <div class="list-mypage place">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure><img src="../../img/mypage/img-default_place.png" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">티엠 키친 쥬드로 티엠</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">임시 저장<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-modify pop-open" data-pop="pop-del"><span class="blind">수정</span></a>
+                                <a href="#" class="btn-del pop-open" data-pop="pop-del"><span class="blind">삭제</span></a>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <a href="#">
+                                <figure><img src="/pc/img/@temp/img-place_list03.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">티엠 키친</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">승인대기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/pc/img/@temp/img-place_list04.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">파시다로</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">일정 선택하기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                            <!-- [D]: 임시저장, 승인 거절인 경우 -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                            </div>
+                            <!-- //[D]: 임시저장, 승인 거절인 경우 -->
+                            <span class="check-share">
+                                <input type="checkbox" name="" id="share01">
+                                <label for="share01">공유</label>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/pc/img/@temp/img-place_list05.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">루체 루다</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">공유중<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-modify"><span class="blind">수정</span></a>
+                                <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                            <span class="check-share">
+                                <input type="checkbox" name="" id="share02" checked>
+                                <label for="share02">공유</label>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/pc/img/@temp/img-place_list06.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">ST 정우남</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">일정 선택하기<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                            <!-- [D]: 승인완료 시  -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-modify"><span class="blind">수정</span></a>
+                                <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                            </div>
+                            <!-- //[D]: 승인완료 시  -->
+                            <span class="check-share">
+                                <input type="checkbox" name="" id="share03" checked>
+                                <label for="share03">공유</label>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="/pc/img/@temp/img-place_list07.jpg" alt="">
+                                    <div class="list-content">
+                                        <strong class="list-tit">봄블룸봄</strong>
+                                        <p class="list-desc small">서울시 강남구</p>
+                                        <span class="list-status">승인거절<i class="ico-more_arrow"></i></span>
+                                    </div>
+                                </figure>
+                            </a>
+                            <!-- [D]: 임시저장, 승인 거절인 경우 -->
+                            <div class="btn-normal-wrap">
+                                <a href="#" class="btn-del"><span class="blind">삭제</span></a>
+                            </div>
+                            <!-- //[D]: 임시저장, 승인 거절인 경우 -->
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        @include('../../inc/_footer.html')
+
+    </div>
+
+    <div class="pop-wrap small place" id="pop-del">
+        <div class="pop-inner">
+            <strong class="t-title1">공간 관리</strong>
+            <div class="pop-cont">
+                <p class="desc1">해당 공간을 삭제하시겠습니까?</p>
+                <!-- <p class="desc1">공유 중인 공간은 공간 OFF가 불가합니다.</p> -->
+                <!-- <p class="desc1">해당 공간을 공유하시겠습니까?</p> -->
+                <!-- <p class="desc1">공유중인 공간은 수정/삭제가 불가합니다.</p> -->
+            </div>
+            <div class="btn-form-wrap">
+                <a href="#" class="btn-form disabled">취소</a>
+                <a href="#" class="btn-form active">확인</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        //dummy script
+        $(document).ready(function () {
+            $('.pop-wrap .btn-form').on('click', function (e) {
+                e.preventDefault();
+
+                pk.popClose(this);
+            })
+        });
+    </script>
+</body>
+
+</html>

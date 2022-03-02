@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../../inc/_head.html',{
+    "title": "| 마이페이지 | 호스트"
+    })
+    <link rel="stylesheet" href="/mobile/css/basic.css">
+    <link rel="stylesheet" href="/mobile/css/detail.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../../inc/_header.html')
+        <div id="content">
+            <section class="pd-box">
+                <div class="sub-title">
+                    <h2 class="t-title1">리뷰 보기</h2>
+                </div>
+
+                <div class="list-mypage head">
+                    <figure>
+                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                        <div class="list-content">
+                            <div class="list-num"><mark>No.</mark>1588296423</div>
+                            <strong class="list-tit">마리 앤 제이</strong>
+                        </div>
+                    </figure>
+                </div>
+                <ul class="satisfy full-box">
+                    <li><span>추천해요</span><em>48</em></li>
+                    <li><span>만족해요</span><em>4</em></li>
+                    <li><span>아쉬워요</span><em>4</em></li>
+                </ul>
+            </section>
+
+            <section class="review">
+                <div class="flex-justify">
+                    <h3>총 64개의 리뷰</h3>
+                    <div class="select-box label-type">
+                        <!-- [D]: label for="" 값과 select id="" 값은 매칭시켜 주세요. -->
+                        <!-- [D]: label에 .active 추가하면 활성화 -->
+                        <label for="sel01">최신순</label>
+                        <select name="" id="sel01">
+                            <option value="" selected>최신순</option>
+                            <option value="">최신순</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="review-list mypage-type">
+                    <!-- loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../../img/@temp/img-reiew_thumbnail.png" alt="" /></figure>
+                            <span>
+                                <!-- [D]: icon type은 3가지 - .ico-review_type1~3 추천/만족/불만족 -->
+                                <strong class="ico-review_type1">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 .cont에 .overflow 추가 -->
+                        <div class="cont overflow">
+                            <div class="inner">
+                                <p>위치도 좋고 분위기도 아주 좋았어요! 이용에 불편함도 없고 완전 최고!! 실내도… </p>
+                                <figure><img src="../../img/@temp/img-review.png" alt="" /></figure>
+                            </div>
+                        </div>
+
+                        <!-- [D]: 더보기가 있는 경우 추가 -->
+                        <a href="#" class="more">더 보기</a>
+                    </li>
+                    <!-- //loop -->
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type2">추천해요!</strong>
+                                <span>정주영<em>2018.09.24</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>공간이 너무 예뻐서 정말 마음에 들었어요! 사진찍기도 너무 좋았습니다 대만족~!!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review-info">
+                            <figure><img src="../../img/@temp/img-reiew_thumbnail02.jpg" alt="" /></figure>
+                            <span>
+                                <strong class="ico-review_type3">아쉬워요!</strong>
+                                <span>장보름<em>2018.08.30</em></span>
+                            </span>
+                        </div>
+                        <div class="cont">
+                            <div class="inner">
+                                <p>시설도 깔끔하고 청결해서 좋았는데 공간이 너무 좁아서 아쉬웠어요 ㅠㅠ</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/mobile/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+</body>
+
+</html>

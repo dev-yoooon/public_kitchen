@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @include('../inc/_head.html',{
+    "title": "| 검색"
+    })
+    <link rel="stylesheet" href="/pc/css/basic.css">
+    <link rel="stylesheet" href="/pc/css/search.css">
+</head>
+
+<body>
+    <div id="wrap">
+        @include('../inc/_header.html')
+
+        <!-- #content -->
+        <div id="content">
+            <section class="sch-header">
+                <h1 class="blind">검색결과</h1>
+                <div class="inp-wrap">
+                    <input type="search" class="inp-search" name="" placeholder="클래스 / 공간 / 선생님 검색" value="베이킹">
+                    <button class="btn-search"><span class="blind">검색</span></button>
+                </div>
+                <div class="tab-title simple">
+                    <a href="#" class="on">전체</a>
+                    <a href="#">클래스</a>
+                    <a href="#">선생님</a>
+                    <a href="#">공간</a>
+                </div>
+                <h2 class="t-title">총 48개의 검색결과</h2>
+            </section>
+            <section class="result">
+                <div class="flex-justify">
+                    <h3 class="t-title1">클래스</h3>
+                    <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                </div>
+                <div class="list-default">
+                    <ul>
+                        <!-- loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb02.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>아욱 된장국</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 5회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>13,500
+                                        <span class="price-origin">₩15,000</span>
+                                        <span class="price-dc">10%</span>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <!-- [D]: 상세 이미지가 있을 때  -->
+                                    <!-- visual slide -->
+                                    <div class="swiper-container paging">
+                                        <div class="swiper-wrapper">
+                                            <!-- loop -->
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb03.jpg" alt="" /></div>
+                                            <!-- //loop -->
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb03.jpg" alt="" /></div>
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb03.jpg" alt="" /></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <!-- //visual slide -->
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>조랭이 궁중 떡볶이</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 5회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>20,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb02.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>조랭이 궁중 떡볶이</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 5회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>20,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb02.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>조랭이 궁중 떡볶이</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                        <span>10월 5회 가능</span>
+                                    </div>
+                                    <span class="price">
+                                        <em>₩</em>20,000
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="result">
+                <div class="flex-justify">
+                    <h3 class="t-title1">선생님</h3>
+                    <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                </div>
+                <div class="list-default">
+                    <ul>
+                        <!-- loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb06.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>오현진 <span>바리스타</span></strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb07.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>이정수 <span>한식전문가</span></strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb06.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>정지은 <span>티전문가</span></strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb06.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>김상근 <span>일식전문가</span></strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="result">
+                <div class="flex-justify">
+                    <h3 class="t-title1">공간</h3>
+                    <a href="#" class="more-arrow small">더 보기 <i class="ico-more_arrow"></i> </a>
+                </div>
+                <div class="list-default">
+                    <ul>
+                        <!-- loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb04.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>마리 엔 제이</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <!-- //loop -->
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <!-- [D]: 상세 이미지가 있을 때  -->
+                                    <!-- visual slide -->
+                                    <div class="swiper-container paging">
+                                        <div class="swiper-wrapper">
+                                            <!-- loop -->
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                            <!-- //loop -->
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                            <div class="swiper-slide"><img src="/pc/img/@temp/img-main-thumb05.jpg" alt="" /></div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <!-- //visual slide -->
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>파시다로</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb04.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>소울키친</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="/pc/img/@temp/img-main-thumb04.jpg" alt="" />
+                                </a>
+                                <figcaption class="list-content">
+                                    <strong>드노피</strong>
+                                    <div class="text-info">
+                                        <span>손님초대</span>
+                                        <span>서울시 강남구</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- // #content -->
+
+        @include('../inc/_footer.html')
+
+    </div>
+
+
+    <script src="/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/common/js/plugin.js"></script>
+    <script src="/pc/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            // list visual slide
+            $('.paging').slider({
+                threshold: 30,
+                pagination: {
+                    el: '.swiper-pagination'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -12,16 +12,77 @@
 <body>
     <div class="pop-wrap">
         <style scoped>
-            .blind{overflow: hidden;position: absolute;top:0;left:0;width: 0.1px;height: 0.1px;text-indent: -999px;}
-            .pop-wrap{position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,.55)} 
-            .pop-content{position: absolute;width: 800px;height: 822px;left: 50%;top: 50%;background: #fff url(../img/image/pop-content.png) no-repeat 50%;background-size: 100% auto;transform: translate(-50%,-50%);}
-            .cont{height: 822px}
-            .check{height: 73px;padding: 0 30px;background: #8E003E;line-height: 74px;text-align: right;}
-            .check input{margin: 0;padding: 0;width: 20px;}
-            .check label{display: inline-block;font-size: 17px;color: #fff;opacity: .8;}
-            .pop-wrap .close{display: block;overflow: hidden;position: absolute;top: 30px;right: 30px;;width: 28px;height: 28px;background: url(../img/image/pop-btn_close.png) no-repeat 50%;background-size: 100% auto;text-indent: -999px;}
-            @media screen and (max-width: 768px){
-                .pop-content{width: 320px}
+            .blind {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0.1px;
+                height: 0.1px;
+                text-indent: -999px;
+            }
+
+            .pop-wrap {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .55)
+            }
+
+            .pop-content {
+                position: absolute;
+                width: 800px;
+                height: 822px;
+                left: 50%;
+                top: 50%;
+                background: #fff url(../img/image/pop-content.png) no-repeat 50%;
+                background-size: 100% auto;
+                transform: translate(-50%, -50%);
+            }
+
+            .cont {
+                height: 822px
+            }
+
+            .check {
+                height: 73px;
+                padding: 0 30px;
+                background: #8E003E;
+                line-height: 74px;
+                text-align: right;
+            }
+
+            .check input {
+                margin: 0;
+                padding: 0;
+                width: 20px;
+            }
+
+            .check label {
+                display: inline-block;
+                font-size: 17px;
+                color: #fff;
+                opacity: .8;
+            }
+
+            .pop-wrap .close {
+                display: block;
+                overflow: hidden;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                ;
+                width: 28px;
+                height: 28px;
+                background: url(../img/image/pop-btn_close.png) no-repeat 50%;
+                background-size: 100% auto;
+                text-indent: -999px;
+            }
+
+            @media screen and (max-width: 768px) {
+                .pop-content {
+                    width: 320px
+                }
             }
         </style>
         <div class="pop-content">

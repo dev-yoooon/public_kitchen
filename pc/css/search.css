@@ -1,135 +1,51 @@
-.sch-header .tab-title a {
-  margin-bottom: 0;
-}
+.sch-header .tab-title a { margin-bottom: 0; }
 
-.sch-header .t-title {
-  margin-top: 60px;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 37px;
-}
+.sch-header .t-title { margin-top: 60px; font-weight: 600; font-size: 25px; line-height: 37px; }
 
-.sch-header .tab-title {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
+.sch-header .tab-title { margin-top: 20px; margin-bottom: 0; }
 
-.sch-header .inp-search {
-  margin-left: 0;
-  padding-left: 0;
-  font-weight: 200;
-  font-size: 25px;
-}
+.sch-header .inp-search { margin-left: 0; padding-left: 0; font-weight: 200; font-size: 25px; }
 
-.sch-header .btn-search {
-  display: block;
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  right: 11px;
-  bottom: 12px;
-  background: url(../img/ico-gnb-search.svg) no-repeat 50%/auto 100%;
-}
+.sch-header .btn-search { display: block; position: absolute; width: 26px; height: 26px; right: 11px; bottom: 12px; background: url(../img/ico-gnb-search.svg) no-repeat 50%/auto 100%; }
 
-.sch-header .select-box.btn-type label {
-  margin-top: 3px;
-}
+.sch-header .select-box.btn-type label { margin-top: 3px; }
 
-.result {
-  margin-top: 10px;
-}
+.result { margin-top: 10px; }
 
-.sch-header + section {
-  margin-top: 40px;
-}
+.sch-header + section { margin-top: 40px; }
 
-.result:last-child {
-  padding-bottom: 70px;
-}
+.result:last-child { padding-bottom: 70px; }
 
-.result .swiper-container {
-  overflow: hidden;
-}
+.result .swiper-container { overflow: hidden; }
 
-.result .text-info {
-  color: #999;
-}
+.result .text-info { color: #999; }
 
-.list-default ul {
-  margin: 0;
-  margin-right: -20px;
-}
+.list-default ul { margin: 0; margin-right: -20px; }
 
-.list-default ul li {
-  margin-bottom: 50px;
-}
+.list-default ul li { margin-bottom: 50px; }
 
-.flex-justify {
-  overflow: hidden;
-  margin-bottom: 25px;
-}
+.flex-justify { overflow: hidden; margin-bottom: 25px; }
 
-.flex-justify h3 {
-  float: left;
-}
+.flex-justify h3 { float: left; }
 
-.flex-justify .more-arrow {
-  float: right;
-  margin-top: 7px;
-}
+.flex-justify .more-arrow { float: right; margin-top: 7px; }
 
-.flex-justify .more {
-  margin-top: 0;
-}
+.flex-justify .more { margin-top: 0; }
 
-.flex-justify + .cont {
-  height: 0;
-  margin-top: 0;
-}
+.flex-justify + .cont { height: 0; margin-top: 0; }
 
-.more-arrow {
-  display: block;
-  position: relative;
-  font-weight: 200;
-  font-size: 16px;
-}
+.more-arrow { display: block; position: relative; font-weight: 200; font-size: 16px; }
 
-.more-arrow strong {
-  margin-right: 5px;
-  font-weight: 600;
-}
+.more-arrow strong { margin-right: 5px; font-weight: 600; }
 
-.more-arrow.small {
-  font-weight: 600;
-  font-size: 16px;
-}
+.more-arrow.small { font-weight: 600; font-size: 16px; }
 
-.more-arrow.small .ico-more_arrow {
-  margin-top: -4px;
-  margin-left: 2px;
-}
+.more-arrow.small .ico-more_arrow { margin-top: -4px; margin-left: 2px; }
 
-.no-msg {
-  margin-top: 120px;
-  font-weight: 200;
-  font-size: 20px;
-  color: #838383;
-  text-align: center;
-}
+.no-msg { margin-top: 120px; font-weight: 200; font-size: 20px; color: #838383; text-align: center; }
 
-.select-box {
-  overflow: hidden;
-  display: block;
-  margin-top: 60px;
-  margin-bottom: -10px;
-  text-align: right;
-}
+.select-box { overflow: hidden; display: block; margin-top: 60px; margin-bottom: -10px; text-align: right; }
 
-.select-box .t-title {
-  float: left;
-  margin-top: 0;
-}
+.select-box .t-title { float: left; margin-top: 0; }
 
-.select-box label {
-  font-size: 12px;
-}
+.select-box label { font-size: 12px; }

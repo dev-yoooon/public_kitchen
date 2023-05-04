@@ -11,6 +11,7 @@ var imgRetina = require('gulp-img-retina')
 var gutil = require('gulp-util')
 var prettyHtml = require('gulp-pretty-html');
 var rename = require("gulp-rename");
+var replace = require("gulp-replace");
 var watch = require('gulp-watch');
 
 var env = gutil.env.mode || 'development';
@@ -63,6 +64,7 @@ gulp.task('html', function () {
 		.pipe(rename(function (path) {
 			path.dirname = path.dirname.replace('html', '');
 		}))
+		.pipe(replace('"../','"'))
 		.pipe(gulp.dest(DIR.DEST))
 		.pipe(browserSync.stream())
 	browserSync.reload();

@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 클래스"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
                 <div class="list-mypage head">
                     <figure>
-                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                        <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
                         <div class="list-content">
                             <div class="list-num"><mark>No.</mark>1588296423</div>
                             <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
@@ -287,9 +287,9 @@
         </div>
         <!-- //팝업 내용 -->
     </div>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
             // dummy script

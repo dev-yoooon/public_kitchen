@@ -5,8 +5,8 @@
     @include('../inc/_head.html',{
     "title": "| 마이페이지 | 선생님"
     })
-    <link rel="stylesheet" href="/pc/css/basic.css">
-    <link rel="stylesheet" href="/pc/css/detail.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/detail.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                         <h3 class="t-title2">클래스 정보</h3>
                     </div>
                     <div class="list-mypage head">
-                        <figure><img src="/mobile/img/@temp/img-mypage_list.jpg" alt="">
+                        <figure><img src="@webRoot/mobile/img/@temp/img-mypage_list.jpg" alt="">
                             <div class="list-content">
 																<strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
 																<p><span>78,000</span>원</p>
@@ -54,9 +54,9 @@
         <!-- //팝업 내용 -->
         @include('../inc/_footer.html')
     </div>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/pc/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/pc/js/common.js"></script>
     <script>
         $(document).ready(function () {
             // dummy script

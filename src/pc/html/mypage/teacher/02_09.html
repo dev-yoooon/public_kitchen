@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 선생님"
     })
-    <link rel="stylesheet" href="/pc/css/basic.css">
-    <link rel="stylesheet" href="/pc/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/mypage.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <section class="none-border">
                 <div class="intro">
                     <figure class="profile">
-                        <span class="img"><img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt=""></span>
+                        <span class="img"><img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt=""></span>
 
                         <!-- [D]: label for=""값과 input id값은 매칭시켜주세요. -->
                         <label class="inp-file">
@@ -112,7 +112,7 @@
                                 <!-- loop -->
                                 <li>
                                     <a href="#">
-                                        <figure><img src="/pc/img/@temp/img-mypage_list02.jpg" alt="">
+                                        <figure><img src="@webRoot/pc/img/@temp/img-mypage_list02.jpg" alt="">
                                             <div class="list-content">
                                                 <strong class="list-tit">마리 앤 제이</strong>
                                                 <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
@@ -124,7 +124,7 @@
 
                                 <li>
                                     <a href="#">
-                                        <figure><img src="/pc/img/@temp/img-mypage_list02.jpg" alt="">
+                                        <figure><img src="@webRoot/pc/img/@temp/img-mypage_list02.jpg" alt="">
                                             <div class="list-content">
                                                 <strong class="list-tit">마리 앤 제이</strong>
                                                 <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
@@ -154,9 +154,9 @@
     </div>
 
 
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/pc/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/pc/js/common.js"></script>
     <script>
         $(document).ready(function () {
 

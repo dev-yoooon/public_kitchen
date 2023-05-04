@@ -5,8 +5,8 @@
     @include('../inc/_head.html',{
     "title": "| 결제하기"
     })
-    <link rel="stylesheet" href="/pc/css/basic.css">
-    <link rel="stylesheet" href="/pc/css/detail.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/detail.css">
 </head>
 
 <body>
@@ -266,9 +266,9 @@
         <!-- // #content -->
         @include('../inc/_footer.html')
     </div>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/pc/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/pc/js/common.js"></script>
     <script>
         $(document).ready(function () {
             $('.won input').on('input change', function() {

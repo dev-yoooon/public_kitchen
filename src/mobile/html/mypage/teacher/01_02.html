@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 선생님"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                                         </label>
 
                                         <!-- [D]: 이미지 추가시 .hidden 삭제 -->
-                                        <img src="/mobile/img/@temp/img-class_visual01.png" alt="">
+                                        <img src="@webRoot/mobile/img/@temp/img-class_visual01.png" alt="">
 
                                         <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
                                         <div class="btn-modify open">
@@ -82,7 +82,7 @@
                                         </label>
 
                                         <!-- [D]: 이미지 추가시 .hidden 삭제 -->
-                                        <img src="/mobile/img/blank.png" alt="" class="hidden">
+                                        <img src="@webRoot/mobile/img/blank.png" alt="" class="hidden">
 
                                         <!-- [D]: .btn-modify에 .open이 붙으면 활성화됩니다. -->
                                         <div class="btn-modify">
@@ -357,9 +357,9 @@
     </div>
 
 
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-sel_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.58313109,-1.99686891 C2.19313109,-1.60686891 2.19313109,-0.976868912 2.58313109,-0.586868912 L6.46313109,3.29313109 L2.58313109,7.17313109 C2.19313109,7.56313109 2.19313109,8.19313109 2.58313109,8.58313109 C2.97313109,8.97313109 3.60313109,8.97313109 3.99313109,8.58313109 L8.58313109,3.99313109 C8.97313109,3.60313109 8.97313109,2.97313109 8.58313109,2.58313109 L3.99313109,-2.00686891 C3.61313109,-2.38686891 2.97313109,-2.38686891 2.58313109,-1.99686891 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button/Dropdown">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="ico-sel_arrow" fill="#B7B7B7" fill-rule="nonzero" transform="translate(5.583131, 3.292500) rotate(-270.000000) translate(-5.583131, -3.292500) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

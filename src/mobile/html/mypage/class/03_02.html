@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 클래스"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="list-mypage head">
                         <figure>
-                            <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                            <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list.jpg" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
                             <div class="list-content">
                                 <div class="list-num"><mark>No.</mark>1588296423</div>
                                 <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
@@ -47,7 +47,7 @@
                         <div class="inp-wrap">
                             <span class="inp-tit">리뷰를 남겨주세요.</span>
                             <p class="inp-txt">평소에 좋아하는 앙버터를 직접 만들어보니 감회가 참 새로웠어요! 김수아 선생님도 수업내내 친절히 대해주셔서 즐겁게 배울 수 있었습니다. 중간 브레이크 타임에도 선생님 덕분에 화기애애한 분위기속에서 편히 쉴 수 있었어요. 부족한 실력을 선생님이 챙겨주셔서 사진도 이쁘게 나왔네요.</p>
-                            <figure class="review-img"><img src="/mobile/img/@temp/img-review.png" alt=""></figure>
+                            <figure class="review-img"><img src="@webRoot/mobile/img/@temp/img-review.png" alt=""></figure>
                         </div>
 
                         <ul class="full-box instr md">
@@ -63,9 +63,9 @@
         </div>
         <!-- //팝업 내용 -->
     </div>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
 

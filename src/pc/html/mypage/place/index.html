@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 클래스"
     })
-    <link rel="stylesheet" href="/pc/css/basic.css">
-    <link rel="stylesheet" href="/pc/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/mypage.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <section class="none-border">
                 <div class="intro">
                     <figure class="profile">
-                        <span class="img"><img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt=""></span>
+                        <span class="img"><img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt=""></span>
 
                         <!-- [D]: label for=""값과 input id값은 매칭시켜주세요. -->
                         <label class="inp-file">
@@ -89,7 +89,7 @@
                             <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
                             <!-- [D]: .pop-open(팝업 오픈할 버튼), .pop-btn-close(팝업 닫을 버튼) 넣어주면 자동 열림/닫힘 -->
                             <a href="#">
-                                <figure><img src="/pc/img/mypage/img-public_msg.png" alt=""> </figure>
+                                <figure><img src="@webRoot/pc/img/mypage/img-public_msg.png" alt=""> </figure>
                                 <div class="list-content">
                                     <strong class="list-tit">공공의 주방</strong>
                                     <p class="list-msg">공공의 주방을 사랑해주시는 선생님들 안녕하세요. 공간대여…</p>
@@ -102,7 +102,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <figure><img src="/pc/img/mypage/img-notice_msg.png" alt=""> </figure>
+                                <figure><img src="@webRoot/pc/img/mypage/img-notice_msg.png" alt=""> </figure>
                                 <div class="list-content">
                                     <strong class="list-tit">광고</strong>
                                     <p class="list-msg">12월을 맞아 제철 요리를 클래스에 등록해보시는건 어떨까…</p>
@@ -115,7 +115,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <figure><img src="/pc/img/mypage/img-alert_msg.png" alt=""> </figure>
+                                <figure><img src="@webRoot/pc/img/mypage/img-alert_msg.png" alt=""> </figure>
                                 <div class="list-content">
                                     <strong class="list-tit">요리배우기</strong>
                                     <p class="list-msg">신청하신 클래스(클래스명)가 예약 확정되었습니다. 나의 예…</p>
@@ -238,9 +238,9 @@
         <!-- #content -->
         @include('../../inc/_footer.html')
     </div>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
             $('.list-scroll .inner').slider({

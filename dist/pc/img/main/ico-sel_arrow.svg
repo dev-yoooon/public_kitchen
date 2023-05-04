@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="A.-메인" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SUB_CLASS" transform="translate(-343.000000, -948.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="375" height="3583"></rect>
+            <g id="+-02" transform="translate(25.000000, 879.000000)" fill-rule="nonzero" stroke="#000000">
+                <g id="++-sub_menu" transform="translate(0.000000, 56.000000)">
+                    <g id="+++-order" transform="translate(273.000000, 5.000000)">
+                        <polyline id="Path-2" points="46 10 49.072767 13 52 10"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -5,8 +5,8 @@
     @include('./../inc/_head.html',{
     "title": "| 마이페이지"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <!-- 전체 팝업 내용 (#content 밖으로 생성) -->
         <div class="pop-wrap photo open" id="photo">
             <div class="pop-cont">
-                <img src="/mobile/img/@temp/img-photo_slice.jpg" alt="" class="bg">
+                <img src="@webRoot/mobile/img/@temp/img-photo_slice.jpg" alt="" class="bg">
                 <div class="view-box">
                     <span class="line horizontal"></span>
                     <span class="line vertical"></span>
@@ -37,9 +37,9 @@
         </div>
         <!-- //팝업 내용 -->
     </div>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
 

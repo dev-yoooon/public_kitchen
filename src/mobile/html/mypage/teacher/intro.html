@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 선생님"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <figure>
-                                <img src="/mobile/img/mypage/img-intro_teacher01.png" alt="" />
+                                <img src="@webRoot/mobile/img/mypage/img-intro_teacher01.png" alt="" />
                                 <figcaption>
                                     <p>공공의주방에서<br> 선생님으로 활동해 보세요!</p>
                                 </figcaption>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="swiper-slide">
                             <figure>
-                                <img src="/mobile/img/mypage/img-intro_teacher02.png" alt="" />
+                                <img src="@webRoot/mobile/img/mypage/img-intro_teacher02.png" alt="" />
                                 <figcaption>
                                     <p>나만의 클래스를 만들고<br> 수업을 진행해 보세요!</p>
                                 </figcaption>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="swiper-slide">
                             <figure>
-                                <img src="/mobile/img/mypage/img-intro_teacher03.png" alt="" />
+                                <img src="@webRoot/mobile/img/mypage/img-intro_teacher03.png" alt="" />
                                 <figcaption>
                                     <p>수강생과 즐겁게 소통해 보세요!</p>
                                 </figcaption>
@@ -81,9 +81,9 @@
     </div>
 
 
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
             $('.swiper-container').slider({

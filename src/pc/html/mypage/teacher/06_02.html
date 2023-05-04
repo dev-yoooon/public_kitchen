@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 선생님"
     })
-    <link rel="stylesheet" href="/pc/css/basic.css">
-    <link rel="stylesheet" href="/pc/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/pc/css/mypage.css">
 </head>
 
 <body>
@@ -23,13 +23,13 @@
                 <div class="list-mypage head">
                     <div class="list-num"><mark>No.</mark>1588296423</div>
                     <hr/>
-                    <figure><img src="/pc/img/@temp/img-mypage_list.jpg" alt="">
+                    <figure><img src="@webRoot/pc/img/@temp/img-mypage_list.jpg" alt="">
                         <div class="list-content">
                             <strong class="list-tit">조랭이 궁중 떡볶이찜</strong>
                             <span class="price"><em>₩</em>55,000</span>
                         </div>
                     </figure>
-                    <hr class="slim"/>
+                    <hr class="slim"@webRoot/>
                 </div>
                 <ul class="class-info">
                     <li>
@@ -50,7 +50,7 @@
                         <!-- //내 공간일 때  -->
 
                         <div class="list-mypage type2">
-                            <figure><img src="/pc/img/@temp/img-mypage_list02.jpg" alt="">
+                            <figure><img src="@webRoot/pc/img/@temp/img-mypage_list02.jpg" alt="">
                                 <div class="list-content">
                                     <strong class="list-tit">마리 앤 제이</strong>
                                     <p class="list-desc small">서울시 강남구 논현동 15-9 매틴빌딩 3층</p>
@@ -122,7 +122,7 @@
                                     <ul>
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -135,7 +135,7 @@
                                         </li>
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -149,7 +149,7 @@
                                         <!-- [D]: 예약취소 시 .disabled 추가 -->
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -211,7 +211,7 @@
                                     <ul>
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -224,7 +224,7 @@
                                         </li>
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -240,7 +240,7 @@
                                         <!-- [D]: 예약취소 시 .disabled 추가 -->
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -285,7 +285,7 @@
                                     <ul>
                                         <li>
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -298,7 +298,7 @@
                                         </li>
                                         <li>
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -314,7 +314,7 @@
                                         <!-- [D]: 예약취소 시 .disabled 추가 -->
                                         <li class="disabled">
                                             <figure class="info">
-                                                <img src="/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
+                                                <img src="@webRoot/pc/img/@temp/img-reiew_thumbnail02.jpg" alt="">
                                                 <figcaption>
                                                     <span>이지수</span>
                                                     <span>여</span>
@@ -510,9 +510,9 @@
         </div>
         @include('../../inc/_footer.html')
     </div>
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/pc/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/pc/js/common.js"></script>
     <script>
         $(document).ready(function () {
 

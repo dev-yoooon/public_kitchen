@@ -5,8 +5,8 @@
     @include('../../inc/_head.html',{
     "title": "| 마이페이지 | 위시리스트"
     })
-    <link rel="stylesheet" href="/mobile/css/basic.css">
-    <link rel="stylesheet" href="/mobile/css/mypage.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/basic.css">
+    <link rel="stylesheet" href="@webRoot/mobile/css/mypage.css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                                             선생님: img-default_teacher.png
                                             공간: img-default_place.png
                                         -->
-                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_class.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/mypage/img-default_class.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk01">
@@ -59,7 +59,7 @@
                                 </li>
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk01">
@@ -82,7 +82,7 @@
                                 <!-- 선생님 -->
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_teacher.png" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/mypage/img-default_teacher.png" alt=""></span> <!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk02">
@@ -99,7 +99,7 @@
                                 </li>
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list02.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list02.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk02">
@@ -118,7 +118,7 @@
                                 <!-- 공간 -->
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/mypage/img-default_place.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/mypage/img-default_place.png" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk03">
@@ -135,7 +135,7 @@
                                 </li>
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk03">
@@ -154,7 +154,7 @@
                                 <!-- 공간 -->
                                 <li>
                                     <figure>
-                                        <span class="img-wrap"><img src="/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
+                                        <span class="img-wrap"><img src="@webRoot/mobile/img/@temp/img-mypage_list03.jpg" alt=""></span><!-- [18.12.19] 수정: 마크업 추가 -->
                                         <div class="list-check hidden">
                                             <!-- [D]: label for="" 값과 input id=""값은 매칭시켜 주세요. -->
                                             <input type="checkbox" name="" id="listChk03">
@@ -186,9 +186,9 @@
     </div>
 
 
-    <script src="/common/js/jquery-3.3.1.min.js"></script>
-    <script src="/common/js/plugin.js"></script>
-    <script src="/mobile/js/common.js"></script>
+    <script src="@webRoot/common/js/jquery-3.3.1.min.js"></script>
+    <script src="@webRoot/common/js/plugin.js"></script>
+    <script src="@webRoot/mobile/js/common.js"></script>
     <script>
         $(document).ready(function () {
             // dummy script
